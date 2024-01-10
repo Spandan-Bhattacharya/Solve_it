@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sudoku Solver 4x4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/sudoku_solver4.css">
+
+    </head>
+    
+        <body onload="setMatrix()">
+            <!-- <img src="../assets/Image/moon.png" id="icon"> -->
+            <div class="calculator-name-header">
+               
+                <span>Sudoku Solver</span>
+              </div>
+            <form class="form-horizontal" id="logarithm">
+                
+                <br/><br/>
+                <div id="matrix">
+        
+                </div>
+                <button type="button" id="deterset" onclick="deterSet()">Reset</button>
+                <button type="button" onclick="calculateDet()">Submit</button><br/><br/><br/>
+                <div class="outterbox">
+                    <div class="box" id="resultboxdet" style="display:none"><span id="resultdet"></span></div>
+                </div>
+              
+            </form>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="../javascript/sudoku_solver4.js" async defer></script>
+    </body>
+</html>
