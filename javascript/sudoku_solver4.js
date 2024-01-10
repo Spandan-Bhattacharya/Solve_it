@@ -1,12 +1,8 @@
-function setMatrix() {
-    // deterSet();
-    const input = document.querySelector("#matrix");
+function setGrid() {
+    
+    const input = document.querySelector("#grid");
     const size = 4;
-    // if (!(size > 0 && size < 11)) {
-    //   document.getElementById("resultdet").innerHTML = "Invalid Order";
-    //   document.querySelector("#resultboxdet").style.display = "inline";
-    //   return;
-    // }
+
   
     for (var i = 0; i < size; i++) {
       var rows = document.createElement('div');
@@ -17,7 +13,7 @@ function setMatrix() {
         var field = document.createElement("input");
         field.type = "number";
         field.className = "cells";
-        field.id = `deter${i}${j}`;
+        field.id = `grid${i}${j}`;
         var flex = document.createElement('div');
         flex.className = "flex";
   
@@ -29,18 +25,18 @@ function setMatrix() {
   
     }
   }
-  document.getElementById("resultboxdet").addEventListener("submit",(e)=>{
+  document.getElementById("resultboxgrid").addEventListener("submit",(e)=>{
     e.preventDefault()
-    calculatelDet()
+    calculatelGrid()
 })
-function calculateDet() {
+function calculateGrid() {
     var n =4;
     var mat = [];
     for (var i = 0; i < n; i++) {
       mat[i] = [];
       for (var j = 0; j < n; j++) {
-        if (document.getElementById(`deter${i}${j}`).value) {
-          mat[i][j] =parseInt(document.getElementById(`deter${i}${j}`).value);
+        if (document.getElementById(`grid${i}${j}`).value) {
+          mat[i][j] =parseInt(document.getElementById(`grid${i}${j}`).value);
         }
         else mat[i][j] = '.';
       }
@@ -50,7 +46,7 @@ function calculateDet() {
     for (var i = 0; i < n; i++) {
         for (var j = 0; j < n; j++) {
         
-            document.getElementById(`deter${i}${j}`).value=mat[i][j];
+            document.getElementById(`grid${i}${j}`).value=mat[i][j];
           
          
         }
@@ -112,4 +108,7 @@ function solve(board){
         }
     }
     return 1;
+}
+function gridReset(){
+  
 }

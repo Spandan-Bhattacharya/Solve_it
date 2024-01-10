@@ -1,9 +1,9 @@
-/* p{
-    background-color: aqua;
-} */
+/* for urls  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap");
+
+/* For whole page formatting, these are applied to all elements */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,8 @@
     font-family: Ubuntu;
      background-color: #ffffff; 
   }
+
+  /* navigation bar css begins */
   .topnav {
     background-color: #000000;
     overflow: hidden;
@@ -38,6 +40,9 @@
     background-color: #1665cc;
     color: black;
   }
+
+/* navigation bar css ends */
+/* the writing of the page(hero) css begins */
 .hero-section .herocontainer h1,
 h3 {
   display: flex;
@@ -87,7 +92,8 @@ h3 {
 .hero-section h3 {
   font-size: 32px;
 }
-
+/* the writing of the page(hero) css ends */
+/* css for the grid of solvers begins */
 .container {
     display: flex;
     justify-content: center;
@@ -109,17 +115,22 @@ h3 {
     border-color: black;
     border-style: dashed;
   }
+  /* css for the grid of solvers ends */
+  /* css for the footer begins*/
   .footer {
-    /* position: fixed; */
     padding: 20px; /* Some padding */
   text-align: center; /* Center text*/
-  background: #000000; /* Grey background */
+  background: #000000; /* Black background */
   /* color:white; */
   }
   #footer{
     background: #000000; 
     color: white;
   }
-  
+  /* css for the footer ends */
+  /* css for the headers of each solver web page */
+  .solver-name-header{
+
+  }
  
  
