@@ -42,6 +42,8 @@ function calculateGrid() {
       }
     }
   //  console.log(mat);
+  if(isValid(mat)){
+
     solve(mat);
     for (var i = 0; i < n; i++) {
         for (var j = 0; j < n; j++) {
@@ -51,11 +53,29 @@ function calculateGrid() {
          
         }
       }
+    }
+    else{
+      alert("Give correct input");
+    }
  
     
     // document.getElementById("resultdet").innerHTML = ans;
     // document.querySelector("#resultboxdet").style.display = "block";
   
+  }
+  function isValid(board){
+    var n=4;
+    //check columns
+    var f=1;
+    for(var i=0;i<n;i++){
+      for(var j=0;j<n;j++){
+        if(board[i][j]!='.'){
+          if(check(board,i,j,board[i][j])==0)return false;
+        }
+      }
+    }
+    return true;
+
   }
   function check(board,i,j,cond){
     
