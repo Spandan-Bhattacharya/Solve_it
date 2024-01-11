@@ -11,4 +11,7 @@ The github repository is:https://github.com/Spandan-Bhattacharya/Solve_it
 
 The website is intentionally kept in such a bare-bones state, to help the mentees, especially those just starting their Open-source Journey, take their first steps in the field!!
 
+Website design inspired from fix-your-nums, a great project from JWoC 2023 by Srijita Mandal.
+https://github.com/Srijita-Mandal/fix-your-nums
+
 #JWoC
