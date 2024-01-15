@@ -1,4 +1,5 @@
 # Solve it! - Puzzle Solver Website
+<img width="1440" alt="Screenshot 2024-01-16 at 1 27 17 AM" src="https://github.com/rahat2134/Solve_it/assets/136263179/074bc8fc-b784-44b7-8074-a9eda0d9ab6e">
 
 Welcome to Solve it! - your go-to destination for solving mind-bending puzzles! This repository contains the HTML code for the Solve it! website. The website provides solvers for common games like Sudoku, Nonogram, Crosswords, and more.
 
@@ -25,6 +26,8 @@ cd solve-it-website
 - **Responsive Design**: The website is designed to work seamlessly on various devices, ensuring a consistent experience.
 
 ## Usage
+<img width="835" alt="Screenshot 2024-01-16 at 1 29 18 AM" src="https://github.com/rahat2134/Solve_it/assets/136263179/11201f7b-30b4-4154-8e17-aae432dc810d">
+
 
 1. Open the HTML file in your web browser.
 2. Navigate through the navbar to access different sections such as Home, Contact, and About.
@@ -39,7 +42,10 @@ If you would like to contribute to the development of Solve it!, feel free to fo
 ```bash
 git clone https://github.com/your-username/solve-it-website.git
 cd solve-it-website
+```
+* Wait until the issue get assigned to you by maintainer.
 # Make your changes
+```
 git add .
 git commit -m "Add your contribution"
 git push origin main
@@ -50,3 +56,5 @@ git push origin main
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details. Feel free to use and modify the code for your own projects.
 
 Thank you for using Solve it! Happy solving! 🧩
+<img width="253" alt="Screenshot 2024-01-16 at 1 29 58 AM" src="https://github.com/rahat2134/Solve_it/assets/136263179/a62aaf14-bcef-4b71-bace-88980902d24e">
+
