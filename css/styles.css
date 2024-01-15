@@ -133,8 +133,36 @@ h3 {
 
   }
 
-  .trynow-button{
-    /* Implement this class */
+  .trynow-button {
+    background-color: #1665cc;
+    
+    display: inline;
+    width: 95px;
+    height: 9%;
+    /* border: 3px solid black;
+    border-style: dashed; */
+    padding : 5px 10px;
+    position: absolute;
+    top: 244px;
+    bottom: 240px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(48, 193, 250, 0.31);
+    text-decoration: none;
+  }
+  .trynow-button a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .trynow-button:hover{
+    background-color: #92d3ff;
+    cursor: pointer;
+  }
+  .trynow-button a:hover{
+    text-decoration: none;
+    color:rgb(0, 67, 112);
   }
  
  
