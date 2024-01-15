@@ -36,7 +36,7 @@ cd solve-it-website
 5. The footer contains a message, "Made with Love."
 
 ## Contributing
-
+This project is a part of JWoC 2024!! Everyone interested please join the discord channel : https://discord.gg/bcgZ9RZZ8r All communication will be done through the solve-it! channel in the server.
 If you would like to contribute to the development of Solve it!, feel free to fork this repository and submit a pull request with your changes. We welcome any improvements, bug fixes, or additional puzzle solvers.
 
 ```bash
@@ -50,6 +50,8 @@ git add .
 git commit -m "Add your contribution"
 git push origin main
 ```
+The github repository is:https://github.com/Spandan-Bhattacharya/Solve_it
+Website design inspired from fix-your-nums, a great project from JWoC 2023 by Srijita Mandal. https://github.com/Srijita-Mandal/fix-your-nums
 
 ## License
 
