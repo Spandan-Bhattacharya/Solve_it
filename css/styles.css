@@ -5,41 +5,54 @@
 
 /* For whole page formatting, these are applied to all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins;
-    font-family: Ubuntu;
-     background-color: #ffffff; 
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  font-family: Ubuntu;
+  background-color: #ffffff;
+}
 
-  /* navigation bar css begins */
-  .topnav {
-    background-color: #000000;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #1665cc;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #1665cc;
-    color: black;
-  }
+/* navigation bar css begins */
+.topnav {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  height: 55px;
+  background: rgb(0, 32, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 32, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 41%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  /* border-radius: 10px; */
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  /* float: left; */
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #205fb7;
+  border-radius: 10px;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /* background-color: #2b61a8; */
+  border-radius: 10px;
+  /* color: black; */
+}
 
 /* navigation bar css ends */
 /* the writing of the page(hero) css begins */
@@ -54,14 +67,13 @@ h3 {
   margin-top: 130px;
   font-size: 8rem;
   text-shadow: 2px 2px 2px #0c27a1;
-  
 }
 .hero-section .herocontainer h3 {
   font-weight: 300;
   font-size: 3rem;
 }
 .paragraph {
-  font-size:2rem;
+  font-size: 2rem;
   width: 70%;
   text-align: center;
   margin: auto;
@@ -95,46 +107,43 @@ h3 {
 /* the writing of the page(hero) css ends */
 /* css for the grid of solvers begins */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-    /* margin: none; */
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  /* margin: none; */
+}
+
 .box {
-    position: relative;
-    width: 320px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 30px;
-    transition: 0.5s;
-    border-color: black;
-    border-style: dashed;
-  }
-  /* css for the grid of solvers ends */
-  /* css for the footer begins*/
-  .footer {
-    padding: 20px; /* Some padding */
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+  border-color: black;
+  border-style: dashed;
+}
+/* css for the grid of solvers ends */
+/* css for the footer begins*/
+.footer {
+  padding: 20px; /* Some padding */
   text-align: center; /* Center text*/
   background: #000000; /* Black background */
   /* color:white; */
-  }
-  #footer{
-    background: #000000; 
-    color: white;
-  }
-  /* css for the footer ends */
-  /* css for the headers of each solver web page */
-  .solver-name-header{
+}
+#footer {
+  background: #000000;
+  color: white;
+}
+/* css for the footer ends */
+/* css for the headers of each solver web page */
+.solver-name-header {
+}
 
-  }
-
-  .trynow-button{
-    /* Implement this class */
-  }
- 
- 
+.trynow-button {
+  /* Implement this class */
+}
