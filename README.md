@@ -1,20 +1,52 @@
-This project is a part of JWoC 2024!!
-Everyone interested please join the discord channel :
-https://discord.gg/bcgZ9RZZ8r
-All communication will be done through the solve-it! channel in the server.
+# Solve it! - Puzzle Solver Website
 
-Solve it! is a website, where people can find solvers for various popular games like Sudoku, Nonogram, Crossword etc.
+Welcome to Solve it! - your go-to destination for solving mind-bending puzzles! This repository contains the HTML code for the Solve it! website. The website provides solvers for common games like Sudoku, Nonogram, Crosswords, and more.
 
-They just need to enter the valid values of the problem, and the the solver would solve the problem and provide the solution.
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-For Example, if someone wants to solve  a 4x4 sudoku, they just need to input the given digits in the website grid, and then hit submit to get the solution.
-The Website is currently hosted at:https://solve-it-self.vercel.app/
+## Getting Started
 
-The github repository is:https://github.com/Spandan-Bhattacharya/Solve_it
+To get started with the Solve it! website, simply clone this repository or download the HTML file. You can then open the HTML file in your preferred web browser.
 
-The website is intentionally kept in such a bare-bones state, to help the mentees, especially those just starting their Open-source Journey, take their first steps in the field!!
+```bash
+git clone https://github.com/your-username/solve-it-website.git
+cd solve-it-website
+```
 
-Website design inspired from fix-your-nums, a great project from JWoC 2023 by Srijita Mandal.
-https://github.com/Srijita-Mandal/fix-your-nums
+## Features
 
-#JWoC
+- **Sudoku Solvers**: Solve any valid 4x4 or 6x6 Sudoku puzzles effortlessly.
+- **User-friendly Interface**: The website provides a clean and intuitive interface for an optimal user experience.
+- **Responsive Design**: The website is designed to work seamlessly on various devices, ensuring a consistent experience.
+
+## Usage
+
+1. Open the HTML file in your web browser.
+2. Navigate through the navbar to access different sections such as Home, Contact, and About.
+3. Explore the title section to understand the purpose of the website.
+4. Check out the puzzle solvers in the grid section. Click on "Try Now!" to access the solver for specific puzzle sizes.
+5. The footer contains a message, "Made with Love."
+
+## Contributing
+
+If you would like to contribute to the development of Solve it!, feel free to fork this repository and submit a pull request with your changes. We welcome any improvements, bug fixes, or additional puzzle solvers.
+
+```bash
+git clone https://github.com/your-username/solve-it-website.git
+cd solve-it-website
+# Make your changes
+git add .
+git commit -m "Add your contribution"
+git push origin main
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details. Feel free to use and modify the code for your own projects.
+
+Thank you for using Solve it! Happy solving! 🧩
