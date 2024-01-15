@@ -3,7 +3,7 @@ Everyone interested please join the discord channel :
 https://discord.gg/bcgZ9RZZ8r
 All communication will be done through the solve-it! channel in the server.
 
-Solve it! is a website, where people can find solvers for letious popular games like Sudoku, Nonogram, Crossword etc.
+Solve it! is a website, where people can find solvers for various popular games like Sudoku, Nonogram, Crossword etc.
 
 They just need to enter the valid values of the problem, and the the solver would solve the problem and provide the solution.
 

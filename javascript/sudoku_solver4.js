@@ -14,9 +14,7 @@ function setGrid() {
       field.id = `grid${i}${j}`;
       let flex = document.createElement("div");
       flex.className = "flex";
-
       flex.style.display = "inline";
-
       rows.appendChild(flex);
       flex.appendChild(field);
     }
@@ -96,18 +94,18 @@ function solve(board) {
 function gridReset() {}
 
 function calculateGrid() {
-  var n = 4;
-  var mat = [];
-  var invalidCells = [];
+  let n = 4;
+  let mat = [];
+  let invalidCells = [];
 
-  for (var i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     mat[i] = [];
-    for (var j = 0; j < n; j++) {
-      var inputValue = document.getElementById(`grid${i}${j}`).value;
+    for (let j = 0; j < n; j++) {
+      let inputValue = document.getElementById(`grid${i}${j}`).value;
       if (inputValue === "") {
         mat[i][j] = ".";
       } else {
-        var parsedValue = parseInt(inputValue);
+        let parsedValue = parseInt(inputValue);
         if (isNaN(parsedValue) || parsedValue < 1 ) {
           invalidCells.push({ row: i, col: j });
         } else {
@@ -119,14 +117,14 @@ function calculateGrid() {
 
   if (invalidCells.length === 0 && isValid(mat)) {
     solve(mat);
-    for (var i = 0; i < n; i++) {
-      for (var j = 0; j < n; j++) {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
         document.getElementById(`grid${i}${j}`).value = mat[i][j];
       }
     }
   } else {
     if (!document.getElementById("errorMessage")) {
-      var errorMessage = document.createElement("div");
+      let errorMessage = document.createElement("div");
       errorMessage.innerHTML = "Invalid input!. Please enter valid Numbers.";
       errorMessage.style.color = "red";
       errorMessage.id = "errorMessage";
