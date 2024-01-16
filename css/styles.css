@@ -200,3 +200,119 @@ h3 {
   }
  
 
+  .about-section {
+    background-color: #131313; 
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    color: #2977d5; 
+  }
+  
+  .about-section p {
+    color: #a1a0a0; 
+  }
+  
+/* Add your existing styles here */
+
+/* Contact section styling begins */
+.contact-section {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #205fb7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section p {
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+ul li a {
+  color: #205fb7;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contact form styling */
+form {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1d86aa;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  background-color: #205fb7;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+input[type="submit"]:hover {
+  background-color: #1a4a8f;
+}
+
+/* Footer styling */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #131313;
+  color: #ffffff;
+}
+
+#footer {
+  background: #131313;
+  color: #ffffff;
+}
+.container  {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#contact {
+  background-color: #212121;
+  padding: 40px 0;
+  text-align: center;
+}
+
+
