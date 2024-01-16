@@ -144,11 +144,15 @@ for (let i = 0; i < size; i++) {
 }
 }
 
-function gridReset(){
-document.getElementById("resetButton").addEventListener("click", () => {
-resetGrid();
-});
+// function gridReset(){
+//  document.getElementById("resetButton").addEventListener("click", () => {
+//     resetGrid();
+//   });
+// } 
 
-}
+document.getElementById("resetButton").addEventListener("click", (e) => {
+  e.preventDefault(); // Prevents the form from being submitted and page refresh
+  resetGrid();
+});
 
 
