@@ -23,16 +23,16 @@ function setGrid() {
 
   }
 }
-document.getElementById("resultboxgrid").addEventListener("submit",(e)=>{
-  e.preventDefault()
-  calculatelGrid()
-})
+document.getElementById("submitButton").addEventListener("click", (e) => {
+  e.preventDefault(); // Prevents the form from being submitted and page refresh
+  calculateGrid();
+});
 function calculateGrid() {
-  var n =4;
-  var mat = [];
-  for (var i = 0; i < n; i++) {
+  let n =4;
+  let mat = [];
+  for (let i = 0; i < n; i++) {
     mat[i] = [];
-    for (var j = 0; j < n; j++) {
+    for (let j = 0; j < n; j++) {
       if (document.getElementById(`grid${i}${j}`).value) {
         mat[i][j] =parseInt(document.getElementById(`grid${i}${j}`).value);
       }
@@ -43,8 +43,8 @@ function calculateGrid() {
 if(isValid(mat)){
 
   solve(mat);
-  for (var i = 0; i < n; i++) {
-      for (var j = 0; j < n; j++) {
+  for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
       
           document.getElementById(`grid${i}${j}`).value=mat[i][j];
         
@@ -74,11 +74,11 @@ if(isValid(mat)){
 
 
 function isValid(board){
-  var n=4;
+  let n=4;
   //check columns
-  var f=1;
-  for(var i=0;i<n;i++){
-    for(var j=0;j<n;j++){
+  let f=1;
+  for(let i=0;i<n;i++){
+    for(let j=0;j<n;j++){
       if(board[i][j]!='.'){
         if(check(board,i,j,board[i][j])==0)return false;
       }
@@ -90,16 +90,16 @@ function isValid(board){
 function check(board,i,j,cond){
   
   
-  var a=true;
-  var b=cond;
-  for(var k=0;k<4;k++){
+  let a=true;
+  let b=cond;
+  for(let k=0;k<4;k++){
       if((board[i][k]==b&&(k^j)) || (board[k][j]==b&&(k^i))) a=false;
       }
   
-var r=Math.floor(i/2)*2;
-var c=Math.floor(j/2)*2;
-for(var p=r;p<r+2;p++){
-  for(var q=c;q<c+2;q++){
+let r=Math.floor(i/2)*2;
+let c=Math.floor(j/2)*2;
+for(let p=r;p<r+2;p++){
+  for(let q=c;q<c+2;q++){
       if(board[p][q]==b && p!=i&&q!=j) a=false;
       }
   }
@@ -109,12 +109,12 @@ for(var p=r;p<r+2;p++){
 
 function solve(board){
   
-  for(var i=0;i<4;i++){
-      for(var j=0;j<4;j++){
+  for(let i=0;i<4;i++){
+      for(let j=0;j<4;j++){
           if(board[i][j]=='.'){
              
               
-              for(var k='1';k<='4';k++){
+              for(let k='1';k<='4';k++){
                   if(check(board,i,j,k)){
                       
                       board[i][j]=parseInt(k);
