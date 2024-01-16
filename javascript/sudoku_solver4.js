@@ -1,22 +1,20 @@
 function setGrid() {
-    
+
   const input = document.querySelector("#grid");
   const size = 4;
 
-
-  for (var i = 0; i < size; i++) {
-    var rows = document.createElement('div');
+  for (let i = 0; i < size; i++) {
+    let rows = document.createElement("div");
     input.appendChild(rows);
     rows.className = "rows";
 
-    for (var j = 0; j < size; j++) {
-      var field = document.createElement("input");
+    for (let j = 0; j < size; j++) {
+      let field = document.createElement("input");
       field.type = "number";
       field.className = "cells";
       field.id = `grid${i}${j}`;
-      var flex = document.createElement('div');
+      let flex = document.createElement("div");
       flex.className = "flex";
-
       flex.style.display = "inline";
 
       rows.appendChild(flex);
@@ -54,15 +52,27 @@ if(isValid(mat)){
       }
     }
   }
-  else{
-    alert("Give correct input");
+    else {
+    if (!document.getElementById("errorMessage")) {
+      let errorMessage = document.createElement("div");
+      errorMessage.innerHTML = "Invalid input!. Please enter valid Numbers.";
+      errorMessage.style.color = "red";
+      errorMessage.id = "errorMessage";
+      document.body.appendChild(errorMessage);
+
+      setTimeout(function () {
+        document.body.removeChild(errorMessage);
+        resetGrid();
+      }, 2000);
+    }
+  }
   }
 
   
   // document.getElementById("resultdet").innerHTML = ans;
   // document.querySelector("#resultboxdet").style.display = "block";
 
-}
+
 function isValid(board){
   var n=4;
   //check columns
@@ -94,8 +104,8 @@ for(var p=r;p<r+2;p++){
       }
   }
   return a;
-}
 
+}
 
 function solve(board){
   
@@ -155,4 +165,6 @@ document.getElementById("resetButton").addEventListener("click", (e) => {
   resetGrid();
 });
 
+
+  
 
