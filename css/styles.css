@@ -184,55 +184,110 @@ h3 {
   }
   
   .about-section h2 {
-    color: #c3c3c3; 
+    color: #2977d5; 
   }
   
   .about-section p {
     color: #a1a0a0; 
   }
   
+/* Add your existing styles here */
+
+/* Contact section styling begins */
 .contact-section {
-    background-color: #131313;
-    padding: 60px 0;
-    text-align: left;
+  background-color: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
 }
 
-.contact-section h3 {
-    color: #cccdce;
-    margin-bottom: 20px;
-    padding-left: 10px;
+.contact-section h2 {
+  color: #205fb7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.contact-info {
-    text-align: left;
+.contact-section p {
+  color: #555555;
+  margin-bottom: 30px;
 }
 
-.container ul {
-    list-style-type: none;
-    padding: 0;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.container li {
-    margin-bottom: 10px;
+ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
-.container a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+ul li a {
+  color: #205fb7;
+  text-decoration: none;
 }
 
-.container a:hover {
-    text-decoration: underline;
+ul li a:hover {
+  text-decoration: underline;
 }
-.container {
+
+/* Contact form styling */
+form {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1d86aa;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  background-color: #205fb7;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+input[type="submit"]:hover {
+  background-color: #1a4a8f;
+}
+
+/* Footer styling */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #131313;
+  color: #ffffff;
+}
+
+#footer {
+  background: #131313;
+  color: #ffffff;
+}
+.container  {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
 #contact {
-  background-color: #131313;
+  background-color: #212121;
   padding: 40px 0;
   text-align: center;
 }
