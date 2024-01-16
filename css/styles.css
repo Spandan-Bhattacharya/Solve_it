@@ -177,3 +177,64 @@ h3 {
   }
  
 
+  .about-section {
+    background-color: #131313; 
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    color: #c3c3c3; 
+  }
+  
+  .about-section p {
+    color: #a1a0a0; 
+  }
+  
+.contact-section {
+    background-color: #131313;
+    padding: 60px 0;
+    text-align: left;
+}
+
+.contact-section h3 {
+    color: #cccdce;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container li {
+    margin-bottom: 10px;
+}
+
+.container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#contact {
+  background-color: #131313;
+  padding: 40px 0;
+  text-align: center;
+}
+
+
