@@ -10,13 +10,12 @@
   box-sizing: border-box;
   font-family: poppins;
   font-family: Ubuntu;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 html{
   scroll-behavior: smooth;
 }
-
 ::-webkit-scrollbar{
   width: 15px;
 }
@@ -193,5 +192,40 @@ h3 {
     text-decoration: none;
     color:rgb(0, 67, 112);
   }
- 
+  .contain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2017/07/10/23/45/cubes-2492010_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-attachment: fixed;
+  }
+  /* solve it will have glowing effect */
+  h1{
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,beige);
+    outline: none;
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animate
+  {
+        0%,18%, 20%, 50.1%,60%,65.1%,80%,90.1%,92%
+        { 
+        color:#0e3742;
+        text-shadow: none; 
+        }
+        18.1%,20.1%,30%,50%,60.1%,65%, 80.1%, 90%,92.1%,100%
+        {
+        color:#fff;  
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+        }
 
+  }
