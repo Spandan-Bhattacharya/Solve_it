@@ -13,7 +13,13 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     />
+
+    <link rel="stylesheet" href="/css/searchstyle.css"/>
+    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+
+
     <link rel="icon" href="favicon.png" type="image/png" />
+
   </head>
   <body>
     <!-- navbar begins-->
@@ -21,8 +27,20 @@
     <nav class="topnav">
       <img src="bodylogo.png" alt="img" >
       <a class="active" href="#home">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
+
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <div class="search-box">
+        <div class="row">
+        <input type="text" id="input-box" placeholder="Search Solver" autocomplete="off" >
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="result-box">
+          
+        </div>
+      </div>
+      
+
     </nav>
     <!-- navbar ends -->
 
@@ -75,5 +93,6 @@
     <button id="goToTopBtn" onclick="goToTop()">⬆</button>
     <script src="javascript/GoToTop.js"></script>
     <script src="/javascript/script.js" async defer></script>
+    <script src="/javascript/autocomplete.js"></script>
   </body>
 </html>
