@@ -11,6 +11,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../css/sudoku_solver4.css" />
   </head>
 
@@ -21,6 +22,7 @@
          
                
                 <span>Sudoku Solver</span>
+                <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
               </div>
             <form class="form-horizontal" id="logarithm">
                 
@@ -32,13 +34,14 @@
                 <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button> -->
                 <button id="resetButton">Reset</button>
                 <button type="button" id="submitButton">Submit</button><br/><br/><br/>
+                
                 <div class="outterbox">
                     <div class="box" id="resultboxgrid" style="display:none"><span id="resultgrid"></span></div>
                 </div>
-              
+               
             </form>
       
-        
+           
         <script src="../javascript/sudoku_solver4.js" async defer></script>
     </body>
 </html>
