@@ -17,7 +17,7 @@
     align-items: center;
     padding: 10px 20px;
 }
-input{
+.search-box input{
     flex:1;
     height:50px;
     background: transparent;
@@ -26,43 +26,43 @@ input{
     font-size:20px;
     color:#555;
 }
-button{
+.search-box button{
     background:transparent;
     border:0;
     outline:0;
 }
-button.fa-solid{
+.search-box button.fa-solid{
     width:25px;
     color:#555;
     font-size:15px;
     cursor:pointer;
 }
-::placeholder{
+.search-box::placeholder{
     color:#030a134e;
 
 }
-.result-box ul{
+.search-box .result-box ul{
     border-top:1px solid #999;
     padding: 15px 10px;
 }
-.result-box ul li{
+.search-box .result-box ul li{
     list-style: none;
     border-radius:3px;
     padding: 15px 10px;
     cursor:pointer;
     
 }
-.result-box ul li:hover{
+.search-box .result-box ul li:hover{
     background:#d5f4f8;
 }
-.result-box{
+.search-box .result-box{
     max-height:  300px ;
     width:400px;
     overflow-y:scroll;
     position: absolute;
     
 }
-ul li{
+.search-box ul li{
     background-color: rgb(195, 225, 245);
 }
 
