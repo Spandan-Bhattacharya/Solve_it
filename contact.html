@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Contact Us - Solve it!</title>
+    <meta name="description" content="Get in touch with Solve it! We'd love to hear from you!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Add any additional stylesheets as needed -->
+  </head>
+  <body>
+    <!-- navbar begins-->
+
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a class="active" href="#contact">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- contact section begins -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+      <div class="container">
+        <h4>Feel free to reach out through any of the following channels:</h3>
+        <ul>
+            <li>Email: <a href="mailto:spandanbhattacharya.sb@gmail.com">spandanbhattacharya.sb@gmail.com</a></li>
+            <li>Phone: <a href="tel:+919330184706">9330184706</a></li>
+            <li>Discord: <a href="https://discord.gg/Xvtv3chFDU" target="_blank">https://discord.gg/Xvtv3chFDU</a></li>
+            <li>GitHub: <a href="https://github.com/Spandan-Bhattacharya/Solve_it/" target="_blank">https://github.com/Spandan-Bhattacharya/Solve_it/</a></li>
+        </ul>
+        <h4>Alternatively, you can use the contact form below:</h4>
+
+        <form id="contactForm" class="contact" action="/submit_contact" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          
+            <input type="submit" value="Submit">
+          </form>          
+      </div>
+    </section>
+    <footer class="footer">
+      <p id="footer">We would love to hear from you! Reach out to us anytime!!</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const formData = new FormData(this);
+          window.location.href = 'submit_contact.html';
+        });
+      </script>
+    <script src="/javascript/script.js" async defer></script>
+  </body>
+</html>

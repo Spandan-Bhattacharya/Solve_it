@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Solve it!</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/styles.css" />
@@ -13,15 +13,21 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="searchstyle.css"/>
+
+    <link rel="stylesheet" href="/css/searchstyle.css"/>
     <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+
+
+    <link rel="icon" href="favicon.png" type="image/png" />
 
   </head>
   <body>
     <!-- navbar begins-->
 
     <nav class="topnav">
+      <img src="bodylogo.png" alt="img" >
       <a class="active" href="#home">Home</a>
+
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
       <div class="search-box">
@@ -34,13 +40,14 @@
         </div>
       </div>
       
+
     </nav>
     <!-- navbar ends -->
 
     <!-- title of the page begins -->
     <section class="hero-section" id="hero">
       <div class="herocontainer">
-        <h1>Solve it!</h1>
+        <img src="bodylogo.png" alt="img" height="450px" width="450px">
         <h3>Find Solutions to all those mind-numbing puzzles right here!</h3>
         <p class="paragraph">
           Solve it! is a website that contains solvers for common games like
@@ -49,18 +56,21 @@
       </div>
     </section>
     <!-- title of the page ends -->
-
+    <br><br>
     <!-- grid begins -->
 
-    <div class="container" id="solvers">
+    <div class="home-container" id="solvers">
       <div class="box">
         <span></span>
         <div class="content">
           <h2>Sudoku Solver: 4x4</h2>
           <p>Solves any valid 4x4 sudoku!!</p>
-          <div class="trynow-button">
-            <a href="/html/sudoku_solver_4x4.html">Try Now!</a>
-          </div>
+          <!-- <div class="trynow-button"> -->
+            <!-- <a href="/html/sudoku_solver_4x4.html">Try Now!</a> -->
+          <!-- </div> -->
+          <a href="/html/sudoku_solver_4x4.html">
+            <div class="trynow-button">Try Now!</div>
+          </a>
         </div>
       </div>
       <div class="box">
@@ -68,18 +78,21 @@
         <div class="content">
           <h2>Sudoku Solver: 6x6</h2>
           <p>Solves any valid 6x6 sudoku!!</p>
-          <div class="trynow-button">
-            <a href="/html/sudoku_solver_6x6.html">Try Now!</a>
-          </div>
+          <a href="/html/sudoku_solver_6x6.html">
+            <div class="trynow-button">Try Now!</div>
+          </a>
         </div>
       </div>
     </div>
     <!-- grid ends -->
-
+  
     <footer class="footer">
       <p id="footer">Made with Love</p>
     </footer>
+    <!-- add a go to top btn -->
+    <button id="goToTopBtn" onclick="goToTop()">⬆</button>
+    <script src="javascript/GoToTop.js"></script>
     <script src="/javascript/script.js" async defer></script>
-    <script src="autocomplete.js"></script>
+    <script src="/javascript/autocomplete.js"></script>
   </body>
 </html>

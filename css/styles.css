@@ -5,41 +5,77 @@
 
 /* For whole page formatting, these are applied to all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins;
-    font-family: Ubuntu;
-     background-color: #ffffff; 
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  font-family: Ubuntu;
+  background-color: #ffffff;
+}
 
-  /* navigation bar css begins */
-  .topnav {
-    background-color: #000000;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #1665cc;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #1665cc;
-    color: black;
-  }
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: linear-gradient(to top, rgba(0, 212, 255, 1) , rgba(9, 9, 121, 1));
+}
+
+/* navigation bar css begins */
+.topnav {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  height: 55px;
+  background: rgb(0, 32, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 32, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 41%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  /* border-radius: 10px; */
+  overflow: hidden;
+}
+
+.topnav img {
+  margin-right: auto;
+  margin-left: 16px; /* Adjust the left margin as needed */
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.topnav a {
+  /* float: left; */
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #205fb7;
+  border-radius: 10px;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /* background-color: #2b61a8; */
+  border-radius: 10px;
+  /* color: black; */
+}
 
 /* navigation bar css ends */
 /* the writing of the page(hero) css begins */
@@ -54,14 +90,13 @@ h3 {
   margin-top: 130px;
   font-size: 8rem;
   text-shadow: 2px 2px 2px #0c27a1;
-  
 }
 .hero-section .herocontainer h3 {
   font-weight: 300;
   font-size: 3rem;
 }
 .paragraph {
-  font-size:2rem;
+  font-size: 2rem;
   width: 70%;
   text-align: center;
   margin: auto;
@@ -73,7 +108,7 @@ h3 {
   height: 70vh;
   display: grid;
   color: white;
-  /* display: flex; */
+  display: block;
   justify-content: center;
   align-items: center;
   /* place-items: center; */
@@ -94,47 +129,213 @@ h3 {
 }
 /* the writing of the page(hero) css ends */
 /* css for the grid of solvers begins */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-    /* margin: none; */
-  }
-  
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  /* margin: none; */
+}
+
 .box {
-    position: relative;
-    width: 320px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 30px;
-    transition: 0.5s;
-    border-color: black;
-    border-style: dashed;
-  }
-  /* css for the grid of solvers ends */
-  /* css for the footer begins*/
-  .footer {
-    padding: 20px; /* Some padding */
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+  border-color: black;
+  border-style: dashed;
+}
+/* css for the grid of solvers ends */
+/* css for the footer begins*/
+.footer {
+  padding: 20px; /* Some padding */
   text-align: center; /* Center text*/
   background: #000000; /* Black background */
   /* color:white; */
-  }
-  #footer{
-    background: #000000; 
+}
+#footer {
+  background: #000000;
+  color: white;
+}
+/* css for the footer ends */
+/* css for the headers of each solver web page */
+.solver-name-header {
+}
+
+  .trynow-button {
+    background-color: #1665cc;
+    
+    display: inline;
+    width: 95px;
+    height: 9%;
     color: white;
+    /* border: 3px solid black;
+    border-style: dashed; */
+    padding : 5px 10px;
+    position: absolute;
+    top: 244px;
+    bottom: 240px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(48, 193, 250, 0.31);
+    text-decoration: none;
   }
-  /* css for the footer ends */
-  /* css for the headers of each solver web page */
-  .solver-name-header{
-
+  .trynow-button a {
+    color: #ffffff;
+    text-decoration: none;
   }
-
-  .trynow-button{
-    /* Implement this class */
+  .trynow-button:hover{
+    background-color: #92d3ff;
+    cursor: pointer;
+    color:rgb(0, 67, 112);
+  }
+  .trynow-button a:hover{
+    text-decoration: none;
+    color:rgb(0, 67, 112);
   }
  
- 
+
+  .about-section {
+    background-color: #131313; 
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    color: #2977d5; 
+  }
+  
+  .about-section p {
+    color: #a1a0a0; 
+  }
+  
+/* Add your existing styles here */
+
+/* Contact section styling begins */
+.contact-section {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #205fb7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section p {
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+ul li a {
+  color: #205fb7;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contact form styling */
+.contact form {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1d86aa;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+}
+
+.contact input[type="submit"] {
+  background-color: #205fb7;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.contact input[type="submit"]:hover {
+  background-color: #1a4a8f;
+}
+
+/* Footer styling */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #131313;
+  color: #ffffff;
+}
+
+#footer {
+  background: #131313;
+  color: #ffffff;
+}
+.container  {
+  max-width: 800px;
+  margin: 0 auto;
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+#contact {
+  background-color: #212121;
+  padding: 40px 0;
+  text-align: center;
+}
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+#goToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+

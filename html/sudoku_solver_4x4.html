@@ -4,21 +4,21 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sudoku Solver 4x4</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/sudoku_solver4.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sudoku Solver 4x4</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/sudoku_solver4.css" />
+  </head>
 
-    </head>
-    
-        <body onload="setGrid()">
+  <body onload="setGrid()">
+    <div class="solver-name-header">
+      <!-- solver-name-header class not yet implemented -->
 
-            <div class="solver-name-header">
-                <!-- solver-name-header class not yet implemented -->
+         
                
                 <span>Sudoku Solver</span>
               </div>
@@ -29,8 +29,9 @@
         
                 </div>
                  <!-- reset button not yet implemented -->
-                <button type="button" id="gridset" onclick="gridReset()">Reset</button>
-                <button type="button" onclick="calculateGrid()">Submit</button><br/><br/><br/>
+                <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button> -->
+                <button id="resetButton">Reset</button>
+                <button type="button" id="submitButton">Submit</button><br/><br/><br/>
                 <div class="outterbox">
                     <div class="box" id="resultboxgrid" style="display:none"><span id="resultgrid"></span></div>
                 </div>
@@ -41,3 +42,4 @@
         <script src="../javascript/sudoku_solver4.js" async defer></script>
     </body>
 </html>
+
