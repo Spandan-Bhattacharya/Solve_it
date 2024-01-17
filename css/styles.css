@@ -319,5 +319,21 @@ ul li a:hover {
   padding: 40px 0;
   text-align: center;
 }
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+#goToTopBtn:hover {
+  background-color: #0056b3;
+}
 
 
