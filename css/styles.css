@@ -337,5 +337,117 @@ ul li a:hover {
 #goToTopBtn:hover {
   background-color: #0056b3;
 }
+.wrap{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  position: absolute;
+}
+.hero-section{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-family: sans-serif;
+    word-spacing: 2px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.wrap div {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 100px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: sparkleAnimation 4s linear infinite;
+}
+/* div .dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+} */
+.wrap div .dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.wrap div:nth-child(2) {
+  top: 20%;
+  left: 20%;
+  animation: sparkleAnimation 8s linear infinite;
+}
+
+.wrap div:nth-child(3) {  
+  top: 60%;
+  left: 80%;
+  animation: sparkleAnimation 10s linear infinite;
+}
+
+.wrap div:nth-child(4) {  
+  top: 40%;
+  left: 40%;  
+  animation: sparkleAnimation 3s linear infinite;
+}
+
+.wrap div:nth-child(5) {
+  top: 66%;
+  left: 30%;
+  animation: sparkleAnimation 7s linear infinite;
+}
+
+.wrap div:nth-child(6) {
+  top: 90%;
+  left: 10%;
+  animation: sparkleAnimation 9s linear infinite;
+}
+.wrap div:nth-child(7) {
+  top: 30%;
+  left: 60%;
+  animation: sparkleAnimation 5s linear infinite;
+}
+
+.wrap div:nth-child(8) {
+  top: 70%;
+  left: 20%;
+  animation: sparkleAnimation 8s linear infinite;
+}
+
+.wrap div:nth-child(9) {
+  top: 75%;
+  left: 60%;
+  animation: sparkleAnimation 10s linear infinite;
+}
+
+.wrap div:nth-child(10) {
+  top: 50%;
+  left: 50%;
+  animation: sparkleAnimation 6s linear infinite;
+}
+
+.wrap div:nth-child(11) {
+  top: 45%;
+  left: 20%;
+  animation: sparkleAnimation 10s linear infinite;
+}
+@keyframes sparkleAnimation {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
+}
 
 
