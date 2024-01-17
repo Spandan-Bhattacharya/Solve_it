@@ -129,7 +129,7 @@ h3 {
 }
 /* the writing of the page(hero) css ends */
 /* css for the grid of solvers begins */
-.container {
+.home-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,21 +255,21 @@ ul li a:hover {
 }
 
 /* Contact form styling */
-form {
+.contact form {
   margin-top: 30px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-label {
+.contact label {
   display: block;
   margin-bottom: 8px;
   color: #1d86aa;
 }
 
-input,
-textarea {
+.contact input,
+.contact textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -278,7 +278,7 @@ textarea {
   border-radius: 8px;
 }
 
-input[type="submit"] {
+.contact input[type="submit"] {
   background-color: #205fb7;
   color: #ffffff;
   border: none;
@@ -287,7 +287,7 @@ input[type="submit"] {
   border-radius: 8px;
 }
 
-input[type="submit"]:hover {
+.contact input[type="submit"]:hover {
   background-color: #1a4a8f;
 }
 
@@ -306,7 +306,12 @@ input[type="submit"]:hover {
 .container  {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
 }
 
 #contact {
