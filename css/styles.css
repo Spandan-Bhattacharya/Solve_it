@@ -173,6 +173,7 @@ h3 {
     display: inline;
     width: 95px;
     height: 9%;
+    color: white;
     /* border: 3px solid black;
     border-style: dashed; */
     padding : 5px 10px;
@@ -193,6 +194,7 @@ h3 {
   .trynow-button:hover{
     background-color: #92d3ff;
     cursor: pointer;
+    color:rgb(0, 67, 112);
   }
   .trynow-button a:hover{
     text-decoration: none;
