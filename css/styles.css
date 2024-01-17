@@ -108,7 +108,7 @@ h3 {
   height: 70vh;
   display: grid;
   color: white;
-  /* display: flex; */
+  display: block;
   justify-content: center;
   align-items: center;
   /* place-items: center; */
