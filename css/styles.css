@@ -294,17 +294,25 @@ h3 {
 
   .about-section {
     background-color: #131313; 
-    padding: 60px 0;
+    padding:368.5px 0;
     text-align: center;
   }
   
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    font-size: 25px;
+    color: white;
+  }
   .about-section h2 {
-    color: #2977d5; 
+    color: #2977d5;
+    font-size: 40px;
   }
   
-  .about-section p {
-    color: #a1a0a0; 
-  }
+ 
   
 /* Add your existing styles here */
 
