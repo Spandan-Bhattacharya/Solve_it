@@ -13,33 +13,30 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/sudoku_solver4.css" />
   </head>
-
-  <body onload="setGrid()">
+  <body onload="setGrid()" class="grid-container">
     <div class="solver-name-header">
-      <!-- solver-name-header class not yet implemented -->
+      <span>Sudoku Solver</span>
+    </div>
+    <form class="form-horizontal" id="logarithm">
+      <br /><br />
+      <div class="gridContainer">
+      <div id="grid"></div>
+    </div>
+      <!-- reset button not yet implemented -->
+      <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button>
+      <button id="resetButton">Reset</button>
+      <button type="button" id="submitButton">Submit</button><br /><br /><br /> -->
+      <button type="button" id="gridset" onclick="gridReset()" class="btn-s">Reset</button>
+      <button type="button" onclick="calculateGrid()" class="btn-s">Submit</button
+      ><br /><br /><br />
+      <div class="outterbox">
+        <div class="box" id="resultboxgrid" style="display: none">
+          <span id="resultgrid"></span>
+        </div>
+      </div>
+      <button class="backHome"><a href="/index.html">Back To Home</a></button>
+    </form>
 
-         
-               
-                <span>Sudoku Solver</span>
-              </div>
-            <form class="form-horizontal" id="logarithm">
-                
-                <br/><br/>
-                <div id="grid">
-        
-                </div>
-                 <!-- reset button not yet implemented -->
-                <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button> -->
-                <button id="resetButton">Reset</button>
-                <button type="button" id="submitButton">Submit</button><br/><br/><br/>
-                <div class="outterbox">
-                    <div class="box" id="resultboxgrid" style="display:none"><span id="resultgrid"></span></div>
-                </div>
-              
-            </form>
-      
-        
-        <script src="../javascript/sudoku_solver4.js" async defer></script>
-    </body>
+    <script src="../javascript/sudoku_solver4.js" async defer></script>
+  </body>
 </html>
-
