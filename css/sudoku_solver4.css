@@ -20,8 +20,8 @@
     /* margin: 5px; */
     text-align: center;
     color: #052145;
-    background-color: #b9d4f3aa;
-    border: 1px solid #f1d51c;
+    background-color: rgb(244, 213, 99);
+    border: 1px solid rgba(9, 9, 121, 1);
 }
 div{
     background-color: rgba(255, 255, 0, 0);
@@ -50,21 +50,22 @@ div{
 } */
 
 #grid00, #grid01, #grid02, #grid03, #grid20, #grid21, #grid22, #grid23{
-    border-top: 4px solid #f1d51c;
+    border-top: 4px solid rgba(9, 9, 121, 1);
 }
 
 #grid00, #grid10, #grid20, #grid30{
-    border-left: 4px solid #f1d51c;
+    border-left: 4px solid rgba(9, 9, 121, 1);
 }
 #grid03, #grid13, #grid23, #grid33, #grid31, #grid21, #grid11, #grid01{
-    border-right: 4px solid #f1d51c;
+    border-right: 4px solid rgba(9, 9, 121, 1);
 }
 #grid30, #grid31, #grid32, #grid33{
-    border-bottom: 4px solid #f1d51c;
+    border-bottom: 4px solid rgba(9, 9, 121, 1);
 }
 
 body{
     background-image: url(/assets/bg.webp);
+    /* background-color: rgba(9, 9, 121, 1); */
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
@@ -88,7 +89,7 @@ body{
 .solver-name-header span{
   font-size: 40px;
   text-align: center;
-  color: rgb(29, 29, 132);
+  color: rgb(149, 202, 235);
   font-weight: 900;
   background-color: rgba(255, 192, 203, 0);
 }
