@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* For whole page formatting, these are applied to all elements */
 * {
@@ -234,8 +235,79 @@ h3 {
   align-items: center;
   margin: 40px 30px;
   transition: 0.5s;
-  border-color: black;
-  border-style: dashed;
+  
+}
+.home-container .box {
+  background: linear-gradient(to top ,#c98900,#e8b70a, #c98900), url(/Solve_it/html/sudokuback.png);
+  background-size: 100% 100%; /* Stretches the image to fit the entire container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-blend-mode: multiply; /* Blends the background image and color */
+  transform: scale(1);
+  border-radius: 30px; /* Makes the corners rounded */
+  border-color: yellow;
+  background-size: 108% 120%;
+  background-position: center;
+  height : 430px;
+  width:300px;
+}
+.home-container {
+  position: relative; /* Makes .home-container the reference point for absolutely positioned children */
+}
+
+.home-container .content h1{
+  color: black;
+  font-weight: bold ;
+  font-size: 50px;
+  font-family: 'League Spartan', sans-serif;
+  position: absolute; /* Allows the h2 to be positioned relative to .home-container */
+  top: 0; /* Positions the h2 at the top of .home-container */
+  left:0; /* Positions the h2 at the left of .home-container */
+  padding-top: 20px;
+  padding-left:30px ;
+  
+}
+.home-container .content h3{
+  color: black;
+  font-weight: 300;
+  font-size: 50px;
+  font-family: 'League Spartan', sans-serif;
+  position: absolute; /* Allows the h2 to be positioned relative to .home-container */
+  top: 0; /* Positions the h2 at the top of .home-container */
+  left: 0;
+  padding-top: 130px;
+  padding-left:30px ;
+  
+}
+.home-container .content p{
+  color: black;
+  font-weight: 200;
+  font-size: 25px;
+  font-family: 'League Spartan', sans-serif;
+  position: absolute; /* Allows the h2 to be positioned relative to .home-container */
+  top: 0; /* Positions the h2 at the top of .home-container */
+  left: 0;
+  padding-top: 230px;
+  padding-left:30px ;
+  
+}
+
+.home-container .box .content .trynow-button{
+  background-color: #000458;
+  position:absolute;
+  padding: 10px 50px;
+  border-radius: 50px;
+  bottom:20px;
+  left: 50px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+  box-shadow: 5px 5px 10px #050a4b; /* Adds a box shadow */
+}
+.home-container .box .content .trynow-button:hover{
+  background: rgb(1, 47, 173); /* Change color on hover */
+  box-shadow: 0 5px 10px rgba(223, 123, 10, 0.4); /* Increase shadow on hover */
+  transition: 0.5s;
 }
 /* css for the grid of solvers ends */
 /* css for the footer begins*/
@@ -254,44 +326,6 @@ h3 {
 }
 /* css for the footer ends */
 /* css for the headers of each solver web page */
-.solver-name-header {
-}
-
-  .trynow-button {
-    background-color: #1665cc;
-    
-    display: inline;
-    width: 95px;
-    height: 9%;
-    color: white;
-    /* border: 3px solid black;
-    border-style: dashed; */
-    padding : 5px 10px;
-    position: absolute;
-    top: 244px;
-    bottom: 240px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(48, 193, 250, 0.31);
-    text-decoration: none;
-  }
-  .trynow-button a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  .trynow-button:hover{
-    background-color: #92d3ff;
-    cursor: pointer;
-    color:rgb(0, 67, 112);
-  }
-  .trynow-button a:hover{
-    text-decoration: none;
-    color:rgb(0, 67, 112);
-  }
- 
-
   .about-section {
     background-color: #131313; 
     padding:368.5px 0;
