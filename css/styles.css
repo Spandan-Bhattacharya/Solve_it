@@ -238,17 +238,20 @@ h3 {
   
 }
 .home-container .box {
-  background: linear-gradient(to top ,#c98900,#e8b70a, #c98900), url(/Solve_it/html/sudokuback.png);
+  background: linear-gradient(-45deg,#c98900,#fad44a, #c98900), url("/Solve_it/assets/sudokuback.png");
   background-size: 100% 100%; /* Stretches the image to fit the entire container */
   background-repeat: no-repeat; /* Prevents the image from repeating */
+  
   background-blend-mode: multiply; /* Blends the background image and color */
   transform: scale(1);
   border-radius: 30px; /* Makes the corners rounded */
   border-color: yellow;
-  background-size: 108% 120%;
+  background-size: 110% 120%;
   background-position: center;
   height : 430px;
   width:300px;
+  
+  
 }
 .home-container {
   position: relative; /* Makes .home-container the reference point for absolutely positioned children */
@@ -302,7 +305,7 @@ h3 {
   font-size: 25px;
   font-family: 'League Spartan', sans-serif;
   color: white;
-  box-shadow: 5px 5px 10px #050a4b; /* Adds a box shadow */
+  box-shadow: 15px 5px 10px #ea711c; /* Adds a box shadow */
 }
 .home-container .box .content .trynow-button:hover{
   background: rgb(1, 47, 173); /* Change color on hover */
