@@ -1,5 +1,11 @@
 # Solve it! - Puzzle Solver Website
 <img width="1440" alt="Screenshot 2024-01-16 at 1 27 17 AM" src="https://github.com/rahat2134/Solve_it/assets/136263179/074bc8fc-b784-44b7-8074-a9eda0d9ab6e">
+<img width="1728" alt="Contact" src="https://github.com/Redvey/Solve_it/assets/128305006/6ee913c3-c6c2-4197-9235-ae8f7f56cbf6">
+<img width="1728" alt="About_page" src="https://github.com/Redvey/Solve_it/assets/128305006/102f6e2a-09b2-4476-83b7-1cb5dc5cde52">
+
+##Figma Link
+https://www.figma.com/file/HIY2NL5aXbIEJNjSjx93OT/solve_it?type=design&node-id=0%3A1&mode=design&t=pZ44qzhbqHGdFam5-1
+
 
 Welcome to Solve it! - your go-to destination for solving mind-bending puzzles! This repository contains the HTML code for the Solve it! website. The website provides solvers for common games like Sudoku, Nonogram, Crosswords, and more.
 
