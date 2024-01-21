@@ -37,7 +37,7 @@ html{
   border: 2px solid rgba(255, 255, 255, 0.7);
   border-radius: 100px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 10%;
   animation: sparkleAnimation 4s linear infinite;
 }
@@ -52,7 +52,7 @@ html{
   right: 20%;
 }
 .wrap div:nth-child(2) {
-  top: 20%;
+  top: 25%;
   left: 20%;
   animation: sparkleAnimation 8s linear infinite;
 }
