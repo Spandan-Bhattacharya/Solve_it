@@ -9,7 +9,20 @@
     vertical-align: middle;
 /*     position: relative; */
     border-bottom:1px solid white;
+    color: rgb(250, 245, 249); 
 
+}
+input[placeholder="Search Solver"]::placeholder {
+    color: rgb(235, 235, 246);
+    font-weight: bold;
+    padding-left: 10px;
+    
+}
+input[placeholder="Search Solver"]:focus {
+    outline: none;
+    box-shadow: 0 0 15px #051628;
+    border-radius: 10px;
+    border: 2px solid rgb(4, 4, 9);
 }
 .search-btn{
     background:lightblue;
