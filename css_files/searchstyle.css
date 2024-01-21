@@ -22,7 +22,7 @@ input[placeholder="Search Solver"]:focus {
     outline: none;
     box-shadow: 0 0 15px #051628;
     border-radius: 10px;
-    border: 2px solid rgb(4, 4, 9);
+    /*border: 2px solid rgb(4, 4, 9);*/
 }
 .search-btn{
     background:lightblue;
