@@ -16,6 +16,7 @@ input[placeholder="Search Solver"]::placeholder {
     color: rgb(235, 235, 246);
     font-weight: bold;
     padding-left: 10px;
+    opacity: 0.5; /* Firefox */
     
 }
 /*input[placeholder="Search Solver"]:focus {
