@@ -13,7 +13,7 @@
 
 }
 input[placeholder="Search Solver"]::placeholder {
-    color: rgb(235, 235, 246);
+    color: rgb(1, 1, 25);
     font-weight: bold;
     padding-left: 10px;
     opacity: 0.5; /* Firefox */
@@ -22,7 +22,7 @@ input[placeholder="Search Solver"]::placeholder {
 input[placeholder="Search Solver"]:focus {
     outline: none;
     box-shadow: 0 0 5px #033b77;
-    border-radius: 10px;
+
     opacity: 0.5;
 }
 .search-btn{
