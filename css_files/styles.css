@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 /* For whole page formatting, these are applied to all elements */
 * {
   margin: 0;
@@ -247,13 +248,13 @@ h3 {
 }
 
 .home-container .box {
-  background: linear-gradient(-45deg, #c98900, #fad44a, #c98900), url("/Solve_it/assets/sudokuback.png");
-  background-size: 100% 100%;
+  background:linear-gradient(-45deg, #c98900, #fad44a, #c98900) ;
+  /* background-size: 100% 100%; */
   /* Stretches the image to fit the entire container */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /* Prevents the image from repeating */
 
-  background-blend-mode: multiply;
+  /* background-blend-mode:multiply; */
   /* Blends the background image and color */
   transform: scale(1);
   border-radius: 30px;
@@ -274,7 +275,7 @@ h3 {
 
 .home-container .content h1 {
   color: black;
-  font-weight: bold;
+  font-weight:bold;
   font-size: 50px;
   font-family: 'League Spartan', sans-serif;
   position: absolute;
@@ -305,7 +306,7 @@ h3 {
 
 .home-container .content p {
   color: black;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 25px;
   font-family: 'League Spartan', sans-serif;
   position: absolute;
