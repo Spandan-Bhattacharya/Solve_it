@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 /* For whole page formatting, these are applied to all elements */
 * {
   margin: 0;
@@ -13,22 +14,22 @@
   font-family: Ubuntu;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   border-radius: 5px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: linear-gradient(to top, rgba(0, 212, 255, 1) , rgba(9, 9, 121, 1));
+  background: linear-gradient(to top, rgba(0, 212, 255, 1), rgba(9, 9, 121, 1));
 }
 
 .wrap div {
@@ -40,6 +41,7 @@ html{
   top: 10%;
   left: 10%;
   animation: sparkleAnimation 4s linear infinite;
+  z-index: -1;
 }
 
 .wrap div .dot {
@@ -51,21 +53,22 @@ html{
   top: 20%;
   right: 20%;
 }
+
 .wrap div:nth-child(2) {
   top: 20%;
   left: 20%;
   animation: sparkleAnimation 8s linear infinite;
 }
 
-.wrap div:nth-child(3) {  
+.wrap div:nth-child(3) {
   top: 60%;
   left: 80%;
   animation: sparkleAnimation 10s linear infinite;
 }
 
-.wrap div:nth-child(4) {  
+.wrap div:nth-child(4) {
   top: 40%;
-  left: 40%;  
+  left: 40%;
   animation: sparkleAnimation 3s linear infinite;
 }
 
@@ -80,6 +83,7 @@ html{
   left: 10%;
   animation: sparkleAnimation 9s linear infinite;
 }
+
 .wrap div:nth-child(7) {
   top: 30%;
   left: 60%;
@@ -109,10 +113,12 @@ html{
   left: 20%;
   animation: sparkleAnimation 10s linear infinite;
 }
+
 @keyframes sparkleAnimation {
   0% {
     transform: scale(0) translateY(0) rotate(70deg);
   }
+
   100% {
     transform: scale(1.3) translateY(-100px) rotate(360deg);
   }
@@ -126,19 +132,18 @@ html{
   height: 55px;
   z-index: 2;
   background: rgb(0, 32, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 32, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 41%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 32, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 41%,
+      rgba(0, 212, 255, 1) 100%);
   /* border-radius: 10px; */
   overflow: hidden;
 }
 
 .topnav img {
   margin-right: auto;
-  margin-left: 16px; /* Adjust the left margin as needed */
+  margin-left: 16px;
+  /* Adjust the left margin as needed */
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -174,15 +179,18 @@ h3 {
   gap: 30px;
   z-index: 200;
 }
+
 .hero-section .herocontainer h1 {
   margin-top: 130px;
   font-size: 8rem;
   text-shadow: 2px 2px 2px #0c27a1;
 }
+
 .hero-section .herocontainer h3 {
   font-weight: 300;
   font-size: 3rem;
 }
+
 .paragraph {
   font-size: 2rem;
   width: 70%;
@@ -215,6 +223,7 @@ h3 {
 .hero-section h3 {
   font-size: 32px;
 }
+
 /* the writing of the page(hero) css ends */
 /* css for the grid of solvers begins */
 .home-container {
@@ -235,122 +244,149 @@ h3 {
   align-items: center;
   margin: 40px 30px;
   transition: 0.5s;
-  
+
 }
+
 .home-container .box {
-  background: linear-gradient(-45deg,#c98900,#fad44a, #c98900), url("/Solve_it/assets/sudokuback.png");
-  background-size: 100% 100%; /* Stretches the image to fit the entire container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  
-  background-blend-mode: multiply; /* Blends the background image and color */
+  background:linear-gradient(-45deg, #c98900, #fad44a, #c98900) ;
+  /* background-size: 100% 100%; */
+  /* Stretches the image to fit the entire container */
+  /* background-repeat: no-repeat; */
+  /* Prevents the image from repeating */
+
+  /* background-blend-mode:multiply; */
+  /* Blends the background image and color */
   transform: scale(1);
-  border-radius: 30px; /* Makes the corners rounded */
+  border-radius: 30px;
+  /* Makes the corners rounded */
   border-color: yellow;
   background-size: 110% 120%;
   background-position: center;
-  height : 430px;
-  width:300px;
-  
-  
-}
-.home-container {
-  position: relative; /* Makes .home-container the reference point for absolutely positioned children */
+  height: 430px;
+  width: 300px;
+
+
 }
 
-.home-container .content h1{
+.home-container {
+  position: relative;
+  /* Makes .home-container the reference point for absolutely positioned children */
+}
+
+.home-container .content h1 {
   color: black;
-  font-weight: bold ;
+  font-weight:bold;
   font-size: 50px;
   font-family: 'League Spartan', sans-serif;
-  position: absolute; /* Allows the h2 to be positioned relative to .home-container */
-  top: 0; /* Positions the h2 at the top of .home-container */
-  left:0; /* Positions the h2 at the left of .home-container */
+  position: absolute;
+  /* Allows the h2 to be positioned relative to .home-container */
+  top: 0;
+  /* Positions the h2 at the top of .home-container */
+  left: 0;
+  /* Positions the h2 at the left of .home-container */
   padding-top: 20px;
-  padding-left:30px ;
-  
+  padding-left: 30px;
+
 }
-.home-container .content h3{
+
+.home-container .content h3 {
   color: black;
   font-weight: 300;
   font-size: 50px;
   font-family: 'League Spartan', sans-serif;
-  position: absolute; /* Allows the h2 to be positioned relative to .home-container */
-  top: 0; /* Positions the h2 at the top of .home-container */
+  position: absolute;
+  /* Allows the h2 to be positioned relative to .home-container */
+  top: 0;
+  /* Positions the h2 at the top of .home-container */
   left: 0;
   padding-top: 130px;
-  padding-left:30px ;
-  
-}
-.home-container .content p{
-  color: black;
-  font-weight: 200;
-  font-size: 25px;
-  font-family: 'League Spartan', sans-serif;
-  position: absolute; /* Allows the h2 to be positioned relative to .home-container */
-  top: 0; /* Positions the h2 at the top of .home-container */
-  left: 0;
-  padding-top: 230px;
-  padding-left:30px ;
-  
+  padding-left: 30px;
+
 }
 
-.home-container .box .content .trynow-button{
+.home-container .content p {
+  color: black;
+  font-weight: 300;
+  font-size: 25px;
+  font-family: 'League Spartan', sans-serif;
+  position: absolute;
+  /* Allows the h2 to be positioned relative to .home-container */
+  top: 0;
+  /* Positions the h2 at the top of .home-container */
+  left: 0;
+  padding-top: 230px;
+  padding-left: 30px;
+
+}
+
+.home-container .box .content .trynow-button {
   background-color: #000458;
-  position:absolute;
+  position: absolute;
   padding: 10px 50px;
   border-radius: 50px;
-  bottom:20px;
+  bottom: 20px;
   left: 50px;
   font-weight: bold;
   font-size: 25px;
   font-family: 'League Spartan', sans-serif;
   color: white;
-  box-shadow: 15px 5px 10px #ea711c; /* Adds a box shadow */
+  box-shadow: 15px 5px 10px #ea711c;
+  /* Adds a box shadow */
 }
-.home-container .box .content .trynow-button:hover{
-  background: rgb(1, 47, 173); /* Change color on hover */
-  box-shadow: 0 5px 10px rgba(223, 123, 10, 0.4); /* Increase shadow on hover */
+
+.home-container .box .content .trynow-button:hover {
+  background: rgb(1, 47, 173);
+  /* Change color on hover */
+  box-shadow: 0 5px 10px rgba(223, 123, 10, 0.4);
+  /* Increase shadow on hover */
   transition: 0.5s;
 }
+
 /* css for the grid of solvers ends */
 /* css for the footer begins*/
 .footer {
-  padding: 20px; /* Some padding */
-  text-align: center; /* Center text*/
-  background: #000000; /* Black background */
+  padding: 20px;
+  /* Some padding */
+  text-align: center;
+  /* Center text*/
+  background: #000000;
+  /* Black background */
   position: relative;
   /* z-index: 10; */
   /* color:white; */
 }
+
 #footer {
   background: #000000;
   color: white;
-  
+
 }
+
 /* css for the footer ends */
 /* css for the headers of each solver web page */
-  .about-section {
-    background-color: #131313; 
-    padding:368.5px 0;
-    text-align: center;
-  }
-  
-  .about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
-    font-size: 25px;
-    color: white;
-  }
-  .about-section h2 {
-    color: #2977d5;
-    font-size: 40px;
-  }
-  
- 
-  
+.about-section {
+  background-color: #131313;
+  padding: 368.5px 0;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  font-size: 25px;
+  color: white;
+}
+
+.about-section h2 {
+  color: #2977d5;
+  font-size: 40px;
+}
+
+
+
 /* Add your existing styles here */
 
 /* Contact section styling begins */
@@ -439,8 +475,8 @@ ul li a:hover {
   justify-content: space-between;
 }
 
-.fbox{
-  flex:1;
+.fbox {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -448,12 +484,13 @@ ul li a:hover {
 
 }
 
-.fbox a{
+.fbox a {
   font-size: 2rem;
   color: #000000;
 
 }
-.container  {
+
+.container {
   max-width: 800px;
   margin: 0 auto;
   /* padding: 20px; */
@@ -469,20 +506,22 @@ ul li a:hover {
   padding: 40px 0;
   text-align: center;
 }
+
 #goToTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
-  padding: 10px;
   border: none;
-  border-radius: 60px;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  padding: 10px;
   cursor: pointer;
 }
 
 #goToTopBtn:hover {
   background-color: #0056b3;
 }
-
