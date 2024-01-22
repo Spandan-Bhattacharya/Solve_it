@@ -1,28 +1,60 @@
-
-.search-box{
+.search-box {
     height: 55px;
-    width:30%;
+    width: 30%;
     background-color: transparent;
     align-items: right;
     font-size: 15px;
     margin: auto;
     vertical-align: middle;
-/*     position: relative; */
-    border-bottom:1px solid white;
-
+    border: 3px solid white;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+     /* Add this line */
+  }
+  .search-btn {
+    position: absolute;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+  }
+input[placeholder="Search Solver"]::placeholder {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0.75; /* Firefox */
+   
 }
-.search-btn{
-    background:lightblue;
+input[placeholder="Search Solver"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #010b16;
+    background-color: rgb(5, 2, 20);
+    opacity: 0.6;
+}
+
+.input-box {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: white;
+}
+.search-btn {
+    background: lightblue;
     position: absolute;
     right: 2%;
     padding-bottom: 10px;
     padding-left: 10px;
-} 
- .row{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-} 
+  }
+ 
+  .search-box.clicked {
+    background: rgb(26, 25, 25);
+  }
 .search-box input{
     flex:1;
     height:50px;
@@ -32,13 +64,13 @@
     font-size:20px;
     color: white;
     padding-bottom: 15px;
-    
+   
 }
 .search-box button{
     background:transparent;
     border:0;
     outline:0;
-    
+   
 
 }
 .search-box button.fa-solid{
@@ -48,7 +80,7 @@
     cursor:pointer;
 }
 .search-box::placeholder{
-    color:#030a134e;
+    color:rgb(255, 255, 255);
 
 }
 .search-box .result-box ul{
@@ -60,7 +92,7 @@
     border-radius:3px;
     padding: 15px 10px;
     cursor:pointer;
-    
+   
 }
 .search-box .result-box ul li:hover{
     background:#d5f4f8;
@@ -70,12 +102,23 @@
     width:400px;
     overflow-y:scroll;
     position: absolute;
-    
+   
 }
 .search-box ul li{
     background-color: rgb(195, 225, 245);
 }
  
-
-
-
+.row{
+    display: flex;
+    align-items: center;
+    margin-right: 1px;
+    margin-left: 2px;
+    margin-top:  3px;
+    margin-bottom: 38px;
+    align-items: center;
+ 
+}
+i{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
