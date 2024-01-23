@@ -128,8 +128,9 @@ html {
 .topnav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 100px;
-  height: 55px;
+  height: 70px;
   z-index: 2;
   background: rgb(0, 32, 36);
   background: linear-gradient(90deg,
@@ -145,7 +146,10 @@ html {
   margin-left: 16px;
   /* Adjust the left margin as needed */
   background-color: rgba(255, 255, 255, 0);
+  height:10vh;
+  width:7vw;
 }
+
 
 .topnav a {
   /* float: left; */
