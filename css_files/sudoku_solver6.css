@@ -71,3 +71,9 @@ body {
     background-color: rgba(255, 192, 203, 0);
 }
 
+#errorMessage{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #92d3ff67;
+    display: inline;
+}

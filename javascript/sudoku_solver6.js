@@ -119,7 +119,7 @@ function calculateGrid() {
   } else {
     if (!document.getElementById("errorMessage")) {
       let errorMessage = document.createElement("div");
-      errorMessage.innerHTML = "Invalid input or unsolvable Sudoku. Please enter valid numbers.";
+      errorMessage.innerHTML = "Invalid input. Please enter valid numbers.";
       errorMessage.style.color = "red";
       errorMessage.id = "errorMessage";
       document.body.appendChild(errorMessage);
