@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -50,7 +51,7 @@ body{
     /* background-color: rgba(9, 9, 121, 1); */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    
 }
 .grid-container{
     text-align: center;
@@ -109,6 +110,7 @@ body{
     border: none;
     border-radius: 10px;
     color: white;
+    font-family: poppins;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.01rem;
@@ -118,6 +120,7 @@ body{
 
 .backHome a{
     text-decoration: none;
+    font-family: poppins;
 }
 .btn-s:hover{
     background-color: #92d3ff;
