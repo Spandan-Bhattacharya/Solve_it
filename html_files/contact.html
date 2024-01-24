@@ -5,9 +5,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Contact Us - Solve it!</title>
-    <meta name="description" content="Get in touch with Solve it! We'd love to hear from you!" />
+    <meta
+      name="description"
+      content="Get in touch with Solve it! We'd love to hear from you!"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../css_files/styles.css" />
+    <link rel="stylesheet" href="/css_files/styles.css" />
 
     <!-- Add any additional stylesheets as needed -->
     <link
@@ -26,6 +29,7 @@
   <body>
     <!-- navbar begins-->
     <nav class="topnav">
+
       <img src="../assets/bodylogo.png" alt="img" class="logo"/>
       <div class="openMenu">
         <i class="fa-solid fa-bars" id="bar"></i>
@@ -66,66 +70,140 @@
 
       
   </nav>
+
     <!-- navbar ends -->
 
     <!-- contact section begins -->
+    
     <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-      <div class="container">
-        <h4>Feel free to reach out through any of the following channels:</h3>
-        <ul>
-            <li>Email: <a href="mailto:spandanbhattacharya.sb@gmail.com">spandanbhattacharya.sb@gmail.com</a></li>
+    
+      <div class="contact-container">
+       
+        <div class="contact-intro">
+         
+          <div class="contact-circle">
+           
+            <img />
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Hi! I am Spandan Bhattacharya</p>
+          <br />
+          <p>A full-time Competitive Programmer, dabbling in Development!</p>
+          <br />
+          <p>Contact Me at:</p>
+          <a href="#"
+            ><i
+              class="fa-brands fa-mail"
+              style="font-size: 1.25em; margin: 2px"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fab fa-x-twitter"
+              style="font-size: 1.25em; margin: 2px"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-github"
+              style="font-size: 1.25em; margin: 2px"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-linkedin"
+              style="font-size: 1.25em; margin: 2px"
+            ></i
+          ></a>
+          <!-- <ul>
+            <li>
+              Email:
+              <a href="mailto:spandanbhattacharya.sb@gmail.com"
+                >spandanbhattacharya.sb@gmail.com</a
+              >
+            </li>
             <li>Phone: <a href="tel:+919330184706">9330184706</a></li>
-            <li>Discord: <a href="https://discord.gg/Xvtv3chFDU" target="_blank">https://discord.gg/Xvtv3chFDU</a></li>
-            <li>GitHub: <a href="https://github.com/Spandan-Bhattacharya/Solve_it/" target="_blank">https://github.com/Spandan-Bhattacharya/Solve_it/</a></li>
-        </ul>
-        <h4>Alternatively, you can use the contact form below:</h4>
+            <li>
+              Discord:
+              <a href="https://discord.gg/Xvtv3chFDU" target="_blank"
+                >https://discord.gg/Xvtv3chFDU</a
+              >
+            </li>
+            <li>
+              GitHub:
+              <a
+                href="https://github.com/Spandan-Bhattacharya/Solve_it/"
+                target="_blank"
+                >https://github.com/Spandan-Bhattacharya/Solve_it/</a
+              >
+            </li>
+          </ul> -->
+        </div>
 
-        <form id="contactForm" class="contact" action="/submit_contact" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-          
-            <input type="submit" value="Submit">
-          </form>          
+        <div class="contact-form">
+          <form
+            id="contactForm"
+            class="contact"
+            action="/submit_contact"
+            method="post"
+          >
+            <label for="name"></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your name"
+            />
+
+            <label for="email"></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your Mail"
+            />
+
+            <label for="message"></label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Type your message"
+            ></textarea>
+            <button id="btn">
+              <input type="submit" value="Submit" />
+            </button>
+          </form>
+        </div>
       </div>
     </section>
     <footer class="footer">
       <div class="fbox">
-        <h2 style="color: #110D2C;">Solve it !</h2>
-        <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;">Quick links</h3>
-        <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;" >Social links</h3>
-        <a href="#"><i class="fab fa-x-twitter" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="#"><i class="fa-brands fa-github" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin" style="font-size: 1.25em;margin: 2px;"></i></a>
+        <p>We would love to hear from you! Reach out to us anytime!!</p>
       </div>
     </footer>
 
     <!-- go to top section -->
-    <button id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="goToTopBtn" onclick="goToTop()">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script src="../javascript/GoToTop.js"></script>
     <!-- go to top section -->
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
           event.preventDefault();
           const formData = new FormData(this);
-          window.location.href = 'submit_contact.html';
+          window.location.href = "submit_contact.html";
         });
-      </script>
+    </script>
     <script src="../javascript/script.js" async defer></script>
   </body>
 </html>
