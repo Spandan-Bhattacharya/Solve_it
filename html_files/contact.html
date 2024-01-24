@@ -15,7 +15,7 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     />
 
-    <link rel="stylesheet" href="css_files/searchstyle.css" />
+    <link rel="stylesheet" href="../css_files/searchstyle.css"/>
     <script
       src="https://kit.fontawesome.com/b9199edbdd.js"
       crossorigin="anonymous"
@@ -25,13 +25,47 @@
   </head>
   <body>
     <!-- navbar begins-->
-
     <nav class="topnav">
       <img src="../assets/bodylogo.png" alt="img" class="logo"/>
-      <a href="../index.html">Home</a>
-      <a class="active" href="#contact">Contact</a>
-      <a href="about.html">About</a>
-    </nav>
+      <div class="openMenu">
+        <i class="fa-solid fa-bars" id="bar"></i>
+      </div>
+      <div class="list">
+          <div class="search-space"></div>
+          <a href="../index.html">Home</a>
+          <a class="active" href="#contact">Contact</a>
+          <a href="about.html">About</a>
+          <span class="icons">
+            <a href="#">
+            <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-square-github"></i>
+              </a>
+            <a href="#">
+                <i class="fa-brands fa-square-x-twitter"></i>
+            </a>
+          </span>
+      </div>
+      <div class="search-box">
+        <div class="row">
+          <input
+            type="text"
+            id="input-box"
+            placeholder="Search Solver"
+            autocomplete="off"
+          />
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="result-box"></div>
+      </div>
+      
+      <div class="result-box"></div>
+
+      
+  </nav>
     <!-- navbar ends -->
 
     <!-- contact section begins -->

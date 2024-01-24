@@ -4,7 +4,7 @@
     background-color: transparent;
     align-items: right;
     font-size: 15px;
-    margin: auto;
+    margin: 1px;
     vertical-align: middle;
     border: 3px solid white;
     border-top: none;
@@ -121,4 +121,26 @@ input[placeholder="Search Solver"]:focus {
 i{
     color: rgb(0, 0, 0);
     font-size: 30px;
+}
+@media (max-width:719px) {
+    .search-box{
+        z-index: 1001;
+        width: 50vw;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        padding: 1vw 1vw;
+        height: 6.5vh;
+        /* border: 1px solid red; */
+    }
+    .search-btn{
+        border: 1px solid green;
+        padding: 1vw 1vw;
+        /* width: 1vw;
+        height: 1vh; */
+    }
+    .search-btn i{
+        color: rgba(223, 222, 222, 0.842);
+    }
+    
 }

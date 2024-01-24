@@ -127,7 +127,7 @@ html {
 /* navigation bar css begins */
 .topnav {
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
   gap: 100px;
   height: 55px;
@@ -138,7 +138,8 @@ html {
       rgba(9, 9, 121, 1) 41%,
       rgba(0, 212, 255, 1) 100%);
   /* border-radius: 10px; */
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* border: 1px solid red; */
 }
 
 .topnav img {
@@ -148,9 +149,9 @@ html {
   background-color: rgba(255, 255, 255, 0);
   height:55px;
   width:55px;
+  cursor: pointer;
+  /* border: 1px solid red; */
 }
-
-
 .topnav a {
   /* float: left; */
   color: #ffffff;
@@ -159,7 +160,105 @@ html {
   text-decoration: none;
   font-size: 17px;
 }
+.topnav .list{
+  /* border: 1px solid red; */
+  display: flex;
+  position: absolute;
+  left: 15%;
+  justify-content: space-around;
+}
+.openMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: none;
+}
+.openMenu i{
+  font-size: 5vw;
+  position: absolute;
+  right: 4dvw;
+  top: 15px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+  width: 40vw;
+}
+.list .icons{
+  display: none;
+}
 
+@media (max-width:719px) {
+  body.scroll{
+    overflow: hidden;
+  }
+  .topnav img{
+    position: absolute;
+    /* width:; */
+    object-fit: cover;
+    object-position: center;
+    top: 0.5dvh;
+    left: 0.5dvw;
+    z-index: 1001;
+  }
+  .openMenu {
+    display: flex;
+  }
+  .list {
+    position: fixed;
+    width: 0%;
+    height: 100dvh;
+    left: 0;
+    top: 0;
+    background: rgb(3,1,36);
+background: linear-gradient(90deg, rgba(3,1,36,1) 0%, rgba(8,8,112,1) 37%, rgba(8,181,255,1) 100%, rgba(0,137,222,1) 100%);
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: 0.2s;
+    overflow: hidden;
+    z-index: 999;
+  }
+  .search-space{
+    height: 12vh;
+  }
+  .topnav .list{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+  }
+  .list a {
+    display: block;
+    width: 100%;
+  }
+  .list.move {
+    width: 100%;
+    transition: 0.2s;
+  }
+  .list .icons{
+    display: flex;
+    /* border: 1px solid red; */
+    /* justify-content: space-between;
+    width:90%; */
+    margin:0 15vw;
+    /* margin-top: 2vw; */
+  }
+  .list .icons a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: #000000;
+    filter: drop-shadow(1px 3px 5px white);
+  }
+  .list .icons a i{
+    font-size: 12vw;
+  }
+
+}
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #205fb7;
