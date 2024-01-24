@@ -155,9 +155,10 @@ html {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #205fb7;
+  background-color: #f99548;
   border-radius: 10px;
-  color: black;
+  color: #0a1629;
+  /* margin: 5px 0% 5px 0%; */
 }
 
 /* Add a color to the active/current link */
@@ -379,7 +380,7 @@ h3 {
 /* Add your existing styles here */
 
 /* Contact section styling begins */
-.form {
+.contact-form {
   margin-left: 50px;
 }
 .contact-container {
@@ -427,7 +428,7 @@ ul li a:hover {
 
 /* Contact form styling */
 
-.intro {
+.contact-intro {
   background: linear-gradient(
     91.08deg,
     #e7a300 1.38%,
@@ -440,7 +441,7 @@ ul li a:hover {
   position: relative;
 }
 
-.circle {
+.contact-circle {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -561,6 +562,16 @@ ul li a:hover {
   flex-wrap: wrap;
   padding: 40px 0;
 }
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
 
 #contact {
   background-color: #212121;
@@ -591,8 +602,11 @@ ul li a:hover {
   position: absolute;
   width: 745px;
   height: 745px;
-  left: 476px;
-  top: 186px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* left: 476px; */
+  /* top: 186px; */
 
-  background: url(bodylogo.png);
+  background: url(/assets/about_bodylogo.png);
 }
