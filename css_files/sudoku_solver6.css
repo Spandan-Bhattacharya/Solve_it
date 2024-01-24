@@ -1,79 +1,139 @@
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: poppins;
     font-family: Ubuntu;
 }
-
-body {
-    background-size: cover;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: flex-start; 
-    height: 100vh;
-}
-
-.grid-container {
-    text-align: center;
-    width: auto; 
-    padding: 20px;
-    margin-top: auto; 
-}
-
-.cells {
+.cells{
+    /* box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; */
+    /* border: 2px solid #070707; */
     padding: 10px;
     height: 90px;
     width: 90px;
     font-size: 26px;
     font-weight: 600;
+    /* border-radius: 6px; */
+    /* margin: 5px; */
     text-align: center;
-    color: black;
-    border: 1px solid black;
+    color: #052145;
+    background-color: rgb(244, 213, 99);
+    border: 1px solid rgba(9, 9, 121, 1);
+}
+div{
+    background-color: rgba(255, 255, 0, 0);
+}
+.rows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 0, 0);
+}
+#grid00, #grid01, #grid02, #grid03,#grid04,#grid05, #grid30, #grid31, #grid32, #grid33,#grid34,#grid35{
+    border-top: 4px solid rgba(9, 9, 121, 1);
 }
 
-#grid02,
-#grid12,
-#grid22,
-#grid32,
-#grid42,
-#grid52 {
-    border-right: 4px solid black;
+#grid00, #grid10, #grid20, #grid30,#grid40,#grid50{
+    border-left: 4px solid rgba(9, 9, 121, 1);
+}
+#grid02, #grid12, #grid22, #grid32,#grid42,#grid52{
+    border-right: 4px solid rgba(9, 9, 121, 1);
+}
+#grid50, #grid51, #grid52, #grid53,#grid54,#grid55{
+    border-bottom: 4px solid rgba(9, 9, 121, 1);
 }
 
-#grid10,
-#grid11,
-#grid12,
-#grid13,
-#grid14,
-#grid15,
-#grid30,
-#grid31,
-#grid32,
-#grid33,
-#grid34,
-#grid35 {
-    border-bottom: 4px solid black;
+body{
+    background-image: url(../assets/bg.webp);
+    /* background-color: rgba(9, 9, 121, 1); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+}
+.grid-container{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    
+    /* background-color: #eccdcd; */
+}
+.form-horizontal{
+    background-color: rgba(255, 255, 0, 0);
 }
 
-.solver-name-header {
-    margin-top: 20px; 
+.solver-name-header{
+    display: flex; /* Makes .solver-name-header a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  text-align: center; /* Centers the text */
+  height: 100%; /* Takes up the full height of its parent */
+    margin-top: 20px;
     background-color: rgba(255, 192, 203, 0);
-    text-align: start;
 }
 
-.solver-name-header span {
-    font-size: 40px;
-    text-align: left;
-    color: black;
-    font-weight: 900;
-    background-color: rgba(255, 192, 203, 0);
+.solver-name-header span{
+  font-size: 40px;
+  text-align: center;
+  color: rgb(149, 202, 235);
+  font-weight: 900;
+  background-color: rgba(255, 192, 203, 0);
+}
+.button-container {
+    display: flex; /* Makes .button-container a flex container */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 15px; /* Adds space between the buttons */
+  }
+  .btn-s{
+    display: block; /* Makes the element a block element */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 15px;
+    background-color: #3d88ec;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-#errorMessage{
+.backHome, .backHome a{
+    display: block; /* Makes the element a block element */
+    margin-left: auto; /* Auto margin on the left */
+    margin-right: auto; /* Auto margin on the right */
+    padding: 5px;
+    background-color: #1665cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.backHome a{
+    text-decoration: none;
+}
+.btn-s:hover{
+    background-color: #92d3ff;
+    color: #1665cc;
+}
+
+.backHome a:hover, .backHome:hover{
+    text-decoration: none;
+    background-color: #92d3ff;
+    color:rgb(35, 107, 159);
+}
+
+#errorMessage text{
     font-size: 18px;
     font-weight: 600;
     background-color: #92d3ff67;
     display: inline;
 }
+
