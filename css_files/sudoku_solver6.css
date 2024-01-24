@@ -32,7 +32,10 @@ div{
     align-items: center;
     background-color: rgba(255, 255, 0, 0);
 }
-#grid00, #grid01, #grid02, #grid03,#grid04,#grid05, #grid30, #grid31, #grid32, #grid33,#grid34,#grid35{
+#grid00, #grid01, #grid02, #grid03,#grid04,#grid05, #grid20, #grid21, #grid22, #grid23,#grid24,#grid25{
+    border-top: 4px solid rgba(9, 9, 121, 1);
+}
+#grid20, #grid21, #grid22, #grid23,#grid24,#grid25, #grid40, #grid41, #grid42, #grid43,#grid44,#grid45{
     border-top: 4px solid rgba(9, 9, 121, 1);
 }
 
