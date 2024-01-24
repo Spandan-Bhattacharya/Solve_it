@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css');
 
 /* For whole page formatting, these are applied to all elements */
 * {
@@ -11,6 +15,10 @@
   box-sizing: border-box;
   font-family: poppins;
   font-family: Ubuntu;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
 }
 
 html {
@@ -370,6 +378,7 @@ h3 {
   background-position: center;
   height: 430px;
   width: 300px;
+  box-shadow: 0px 0px 20px rgb(33, 17, 45) , 0px 0px 40px rgb(33, 17, 45) , 0px 0px 80px rgb(33, 17, 45)  ;
 }
 
 .home-container {
@@ -718,3 +727,214 @@ ul li a:hover {
 
   background: url(/assets/about_bodylogo.png);
 }
+
+/*New Footer CSS Code Starts Here --> */
+
+.newFooter {
+  height: auto;
+  width: 100%;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(10, 18, 31) 2.5%, rgb(10, 22, 41) 43%, rgb(10, 18, 31) 100%);
+  flex-wrap: wrap;
+}
+
+
+.footer-content1 , .footer-content2 , .footer-content3 {
+  width: 30%;
+  height: 100%;
+  color: #ffb780;
+  text-decoration: none;
+}
+
+.footer-content1{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  text-decoration: none;
+  gap: 1rem ;
+}
+
+.round {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ffb780;
+}
+
+.footer-content1 .heading h1 {
+  font-size: 6rem;
+  text-shadow: 0px 0px 20px rgb(51, 34, 101) , 0px 0px 40px rgb(121, 102, 175);
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-content1 {
+  width: 40%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.footer-content1 a {
+  text-decoration: none;
+}
+
+
+.quick-links ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.quick-links ul li {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  position: relative;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.quick-links ul li:hover {
+  top: -7px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-content2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-decoration: none;
+}
+.inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+
+.inside span {
+  font-size: 1.7rem;
+}
+.inside i {
+  font-size: 2rem;
+  color: #ffb780;
+}
+
+.inside:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+  color: #0FFF50;
+}
+
+.quick-links li > a {
+  text-decoration: none;
+  color: #ffb780;
+}
+
+.quick-links li a:hover{
+  text-decoration: none;
+  color: #ffe700;
+  text-shadow: 0px 0px 10px #fce300 , 0px 0px 30px #ffe700;
+}
+
+.icons i {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #0FFF50;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-content3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2.5rem ;
+  padding: 0 4rem;
+  color: white;
+}
+
+.footer-content3 h1 {
+  font-size: 2.5rem;
+}
+
+.icons a {
+  position: relative;
+  transition: all 0.2s  ease-in-out;
+  text-decoration: none;
+  top: 0px;
+}
+.icons a:hover{
+  top: -10px;
+  transition: all 0.2s  linear;
+  text-decoration: none;
+  text-shadow: 0px 0px 20px #0FFF50 , 0px 0px 40px #0FFF50;
+}
+
+@media screen and (max-width : 990px) {
+  .newFooter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .footer-content1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.2fr;
+    border-bottom: 2px solid #ffb780;
+    text-decoration: none;
+  }
+
+  .footer-content2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    border-bottom: 2px solid #ffb780;
+    padding: 4rem 0;
+    text-decoration: none;
+  }
+
+  .footer-content3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 4rem 0;
+  }
+
+  .round {
+    display: none;
+  }
+
+  .quick-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-decoration: none;
+  }
+}
+
+/*New Footer CSS Code Ends Here*/
