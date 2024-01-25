@@ -850,14 +850,14 @@ ul li a:hover {
 
 .quick-links li a:hover{
   text-decoration: none;
-  color: #ffe700;
-  text-shadow: 0px 0px 10px #fce300 , 0px 0px 30px #ffe700;
+  color: white;
+  background: linear-gradient(rgb(10, 18, 31) 2.5%, rgb(10, 22, 41) 43%, rgb(10, 18, 31) 100%);
 }
 
 .icons i {
   cursor: pointer;
   font-size: 2.5rem;
-  color: #0FFF50;
+  color: white;
 }
 
 .icons {
@@ -877,6 +877,7 @@ ul li a:hover {
 
 .footer-content3 h1 {
   font-size: 2.5rem;
+  color: #ffb780;
 }
 
 .icons a {
@@ -889,7 +890,8 @@ ul li a:hover {
   top: -10px;
   transition: all 0.2s  linear;
   text-decoration: none;
-  text-shadow: 0px 0px 20px #0FFF50 , 0px 0px 40px #0FFF50;
+  /* text-shadow: 0px 0px 20px #0FFF50 , 0px 0px 40px #0FFF50; */
+  text-shadow: 0px 0px 20px #1F51FF , 0px 0px 40px #1F51FF , 0px 0px 60px #1F51FF;
 }
 
 @media screen and (max-width : 990px) {
