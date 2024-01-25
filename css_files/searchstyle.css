@@ -1,3 +1,4 @@
+/* Code for Seach Box */
 .search-box {
     height: 55px;
     width: 30%;
@@ -9,30 +10,74 @@
     border: 3px solid white;
     border-top: none;
     border-bottom: none;
-    position: relative;
-     /* Add this line */
-  }
-  .search-btn {
+}
+.search-box.clicked {
+    background: rgb(26, 25, 25);
+}
+.search-box input {
+    flex: 1;
+    height: 59px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 13px;
+    padding-left: 9px;
+}
+.search-box button{
+    background:transparent;
+    border:0;
+    outline:0;
+}
+.search-box button.fa-solid{
+    width:25px;
+    color:#555;
+    font-size:15px;
+    cursor:pointer;
+}
+.search-box::placeholder{
+    color:rgb(255, 255, 255);
+}
+/* Search box with Result box */
+.search-box .result-box ul{
+    border-top:1px solid #999;
+    padding: 15px 10px;
+}
+.search-box .result-box ul li{
+    list-style: none;
+    border-radius:3px;
+    padding: 15px 10px;
+    cursor:pointer;
+}
+.search-box .result-box ul li:hover{
+    background:#d5f4f8;
+}
+.search-box .result-box {
+    top: 3.7%;
+    max-height: 20%;
+    width: 575px;
+    overflow-y: scroll;
     position: absolute;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-  }
+}
+.search-box ul li{
+    background-color: rgb(195, 225, 245);
+}
+
 input[placeholder="Search Solver"]::placeholder {
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 20px;
-    opacity: 0.75; /* Firefox */
+    opacity: 0.75; 
+    align-self: flex-start;
+    justify-content: center;
    
 }
 input[placeholder="Search Solver"]:focus {
     outline: none;
     box-shadow: 0 0 5px #010b16;
     background-color: rgb(5, 2, 20);
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .input-box {
@@ -44,70 +89,6 @@ input[placeholder="Search Solver"]:focus {
     padding-left: 10px;
     color: white;
 }
-.search-btn {
-    background: lightblue;
-    position: absolute;
-    right: 2%;
-    padding-bottom: 10px;
-    padding-left: 10px;
-  }
- 
-  .search-box.clicked {
-    background: rgb(26, 25, 25);
-  }
-.search-box input{
-    flex:1;
-    height:50px;
-    background: transparent;
-    border:0;
-    outline:0;
-    font-size:20px;
-    color: white;
-    padding-bottom: 15px;
-   
-}
-.search-box button{
-    background:transparent;
-    border:0;
-    outline:0;
-   
-
-}
-.search-box button.fa-solid{
-    width:25px;
-    color:#555;
-    font-size:15px;
-    cursor:pointer;
-}
-.search-box::placeholder{
-    color:rgb(255, 255, 255);
-
-}
-.search-box .result-box ul{
-    border-top:1px solid #999;
-    padding: 15px 10px;
-}
-.search-box .result-box ul li{
-    list-style: none;
-    border-radius:3px;
-    padding: 15px 10px;
-    cursor:pointer;
-   
-}
-.search-box .result-box ul li:hover{
-    background:#d5f4f8;
-}
-.search-box .result-box{
-    max-height:  300px ;
-    width:400px;
-    overflow-y:scroll;
-    position: absolute;
-   
-}
-.search-box ul li{
-    background-color: rgb(195, 225, 245);
-}
- 
 .row{
     display: flex;
     align-items: center;
@@ -122,3 +103,33 @@ i{
     color: rgb(0, 0, 0);
     font-size: 30px;
 }
+
+/* search button */
+.search-btn {
+    top: 2%;
+    width: 50px;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.search-btn {
+    position: absolute;
+    right: 50%;
+    top: 2%;
+    width: 50px;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    color: black;
+}
+.search-btn {
+    background: lightblue;
+    position: absolute;
+    right:12%;
+    padding-bottom: 4px;
+    padding-left: 10px;
+  }
