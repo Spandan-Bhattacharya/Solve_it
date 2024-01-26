@@ -139,3 +139,7 @@ body{
     background-color: #92d3ff67;
     display: inline;
 }
+
+.output-cell {
+    color: #1e25e8;
+}

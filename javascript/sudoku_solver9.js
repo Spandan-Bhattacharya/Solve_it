@@ -47,6 +47,8 @@ for(let row=0;row<gridSize;row++){
 
             if(sudokuArray[row][col]!==0){
                 cell.classList.add("user-input");
+            }else {
+                cell.classList.add("output-cell");
             }
 
 
@@ -142,6 +144,8 @@ function resetGrid() {
         if (field) {
           // Set the value to an initial state or clear it
           field.value = ""; // You can set it to any default value you prefer
+          field.classList.remove("user-input");
+          field.classList.remove("output-cell");
         }
       }
     }
