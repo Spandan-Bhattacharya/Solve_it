@@ -36,6 +36,7 @@ function calculateGrid() {
       let inputValue = document.getElementById(`grid${i}${j}`).value;
       if (inputValue === "") {
         mat[i][j] = ".";
+        document.getElementById(`grid${i}${j}`).classList.add("output-cell");
       } else {
         let parsedValue = parseInt(inputValue);
         if (isNaN(parsedValue) || parsedValue < 1  || parsedValue > 6) {
@@ -139,6 +140,7 @@ function resetGrid() {
       if (field) {
         // Set the value to an initial state or clear it
         field.value = ""; // You can set it to any default value you prefer
+        field.classList.remove("output-cell");
       }
     }
   }

@@ -149,3 +149,6 @@ body{
     display: inline;
 }
 
+.output-cell {
+    color: #1e25e8;
+}
