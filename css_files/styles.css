@@ -432,6 +432,79 @@ h3 {
 }
 
 /* css for the grid of solvers ends */
+
+/* css for suggestion section begins */
+.suggestion {
+
+  border: rgb(39, 2, 113);
+  box-shadow: inset 6px 6px 6px #311f95, inset -6px -6px 6px rgb(88, 29, 206);
+  border-radius: 50px;
+  margin: 0px 100px 100px 100px;
+  text-align: center;
+  padding: 40px 40px 50px 40px;
+  color: white;
+  font-size: 29px;
+  
+}
+
+.puzzle-title {
+  padding: 30px 300px 50px 300px;
+  
+}
+.puzzle-title h1{
+  font-weight:900;
+  
+}
+
+
+.email {
+
+  height: 100px;
+  align-items: center;
+}
+
+.email button {
+  border: 0;
+  padding: 20px;
+  text-decoration: none;
+  background: none;
+}
+
+.email button:hover {
+  transition: 0.7s;
+  transform: translateY(-10px);
+  border: rgb(39, 2, 113);
+  box-shadow: inset 6px 6px 6px #311f95, inset -6px -6px 6px rgb(88, 29, 206);
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+
+.email a {
+  text-decoration: none;
+  
+}
+
+.email a:hover {
+  text-decoration: none;
+  background: linear-gradient(to top, rgb(152, 61, 146), yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.puzzle-title:hover, .email:hover{
+  background: linear-gradient(to top, rgb(198, 200, 195), rgb(255, 234, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: 0.5s;
+}
+
+/* css for suggestion section ends */
+
+
+
 /* css for the footer begins*/
 .footer {
   padding: 20px;
