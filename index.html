@@ -7,6 +7,8 @@
     <title>Solve it!</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="css_files/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ez3TI/GjD01HI6i7tiDO/CXc1xr4sPJzZoJdF3l5fm5bT4P3FlbCC2vq9WBLUuGf" crossorigin="anonymous">
 
@@ -32,26 +34,46 @@
   >
     <!-- navbar begins-->
     <nav class="topnav">
-      <img src="assets/bodylogo.png" alt="img" />
-      <a class="active" href="#home">Home</a>
-      <a href="html_files/contact.html">Contact</a>
-      <a href="html_files/about.html">About</a>
 
-      <div class="search-box">
+        <img src="assets/bodylogo.png" alt="img" />
+        <div class="openMenu">
+          <i class="fa-solid fa-bars" id="bar"></i>
+        </div>
+        <div class="list">
+            <div class="search-space"></div>
+            <a class="active" href="#home">Home</a>
+            <a href="html_files/contact.html">Contact</a>
+            <a href="html_files/about.html">About</a>
+            <span class="icons">
+              <a href="#">
+              <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-square-github"></i>
+                </a>
+              <a href="#">
+                  <i class="fa-brands fa-square-x-twitter"></i>
+              </a>
+            </span>
+        </div>
+        <div class="search-box">
           <div class="row">
-              <input
-                  type="text"
-                  id="input-box"
-                  placeholder="Search Solver"
-                  autocomplete="off"
-              />
-              <button class="search-btn">
-                  <i class="fa fa-magnifying-glass"></i>
-              </button>
+            <input
+              type="text"
+              id="input-box"
+              placeholder="Search Solver"
+              autocomplete="off"
+            />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
-          
           <div class="result-box"></div>
-      </div>
+        </div>
+        
+        <div class="result-box"></div>
+
+        
 
     </nav>
     <!-- navbar ends -->
@@ -114,13 +136,24 @@
             </a>
           </div>
         </div>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h1>Sudoku Solver</h1>
+            <h3>9x9</h3>
+            <p>Solves any valid 9x9 sudoku!!</p>
+            <a href="./html_files/sudoku_solver_9x9.html">
+              <div class="trynow-button">TRY NOW!</div>
+            </a>
+          </div>
+        </div>
       </div>
   
       <!-- grid ends -->
 
 
     </div>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="fbox">
         <h2 style="color: #110D2C;">Solve it !</h2>
         <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
@@ -136,6 +169,50 @@
         <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em;margin: 2px;"></i></a>
         <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github" style="font-size: 1.25em;margin: 2px;"></i></a>
         <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin" style="font-size: 1.25em;margin: 2px;"></i></a>
+      </div>
+    </footer> -->
+
+    <footer class="newFooter">
+      <div class="footer-content1">
+        <div class="heading">
+          <h1>Solve It !</h1> 
+        </div>
+        <div class="quick-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <!-- <div class="round"></div> -->
+            <li><a href="html_files/about.html" >About</a></li>
+            <!-- <div class="round"></div> -->
+            <li><a href="html_files/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="copyright" style="color: white;">
+          @Spandan-Bhattacharya 2024
+        </div>
+      </div>
+      <div class="footer-content2">
+        <div class="inside">
+          <i class="fi fi-rs-marker"></i>
+          <span>Jalpaiguri Government Engineering College<span>
+        </div>
+        <div class="inside">
+          <i class="fi fi-rr-phone-call"></i>
+          <span>123456789<span>
+        </div>
+        <div class="inside">
+          <i class="fi fi-rr-envelope"></i>
+          <span>@Spandan-Bhattacharya</span>
+        </div>
+      </div>
+      <div class="footer-content3">
+        <h1>About The Game</span></h1>
+        <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
+        <div class="icons">
+          <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-twitter-alt"></i></a>
+          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fi fi-brands-linkedin"></i></a>
+          <a href="https://github.com/Spandan-Bhattacharya"><i class="fi fi-brands-github"></i></a>
+          <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-facebook"></i></a>
+        </div>
       </div>
     </footer>
 

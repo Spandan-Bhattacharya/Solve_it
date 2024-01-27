@@ -62,7 +62,7 @@ body {
     white-space: nowrap; /* Prevent line breaks */
 }
 
-.footer {
+/* .footer {
     margin-top: auto;
     width: 100%;
     background: linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%);
@@ -78,6 +78,57 @@ body {
     text-align: center;
     font-size: 18px;
     font-weight: 400;
+} */
+
+.footer-container{
+    width: 100%;
+    background:linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%); 
+    padding: 20px;
+    background: url(Image.png);
+}
+.foot-head h2{
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+}
+.foot-head p{
+    text-align: center;
+    font-size: 1.70rem;
+}
+.foot-navlinks h3{
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+}
+.foot-navlinks {
+    text-align: center;
+}
+.foot-navlinks a{
+    color: #ffb780;
+    font-size: 18px;
+}
+.foot-social {
+    text-align: center;
+}
+.foot-social h3{
+    color: aqua;
+    font-weight: 600;
+}
+.foot-social a{
+    font-size: 30px;
+}
+
+.foot-last{
+    margin-top: 10px;
+    padding: 2rem;
+    padding-bottom: 1rem;
+   font-family:  Ubuntu, sans-serif;
+   font-size: medium;
+   text-align: center;
+   border-top: 1px solid #9D5CFF;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .made-with-passion {
@@ -93,7 +144,7 @@ body {
 
 .heart {
 color: #9D5CFF;
-font-size: 29px !important; /* Add !important to ensure the style is applied */
+ font-size: 29px !important; /* Add !important to ensure the style is applied  */
 }
 
 
