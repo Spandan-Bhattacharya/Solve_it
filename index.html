@@ -34,11 +34,12 @@
   >
     <!-- navbar begins-->
     <nav class="topnav">
-
+      <div>
         <img src="assets/bodylogo.png" alt="img" />
-        <div class="openMenu">
-          <i class="fa-solid fa-bars" id="bar"></i>
-        </div>
+      </div>
+      <div class="openMenu">
+        <i class="fa-solid fa-bars" id="bar"></i>
+      </div>
         <div class="list">
             <div class="search-space"></div>
             <a class="active" href="#home">Home</a>
@@ -56,25 +57,20 @@
               </a>
             </span>
         </div>
-        <div class="search-box">
-          <div class="row">
-            <input
-              type="text"
-              id="input-box"
-              placeholder="Search Solver"
-              autocomplete="off"
-            />
-            <button class="search-btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+
+        <!-- Search Box -->
+        <div class="searchWrapper">
+          <div class="search-container">
+            <div class="searchBox">
+              <input class="searchInput" type="text" id="input-box" placeholder="Search" autocomplete="off" />
+              <button class="searchButton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="result-box"></div>
           </div>
-          <div class="result-box"></div>
         </div>
         
-        <div class="result-box"></div>
-
-        
-
     </nav>
     <!-- navbar ends -->
 
