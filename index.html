@@ -1,222 +1,151 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Solve it!</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel='stylesheet'
-    href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel="stylesheet" href="css_files/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ez3TI/GjD01HI6i7tiDO/CXc1xr4sPJzZoJdF3l5fm5bT4P3FlbCC2vq9WBLUuGf" crossorigin="anonymous">
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    />
 
-    <link rel="stylesheet" href="css_files/searchstyle.css" />
-    <script
-      src="https://kit.fontawesome.com/b9199edbdd.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Solve it!</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css_files/styles.css" />
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 
-    <link rel="icon" href="assets/favicon.png" type="image/png" />
-  </head>
-  <body
-    style="
+  <link rel="stylesheet" href="css_files/searchstyle.css" />
+  <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+</head>
+
+<body style="
       background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
      position: relative;
     
-    "
-  >
-    <!-- navbar begins-->
-    <nav class="topnav">
-      <div>
-        <img src="assets/bodylogo.png" alt="img" />
-      </div>
-      <div class="openMenu">
-        <i class="fa-solid fa-bars" id="bar"></i>
-      </div>
-        <div class="list">
-            <div class="search-space"></div>
-            <a class="active" href="#home">Home</a>
-            <a href="html_files/contact.html">Contact</a>
-            <a href="html_files/about.html">About</a>
-            <span class="icons">
-              <a href="#">
-              <i class="fa-brands fa-square-instagram"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-square-github"></i>
-                </a>
-              <a href="#">
-                  <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-            </span>
-        </div>
+    ">
+  <!-- navbar begins-->
 
-        <!-- Search Box -->
-        <div class="searchWrapper">
-          <div class="search-container">
-            <div class="searchBox">
-              <input class="searchInput" type="text" id="input-box" placeholder="Search" autocomplete="off" />
-              <button class="searchButton">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-            <div class="result-box"></div>
-          </div>
-        </div>
-        
-    </nav>
-    <!-- navbar ends -->
+  <nav class="topnav">
+    <img src="assets/bodylogo.png" alt="img" />
+    <a class="active" href="#home">Home</a>
 
-
-    <!-- title of the page begins -->
-    <div>
-      <div class="wrap">
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
+    <a href="html_files/contact.html">Contact</a>
+    <a href="html_files/about.html">About</a>
+    <div class="search-box">
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Search Solver" autocomplete="off" />
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
-      <section class="hero-section" id="hero">
-        <div class="herocontainer">
-          <img
-            src="assets/bodylogo.png"
-            alt="img"
-            height="450px"
-            width="450px"
-          />
-          <h3>Find Solutions to all those mind-numbing puzzles right here!</h3>
-          <p class="paragraph">
-            Solve it! is a website that contains solvers for common games like
-            Sudoku, Nonogram, Crosswords and more!
-          </p>
-        </div>
-      </section>
-      <!-- title of the page ends -->
-      <br /><br />
-      <!-- grid begins -->
-      
-      <div class="home-container" id="solvers">
-        <div class="box">
-          <span></span>
-          <div class="content">
-            <h1>Sudoku Solver</h1>
-            <h3>4x4</h3>
-            <p>Solves any valid 4x4 sudoku!!</p>
-          
-            <a href="html_files/sudoku_solver_4x4.html">
-              <div class="trynow-button">TRY NOW!</div>
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <span></span>
-          <div class="content">
-            <h1>Sudoku Solver</h1>
-            <h3>6x6</h3>
-            <p>Solves any valid 6x6 sudoku!!</p>
-            <a href="html_files/sudoku_solver_6x6.html">
-              <div class="trynow-button">TRY NOW!</div>
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <span></span>
-          <div class="content">
-            <h1>Sudoku Solver</h1>
-            <h3>9x9</h3>
-            <p>Solves any valid 9x9 sudoku!!</p>
-            <a href="./html_files/sudoku_solver_9x9.html">
-              <div class="trynow-button">TRY NOW!</div>
-            </a>
-          </div>
+      <div class="result-box"></div>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+
+  <!-- title of the page begins -->
+  <div>
+    <div class="wrap">
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+    </div>
+    <section class="hero-section" id="hero">
+      <div class="herocontainer">
+        <img src="assets/bodylogo.png" alt="img" height="450px" width="450px" />
+        <h3>Find Solutions to all those mind-numbing puzzles right here!</h3>
+        <p class="paragraph">
+          Solve it! is a website that contains solvers for common games like
+          Sudoku, Nonogram, Crosswords and more!
+        </p>
+      </div>
+    </section>
+    <!-- title of the page ends -->
+    <br /><br />
+    <!-- grid begins -->
+
+    <div class="home-container" id="solvers">
+      <div class="box">
+        <span></span>
+        <div class="content">
+          <h2>Sudoku Solver: 4x4</h2>
+          <p>Solves any valid 4x4 sudoku!!</p>
+
+          <a href="html_files/sudoku_solver_4x4.html">
+            <div class="trynow-button">Try Now!</div>
+          </a>
         </div>
       </div>
-  
-      <!-- grid ends -->
+      <div class="box">
+        <span></span>
+        <div class="content">
+          <h2>Sudoku Solver: 6x6</h2>
+          <p>Solves any valid 6x6 sudoku!!</p>
+          <a href="html_files/sudoku_solver_6x6.html">
+            <div class="trynow-button">Try Now!</div>
+          </a>
 
+        </div>
+      </div>
+    </div>
+
+    <!-- grid ends -->
+
+
+
+    <!-- suggestion seztion begins -->
+    <div class="suggestion">
+      <div class="puzzle-title">
+        <h1>Calling all puzzle enthusiasts! </h1> <br> 
+        Wanna play some more puzzles? Share your favorite challenges with us and we'll add them for you. <br> Your
+        suggestions will make our puzzle-solving community even more exciting!
+      </div>
+      <div class="email">
+        Share your suggestions on this mail: <button><a  href="mailto:spandanbhattacharya.sb@gmail.com">spandanbhattacharya.sb@gmail.com</a></button>
 
     </div>
-    <!-- <footer class="footer">
-      <div class="fbox">
-        <h2 style="color: #110D2C;">Solve it !</h2>
-        <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;">Quick links</h3>
-        <a href="#">Home</a>
-        <a href="html_files/about.html">About</a>
-        <a href="html_files/contact.html">Contact</a>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;" >Social links</h3>
-        <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin" style="font-size: 1.25em;margin: 2px;"></i></a>
-      </div>
-    </footer> -->
+    
 
-    <footer class="newFooter">
-      <div class="footer-content1">
-        <div class="heading">
-          <h1>Solve It !</h1> 
-        </div>
-        <div class="quick-links">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <!-- <div class="round"></div> -->
-            <li><a href="html_files/about.html" >About</a></li>
-            <!-- <div class="round"></div> -->
-            <li><a href="html_files/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="copyright" style="color: white;">
-          @Spandan-Bhattacharya 2024
-        </div>
       </div>
-      <div class="footer-content2">
-        <div class="inside">
-          <i class="fi fi-rs-marker"></i>
-          <span>Jalpaiguri Government Engineering College<span>
-        </div>
-        <div class="inside">
-          <i class="fi fi-rr-phone-call"></i>
-          <span>123456789<span>
-        </div>
-        <div class="inside">
-          <i class="fi fi-rr-envelope"></i>
-          <span>@Spandan-Bhattacharya</span>
-        </div>
-      </div>
-      <div class="footer-content3">
-        <h1>About The Game</span></h1>
-        <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
-        <div class="icons">
-          <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-twitter-alt"></i></a>
-          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fi fi-brands-linkedin"></i></a>
-          <a href="https://github.com/Spandan-Bhattacharya"><i class="fi fi-brands-github"></i></a>
-          <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-facebook"></i></a>
-        </div>
-      </div>
-    </footer>
+    </div>
+
+    <!-- suggestion section ends -->
+
+  </div>
+  <footer class="footer">
+    <div class="fbox">
+      <h2 style="color: #110D2C;">Solve it !</h2>
+      <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
+    </div>
+    <div class="fbox">
+      <h3 style="font-weight: bold;">Quick links</h3>
+      <a href="#">Home</a>
+      <a href="html_files/about.html">About</a>
+      <a href="html_files/contact.html">Contact</a>
+    </div>
+    <div class="fbox">
+      <h3 style="font-weight: bold;">Social links</h3>
+      <a href="#"><i class="fab fa-x-twitter" style="font-size: 1.25em;margin: 2px;"></i></a>
+      <a href="#"><i class="fa-brands fa-github" style="font-size: 1.25em;margin: 2px;"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin" style="font-size: 1.25em;margin: 2px;"></i></a>
+    </div>
+  </footer>
 
 
-    <!-- add a go to top btn -->
-    <button id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-arrow-up" style="color: white;"></i></button>
-    <script src="javascript/GoToTop.js"></script>
-    <script src="javascript/script.js" async defer></script>
-    <script src="javascript/autocomplete.js"></script>
-  </body>
+  <!-- add a go to top btn -->
+  <button id="goToTopBtn" onclick="goToTop()">⬆</button>
+  <script src="javascript/GoToTop.js"></script>
+  <script src="javascript/script.js" async defer></script>
+  <script src="javascript/autocomplete.js"></script>
+</body>
+
+
 </html>
