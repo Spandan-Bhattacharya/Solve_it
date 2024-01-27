@@ -9,9 +9,10 @@ function setGrid() {
 
     for (let j = 0; j < size; j++) {
       let field = document.createElement("input");
-      field.type = "number";
+      field.type = "text";
       field.className = "cells";
       field.id = `grid${i}${j}`;
+      field.addEventListener("input", handleInput);
       let flex = document.createElement("div");
       flex.className = "flex";
       flex.style.display = "inline";
@@ -20,6 +21,19 @@ function setGrid() {
     }
   }
 }
+
+function handleInput(event) {
+  const inputValue = event.target.value.replace(/[^0-9]/g, '');
+  event.target.value = inputValue;
+  const parsedValue = parseInt(inputValue);
+
+  if (!isNaN(parsedValue) && parsedValue >= 1 && parsedValue <= 4) {
+      event.target.classList.remove("output-cell");
+  } else {
+      event.target.classList.add("output-cell");
+  }
+}
+
 document.getElementById("submitButton").addEventListener("click", (e) => {
   e.preventDefault(); // Prevents the form from being submitted and page refresh
   calculateGrid();

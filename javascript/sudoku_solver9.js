@@ -12,9 +12,15 @@ document.addEventListener('DOMContentLoaded', function(){
         for(let col=0;col<gridSize;col++){
             const cell =document.createElement("td");
             const input = document.createElement("input");
-            input.type="number";
+            input.type="text";
             input.className="cell";
             input.id=`cell-${row}-${col}`;
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+                    e.preventDefault();
+                }
+            });
+            input.addEventListener("input", handleInput);
             cell.appendChild(input);
             newRow.appendChild(cell);
 
@@ -23,6 +29,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }
 });
+
+function handleInput(event) {
+    const inputValue = event.target.value.replace(/[^0-9]/g, '');
+    event.target.value = inputValue;
+    const parsedValue = parseInt(inputValue);
+
+    if (!isNaN(parsedValue) && parsedValue >= 1 && parsedValue <= 9) {
+        event.target.classList.remove("output-cell");
+    } else {
+        event.target.classList.add("output-cell");
+    }
+}
 
 async function solveSudoku(){
     const gridSize=9;
