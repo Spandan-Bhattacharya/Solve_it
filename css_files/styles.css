@@ -135,35 +135,25 @@ html {
 .topnav {
   display: flex;
 
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: center;
 
-  gap: 100px;
   height: 55px;
   z-index: 2;
-
+  padding: 1rem 4rem;
   background: rgb(0, 32, 36);
   background: linear-gradient(180deg, #0a121f 2.5%, #0a1629 43%, #0a121f 100%);
-
-  /* border-radius: 10px; */
-  /* overflow: hidden; */
-  /* border: 1px solid red; */
 }
 
-.topnav img {
-  margin-right: auto;
-  margin-left: 16px;
-  /* Adjust the left margin as needed */
+.topnav > div > img {
   background-color: rgba(255, 255, 255, 0);
 
   height:55px;
   width:55px;
   cursor: pointer;
-  /* border: 1px solid red; */
 }
 
 .topnav a {
-  /* float: left; */
   color: #ffb780;
   text-align: center;
   padding: 14px 16px;
@@ -171,9 +161,7 @@ html {
   font-size: 17px;
 }
 .topnav .list{
-  /* border: 1px solid red; */
   display: flex;
-  position: absolute;
   left: 15%;
   justify-content: space-around;
 }
@@ -185,12 +173,12 @@ html {
   display: none;
 }
 .openMenu i{
-  font-size: 5vw;
   position: absolute;
-  right: 4dvw;
-  top: 15px;
+  font-size: 24px;
+  right: 4rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10001;
+
 }
 .list {
   display: flex;
@@ -206,15 +194,6 @@ html {
 @media (max-width:719px) {
   body.scroll{
     overflow: hidden;
-  }
-  .topnav img{
-    position: absolute;
-    /* width:; */
-    object-fit: cover;
-    object-position: center;
-    top: 0.5dvh;
-    left: 0.5dvw;
-    z-index: 1001;
   }
   .openMenu {
     display: flex;
@@ -274,7 +253,7 @@ background: linear-gradient(90deg, rgba(3,1,36,1) 0%, rgba(8,8,112,1) 37%, rgba(
   background-color: #f99548;
   border-radius: 10px;
   color: #0a1629;
-  /* margin: 5px 0% 5px 0%; */
+  text-decoration: none;
 }
 
 /* Add a color to the active/current link */
