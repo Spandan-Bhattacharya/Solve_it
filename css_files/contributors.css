@@ -125,8 +125,7 @@ repeat(auto-fill,
 minmax(200px,1fr));
 /* Add this line */
    
-gap:
-20px;
+gap:20px;
 /* Add this line to add space between grid items */
   }
  
