@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Ubuntu;
+    color: #ffb780;
+    background: radial-gradient(circle at top right, rgba(16, 14, 44, 0.7), rgba(102, 0, 255, 0.51) 400%) #0a121f;
+    
+    min-height: 100vh;
+}
+.blurred-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(450px);
+    background-image: url(/assets/about_bodylogo.png);
+    background-repeat: no-repeat;
+    margin-top: 230px;
+    background-position: center ;
+
+    z-index: -1; /* Set a lower z-index */
+}
+.contributors-container h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding : 50px;
+    font-family: Ubuntu;
+    text-shadow: 0px 0px 20px rgb(51, 34, 101), 0px 0px 40px rgb(121, 102, 175);
+    color: rgb(0, 212, 255, 1);
+    font-size:50px;
+    font-weight: inherit;
+}
+.footer-container{
+    width: 100%;
+    background:linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%); 
+    padding: 20px;
+    background: url(Image.png);
+}
+.foot-head h2{
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+}
+.foot-head p{
+    text-align: center;
+    font-size: 1.70rem;
+}
+.foot-navlinks h3{
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+}
+.foot-navlinks {
+    text-align: center;
+}
+.foot-navlinks a{
+    color: #ffb780;
+    font-size: 18px;
+}
+.foot-social {
+    text-align: center;
+}
+.foot-social h3{
+    color: aqua;
+    font-weight: 600;
+}
+.foot-social a{
+    font-size: 30px;
+}
+
+.foot-last{
+    margin-top: 10px;
+    padding: 2rem;
+    padding-bottom: 1rem;
+   font-family:  Ubuntu, sans-serif;
+   font-size: medium;
+   text-align: center;
+   border-top: 1px solid #9D5CFF;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.made-with-passion {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.made-with-passion div {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.heart {
+color: #9D5CFF;
+ font-size: 29px !important; /* Add !important to ensure the style is applied  */
+}
+
+
+
+.about-text::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 2px;
+    margin: 15px auto;
+    background: #9D5CFF;
+}
+.navbar div a:hover {
+border-bottom: 2px solid #9D5CFF;
+transition: width 0.3s ease;}
+#contributors-list
+ {
+   
+list-style-type:none;
+   
+padding-left:0;
+   
+display:grid;
+/* Add this line */
+   margin-left: 10px;
+grid-template-columns:
+repeat(auto-fill,
+minmax(200px,1fr));
+/* Add this line */
+   
+gap:20px;
+/* Add this line to add space between grid items */
+  }
+ 
+ 
+.contributor-item {
+   
+display:
+flex;
+   
+flex-direction:
+row;
+   
+align-items:
+center;
+   
+margin-bottom:
+10px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+    top: 40px;
+    z-index: 1; /* Set a higher z-index */
+}
+
+.navbar div a {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFB780;
+    text-decoration: none;
+}
+
+ 
+ 
+.contributor-image {
+    border: 5px solid rgb(210, 115, 7); 
+width:100px;
+   padding: 10px;
+height:100px;
+   
+border-radius:
+50%;
+   
+margin-right:
+10px;
+  }
+ 
+ 
+.contributor-name {
+   
+font-size:
+20px;
+/* Adjust the font size as needed */
+  }
+ 
+.contributor-name:hover {
+   
+text-decoration:
+underline;
+  }
+ 
+ 
+
+.contributors-container
+a{
+   
+text-decoration:
+none;
+   
+color:
+#ffffff;
+   padding: 20px;
+font-size:
+medium;
+  }
+ 
+.contributors-container
+a:hover{
+   
+color:#ffc400;
+  }
+ 
+#contributors-list {
+   
+list-style-type:
+none;
+/* Add this line */
+   
+padding-left:
+0;
+/* Add this line to remove the default padding */
+  }
