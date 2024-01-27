@@ -13,7 +13,7 @@ body {
     height: 100%;
     position: absolute;
     backdrop-filter: blur(450px);
-    background-image: url(/Solve_it/assets/about_bodylogo.png);
+    background-image: url(/assets/about_bodylogo.png);
     background-repeat: no-repeat;
     margin-top: 230px;
     background-position: center ;
