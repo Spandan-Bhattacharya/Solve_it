@@ -29,8 +29,10 @@ function handleInput(event) {
 
   if (!isNaN(parsedValue) && parsedValue >= 1 && parsedValue <= 4) {
       event.target.classList.remove("output-cell");
+      event.target.style.color = "black";
   } else {
       event.target.classList.add("output-cell");
+      event.target.style.color = "red";
   }
 }
 
