@@ -15,7 +15,7 @@ const searchButton = document.querySelector(".searchButton");
 
 document.addEventListener("click", function (event) {
     const isSearchBox = event.target.closest(".searchBox");
-    if (!isSearchBox && event.target !== inputBox && event.target !== resultBox) {
+    if ((!isSearchBox && event.target !== inputBox && event.target !== resultBox) || event.target === searchButton || event.target === searchButton.children[0]) {
         resultBox.innerHTML = "";
     }
 });
