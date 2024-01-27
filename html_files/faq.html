@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Solve it!</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-ez3TI/GjD01HI6i7tiDO/CXc1xr4sPJzZoJdF3l5fm5bT4P3FlbCC2vq9WBLUuGf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../css_files/styles.css" />
+    <link rel="stylesheet" href="../css_files/searchstyle.css" />
+    <link rel="stylesheet" href="../css_files/faq.css" />
+
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+
+    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); position: relative;">
+    <!-- navbar begins-->
+    <nav class="topnav">
+        <div>
+            <img src="../assets/bodylogo.png" alt="img" />
+        </div>
+        <div class="openMenu">
+            <i class="fa-solid fa-bars" id="bar"></i>
+        </div>
+        <div class="list">
+            <div class="search-space"></div>
+            <a class="active" href="../index.html">Home</a>
+            <a href="../html_files/contact.html">Contact</a>
+            <a href="../html_files/about.html">About</a>
+            <a href="" onclick="window.location.reload()">FAQ</a>
+            <span class="icons">
+                <a href="#">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
+            </span>
+        </div>
+
+        <!-- Search Box -->
+        <div class="searchWrapper">
+            <div class="search-container">
+                <div class="searchBox">
+                    <input class="searchInput" type="text" id="input-box" placeholder="Search" autocomplete="off" />
+                    <button class="searchButton">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="result-box"></div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- Watermark -->
+    <div class="watermark">
+        <img src="../assets/bodylogo.png" alt="watermark" />
+    </div>
+    
+    <!-- FAQ Main -->
+    <main class="faqWrapper">
+        <div class="faqHeading">Frequently Asked Questions</div>
+        <div class="faqs">
+            <div class="faqs_container"></div>
+            <div class="faqs_container"></div>
+        </div>
+    </main>
+
+
+    <!-- Footer Section -->
+
+    <footer class="newFooter">
+        <div class="footer-content1">
+            <div class="heading">
+                <h1>Solve It !</h1>
+            </div>
+            <div class="quick-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <!-- <div class="round"></div> -->
+                    <li><a href="../html_files/about.html">About</a></li>
+                    <!-- <div class="round"></div> -->
+                    <li><a href="../html_files/contact.html">Contact</a></li>
+                    <li><a href="" onclick="window.location.reload()">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="copyright" style="color: white;">
+                @Spandan-Bhattacharya 2024
+            </div>
+        </div>
+        <div class="footer-content2">
+            <div class="inside">
+                <i class="fi fi-rs-marker"></i>
+                <span>Jalpaiguri Government Engineering College<span>
+            </div>
+            <div class="inside">
+                <i class="fi fi-rr-phone-call"></i>
+                <span>123456789<span>
+            </div>
+            <div class="inside">
+                <i class="fi fi-rr-envelope"></i>
+                <span>@Spandan-Bhattacharya</span>
+            </div>
+        </div>
+        <div class="footer-content3">
+            <h1>About The Game</span></h1>
+            <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!
+            </p>
+            <div class="icons">
+                <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i
+                        class="fi fi-brands-linkedin"></i></a>
+                <a href="https://github.com/Spandan-Bhattacharya"><i class="fi fi-brands-github"></i></a>
+                <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- add a go to top btn -->
+    <button id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-arrow-up" style="color: white;"></i></button>
+    <script src="../javascript/GoToTop.js"></script>
+    <script src="../javascript/script.js" async defer></script>
+    <script src="../javascript/autocomplete.js"></script>
+    <script src="../javascript/faq.js" async defer></script>
+</body>
+
+</html>

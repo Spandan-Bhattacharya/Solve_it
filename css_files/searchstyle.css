@@ -82,6 +82,7 @@
     margin-top: 2rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    z-index: 2; /* Added z-index in order to prevent the result box to hide under other elements*/
 }
 
 @media screen and (max-width:719px) {
