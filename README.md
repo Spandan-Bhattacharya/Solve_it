@@ -56,8 +56,7 @@ Website design inspired from fix-your-nums, a great project from JWoC 2023 by Sr
 4. Check out the puzzle solvers in the grid section. Click on "Try Now!" to access the solver for specific puzzle sizes.
 5. The footer contains a message, "Made with Love."
 
-
-
+## Local installation guide ## -> [Video](https://drive.google.com/file/d/1fzzpo7ddSvj4rDKYDOSLBQHxxnVjVy07/view?usp=sharing)
 
 
 
