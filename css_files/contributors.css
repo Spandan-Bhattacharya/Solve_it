@@ -25,18 +25,24 @@ body {
     justify-content: center;
     align-items: center;
     
-    padding : 50px;
+    padding : 10px;
     font-family: Ubuntu;
     text-shadow: 0px 0px 20px rgb(51, 34, 101), 0px 0px 40px rgb(121, 102, 175);
     color: rgb(0, 212, 255, 1);
     font-size:50px;
     font-weight: inherit;
+    /* width: 80vw; */
+}
+.contributors-container{
+   width: 80vw;
+   /* padding: 10px; */
 }
 .footer-container{
     width: 100%;
     background:linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%); 
     padding: 20px;
     background: url(Image.png);
+     background-position: center;
 }
 .foot-head h2{
     text-align: center;
@@ -58,6 +64,7 @@ body {
 .foot-navlinks a{
     color: #ffb780;
     font-size: 18px;
+    padding: 10px;
 }
 .foot-social {
     text-align: center;
@@ -121,7 +128,7 @@ padding-left:0;
    
 display:grid;
 /* Add this line */
-   margin-left: 10px;
+   /* margin-left: 10px; */
 grid-template-columns:
 repeat(auto-fill,
 minmax(200px,1fr));
@@ -136,15 +143,15 @@ gap:20px;
    
 display:
 flex;
-   
+   justify-content: center;
 flex-direction:
-row;
+column;
    
 align-items:
 center;
    
-margin-bottom:
-10px;
+/* margin-bottom:
+10px; */
   }
   .navbar {
     display: flex;
@@ -172,16 +179,17 @@ height:100px;
    
 border-radius:
 50%;
-   
-margin-right:
-10px;
+ 
+/* margin-right:
+10px; */
   }
  
  
 .contributor-name {
-   
+   text-align: center;
 font-size:
-20px;
+16px;
+/* justify-content: center; */
 /* Adjust the font size as needed */
   }
  
@@ -196,14 +204,14 @@ underline;
 .contributors-container
 a{
    
-text-decoration:
-none;
+/* text-decoration:
+none; */
    
-color:
-#ffffff;
+/* color:
+#ffffff; */
    padding: 20px;
-font-size:
-medium;
+/* font-size:
+medium; */
   }
  
 .contributors-container
@@ -213,7 +221,6 @@ color:#ffc400;
   }
  
 #contributors-list {
-   
 list-style-type:
 none;
 /* Add this line */
