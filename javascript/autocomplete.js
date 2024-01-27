@@ -14,7 +14,7 @@ const inputBox = document.getElementById("input-box");
 const searchButton = document.querySelector(".searchButton");
 
 document.addEventListener("click", function (event) {
-    const isSearchBox = event.target.closest(".search-box");
+    const isSearchBox = event.target.closest(".searchBox");
     if (!isSearchBox && event.target !== inputBox && event.target !== resultBox) {
         resultBox.innerHTML = "";
     }
@@ -72,12 +72,6 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-function display(result) {
-  const content = result.map((list) => {
-    return "<li onclick='selectInput(this)'>" + list + "</li>";
-  });
-  resultBox.innerHTML = "<ul>" + content.join("") + "</ul>";
-}
 
 function selectInput(list) {
   inputBox.value = list.innerHTML;
