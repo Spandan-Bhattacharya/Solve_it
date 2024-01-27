@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: poppins;
-    font-family: Ubuntu;
+
 }
 .cells{
     /* box-sizing: border-box;
@@ -31,49 +33,38 @@ div{
     align-items: center;
     background-color: rgba(255, 255, 0, 0);
 }
-/* #grid00, #grid01, #grid10, #grid11{
-    background-color: #f3b9b985;
-    border: 1px solid #1665cc;
+#grid00, #grid01, #grid02, #grid03,#grid04,#grid05, #grid20, #grid21, #grid22, #grid23,#grid24,#grid25{
+    border-top: 4px solid rgba(9, 9, 121, 1);
 }
-#grid02, #grid03, #grid12, #grid13{
-    background-color: #e9f3b977;
-    border: 1px solid #16cc2e;
-}
-#grid20, #grid21, #grid30, #grid31{
-    background-color: #b9f3cfa4;
-    border: 1px solid #d363bd;
-}
-#grid22, #grid23, #grid32, #grid33{
-    background-color: #b9d4f3aa;
-    border: 1px solid #ccb416;
-} */
-
-#grid00, #grid01, #grid02, #grid03, #grid20, #grid21, #grid22, #grid23{
+#grid20, #grid21, #grid22, #grid23,#grid24,#grid25, #grid40, #grid41, #grid42, #grid43,#grid44,#grid45{
     border-top: 4px solid rgba(9, 9, 121, 1);
 }
 
-#grid00, #grid10, #grid20, #grid30{
+#grid00, #grid10, #grid20, #grid30,#grid40,#grid50{
     border-left: 4px solid rgba(9, 9, 121, 1);
 }
-#grid03, #grid13, #grid23, #grid33, #grid31, #grid21, #grid11, #grid01{
+#grid05, #grid15, #grid25, #grid35,#grid45,#grid55{
     border-right: 4px solid rgba(9, 9, 121, 1);
 }
-#grid30, #grid31, #grid32, #grid33{
+#grid02, #grid12, #grid22, #grid32,#grid42,#grid52{
+    border-right: 4px solid rgba(9, 9, 121, 1);
+}
+#grid50, #grid51, #grid52, #grid53,#grid54,#grid55{
     border-bottom: 4px solid rgba(9, 9, 121, 1);
 }
 
 body{
-    background-image: url(/assets/bg.webp);
+    background-image: url(../assets/bg.webp);
     /* background-color: rgba(9, 9, 121, 1); */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    
 }
 .grid-container{
     text-align: center;
     width: 100vw;
     height: 100vh;
-    padding: 20px;
+    
     /* background-color: #eccdcd; */
 }
 .form-horizontal{
@@ -81,46 +72,64 @@ body{
 }
 
 .solver-name-header{
-    margin-top: 60px;
+    display: flex; /* Makes .solver-name-header a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  text-align: center; /* Centers the text */
+  height: 100%; /* Takes up the full height of its parent */
+    margin-top: 20px;
     background-color: rgba(255, 192, 203, 0);
+    font-family: poppins;
 }
 
 .solver-name-header span{
   font-size: 40px;
   text-align: center;
   color: rgb(149, 202, 235);
-  font-weight: 900;
+  font-weight: 500;
   background-color: rgba(255, 192, 203, 0);
 }
-
-.btn-s{
+.button-container {
+    display: flex; /* Makes .button-container a flex container */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 15px; /* Adds space between the buttons */
+  }
+  .btn-s{
+    display: block; /* Makes the element a block element */
+    margin-top: 25px;
+    margin-bottom: 15px;
     align-items: center;
-    margin-top: 40px;
-    margin-right: 14px;
-    padding: 8px;
+    padding: 15px;
     background-color: #3d88ec;
     border: none;
     border-radius: 10px;
     color: white;
-    font-size: 16px;
+    font-family: poppins;
+    font-size: 20px;
     font-weight: 700;
     cursor: pointer;
 }
+
 .backHome, .backHome a{
-    padding: 12px;
+    display: block; /* Makes the element a block element */
+    margin-left: auto; /* Auto margin on the left */
+    margin-right: auto; /* Auto margin on the right */
+    padding: 5px;
     background-color: #1665cc;
     border: none;
     border-radius: 10px;
     color: white;
-    font-size: 14px;
+    font-family: poppins;
+    font-size: 20px;
     font-weight: 600;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.01rem;
     cursor: pointer;
     margin-bottom: 10px;
 }
 
 .backHome a{
     text-decoration: none;
+    font-family: poppins;
 }
 .btn-s:hover{
     background-color: #92d3ff;
@@ -133,7 +142,7 @@ body{
     color:rgb(35, 107, 159);
 }
 
-#errorMessage{
+#errorMessage text{
     font-size: 18px;
     font-weight: 600;
     background-color: #92d3ff67;

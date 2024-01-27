@@ -7,17 +7,38 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Sudoku Solver 6x6 </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../css_files/sudoku_solver6.css" />
     </head>
-    <body>
-        <p>Create the 6x6 sudoku solver</p>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
+    <body onload="setGrid()">
+        <div class="solver-name-header">
+          <!-- solver-name-header class not yet implemented -->
+    
+             
+                   
+                    <span>Sudoku Solver</span>
+                  </div>
+                <form class="form-horizontal" id="logarithm">
+                    
+                    <br/><br/>
+                    <div id="grid">
+            
+                    </div>
+                     <!-- reset button not yet implemented -->
+                     <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button> -->
+                    <div class="button-container">
+                    <button id="resetButton" class="btn-s">Reset</button>
+                    <button type="button" id="submitButton" class="btn-s">Submit</button><br/><br/><br/>
+                </div>
+                    <div class="outterbox">
+                        <div class="box" id="resultboxgrid" style="display:none"><span id="resultgrid"></span></div>
+                    </div>
+                    <button class="backHome"><a href="/index.html">Back To Home</a></button>
+                </form>
+          
+            
+            <script src="../javascript/sudoku_solver6.js" async defer></script>
+        </body>
 </html>

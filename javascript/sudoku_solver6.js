@@ -1,6 +1,6 @@
 function setGrid() {
   const input = document.querySelector("#grid");
-  const size = 4;
+  const size = 6;
 
   for (let i = 0; i < size; i++) {
     let rows = document.createElement("div");
@@ -26,7 +26,7 @@ document.getElementById("submitButton").addEventListener("click", (e) => {
 });
 
 function calculateGrid() {
-  let n = 4;
+  let n = 6;
   let mat = [];
   let invalidCells = [];
 
@@ -39,7 +39,7 @@ function calculateGrid() {
         document.getElementById(`grid${i}${j}`).classList.add("output-cell");
       } else {
         let parsedValue = parseInt(inputValue);
-        if (isNaN(parsedValue) || parsedValue < 1  || parsedValue > 4) {
+        if (isNaN(parsedValue) || parsedValue < 1  || parsedValue > 6) {
           invalidCells.push({ row: i, col: j });
         } else {
           mat[i][j] = parsedValue;
@@ -79,7 +79,7 @@ function calculateGrid() {
 // }
 
 function isValid(board) {
-  let n = 4;
+  let n = 6;
   //check columns
   let f = 1;
   for (let i = 0; i < n; i++) {
@@ -94,14 +94,14 @@ function isValid(board) {
 function check(board, i, j, cond) {
   let a = true;
   let b = cond;
-  for (let k = 0; k < 4; k++) {
+  for (let k = 0; k < 6; k++) {
     if ((board[i][k] == b && k ^ j) || (board[k][j] == b && k ^ i)) a = false;
   }
 
   let r = Math.floor(i / 2) * 2;
-  let c = Math.floor(j / 2) * 2;
+  let c = Math.floor(j / 3) * 3;
   for (let p = r; p < r + 2; p++) {
-    for (let q = c; q < c + 2; q++) {
+    for (let q = c; q < c + 3; q++) {
       if (board[p][q] == b && p != i && q != j) a = false;
     }
   }
@@ -109,10 +109,10 @@ function check(board, i, j, cond) {
 }
 
 function solve(board) {
-  for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < 4; j++) {
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 6; j++) {
       if (board[i][j] == ".") {
-        for (let k = "1"; k <= "4"; k++) {
+        for (let k = "1"; k <= "6"; k++) {
           if (check(board, i, j, k)) {
             board[i][j] = parseInt(k);
             if (solve(board)) {
@@ -132,7 +132,7 @@ function solve(board) {
 }
 
 function resetGrid() {
-  const size = 4;
+  const size = 6;
 
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
