@@ -1,0 +1,5 @@
+.inside a {
+    text-decoration: none; /* for hiding the visual that shows this tag as link */
+    color: white; /* text color white */
+}
+  
