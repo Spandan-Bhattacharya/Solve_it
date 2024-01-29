@@ -17,7 +17,7 @@
   font-family: Ubuntu;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-style: normal;
+  /* font-style: normal; */
 
 }
 
@@ -135,35 +135,25 @@ html {
 .topnav {
   display: flex;
 
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: center;
 
-  gap: 100px;
   height: 55px;
   z-index: 2;
-
+  padding: 1rem 4rem;
   background: rgb(0, 32, 36);
   background: linear-gradient(180deg, #0a121f 2.5%, #0a1629 43%, #0a121f 100%);
-
-  /* border-radius: 10px; */
-  /* overflow: hidden; */
-  /* border: 1px solid red; */
 }
 
-.topnav img {
-  margin-right: auto;
-  margin-left: 16px;
-  /* Adjust the left margin as needed */
+.topnav > div > img {
   background-color: rgba(255, 255, 255, 0);
 
   height:55px;
   width:55px;
   cursor: pointer;
-  /* border: 1px solid red; */
 }
 
 .topnav a {
-  /* float: left; */
   color: #ffb780;
   text-align: center;
   padding: 14px 16px;
@@ -171,9 +161,7 @@ html {
   font-size: 17px;
 }
 .topnav .list{
-  /* border: 1px solid red; */
   display: flex;
-  position: absolute;
   left: 15%;
   justify-content: space-around;
 }
@@ -185,12 +173,12 @@ html {
   display: none;
 }
 .openMenu i{
-  font-size: 5vw;
   position: absolute;
-  right: 4dvw;
-  top: 15px;
+  font-size: 24px;
+  right: 4rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10001;
+
 }
 .list {
   display: flex;
@@ -206,15 +194,6 @@ html {
 @media (max-width:719px) {
   body.scroll{
     overflow: hidden;
-  }
-  .topnav img{
-    position: absolute;
-    /* width:; */
-    object-fit: cover;
-    object-position: center;
-    top: 0.5dvh;
-    left: 0.5dvw;
-    z-index: 1001;
   }
   .openMenu {
     display: flex;
@@ -274,7 +253,7 @@ background: linear-gradient(90deg, rgba(3,1,36,1) 0%, rgba(8,8,112,1) 37%, rgba(
   background-color: #f99548;
   border-radius: 10px;
   color: #0a1629;
-  /* margin: 5px 0% 5px 0%; */
+  text-decoration: none;
 }
 
 /* Add a color to the active/current link */
@@ -453,6 +432,79 @@ h3 {
 }
 
 /* css for the grid of solvers ends */
+
+/* css for suggestion section begins */
+.suggestion {
+
+  border: rgb(39, 2, 113);
+  box-shadow: inset 6px 6px 6px #311f95, inset -6px -6px 6px rgb(88, 29, 206);
+  border-radius: 50px;
+  margin: 0px 100px 100px 100px;
+  text-align: center;
+  padding: 40px 40px 50px 40px;
+  color: white;
+  font-size: 29px;
+  
+}
+
+.puzzle-title {
+  padding: 30px 300px 50px 300px;
+  
+}
+.puzzle-title h1{
+  font-weight:900;
+  
+}
+
+
+.email {
+
+  height: 100px;
+  align-items: center;
+}
+
+.email button {
+  border: 0;
+  padding: 20px;
+  text-decoration: none;
+  background: none;
+}
+
+.email button:hover {
+  transition: 0.7s;
+  transform: translateY(-10px);
+  border: rgb(39, 2, 113);
+  box-shadow: inset 6px 6px 6px #311f95, inset -6px -6px 6px rgb(88, 29, 206);
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+
+.email a {
+  text-decoration: none;
+  
+}
+
+.email a:hover {
+  text-decoration: none;
+  background: linear-gradient(to top, rgb(152, 61, 146), yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.puzzle-title:hover, .email:hover{
+  background: linear-gradient(to top, rgb(198, 200, 195), rgb(255, 234, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: 0.5s;
+}
+
+/* css for suggestion section ends */
+
+
+
 /* css for the footer begins*/
 .footer {
   padding: 20px;

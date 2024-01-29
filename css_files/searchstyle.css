@@ -1,146 +1,92 @@
-.search-box {
-    height: 55px;
-    width: 30%;
-    background-color: transparent;
-    align-items: right;
-    font-size: 15px;
-    margin: 1px;
-    vertical-align: middle;
-    border: 3px solid white;
-    border-top: none;
-    border-bottom: none;
+.searchWrapper {
     position: relative;
-     /* Add this line */
-  }
-  .search-btn {
-    position: absolute;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-  }
-input[placeholder="Search Solver"]::placeholder {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 20px;
-    opacity: 0.75; /* Firefox */
-   
-}
-input[placeholder="Search Solver"]:focus {
-    outline: none;
-    box-shadow: 0 0 5px #010b16;
-    background-color: rgb(5, 2, 20);
-    opacity: 0.6;
-}
-
-.input-box {
-    height: 100%;
-    width: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-    color: white;
-}
-.search-btn {
-    background: lightblue;
-    position: absolute;
-    right: 2%;
-    padding-bottom: 10px;
-    padding-left: 10px;
-  }
- 
-  .search-box.clicked {
-    background: rgb(26, 25, 25);
-  }
-.search-box input{
-    flex:1;
-    height:50px;
-    background: transparent;
-    border:0;
-    outline:0;
-    font-size:20px;
-    color: white;
-    padding-bottom: 15px;
-   
-}
-.search-box button{
-    background:transparent;
-    border:0;
-    outline:0;
-   
-
-}
-.search-box button.fa-solid{
-    width:25px;
-    color:#555;
-    font-size:15px;
-    cursor:pointer;
-}
-.search-box::placeholder{
-    color:rgb(255, 255, 255);
-
-}
-.search-box .result-box ul{
-    border-top:1px solid #999;
-    padding: 15px 10px;
-}
-.search-box .result-box ul li{
-    list-style: none;
-    border-radius:3px;
-    padding: 15px 10px;
-    cursor:pointer;
-   
-}
-.search-box .result-box ul li:hover{
-    background:#d5f4f8;
-}
-.search-box .result-box{
-    max-height:  300px ;
-    width:400px;
-    overflow-y:scroll;
-    position: absolute;
-   
-}
-.search-box ul li{
-    background-color: rgb(195, 225, 245);
-}
- 
-.row{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: 1px;
-    margin-left: 2px;
-    margin-top:  3px;
-    margin-bottom: 38px;
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: none;
+}
+
+.search-container {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
     align-items: center;
- 
+    justify-content: center;
 }
-i{
-    color: rgb(0, 0, 0);
-    font-size: 30px;
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
 }
-@media (max-width:719px) {
-    .search-box{
-        z-index: 1001;
-        width: 50vw;
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-        padding: 1vw 1vw;
-        height: 6.5vh;
-        /* border: 1px solid red; */
+
+.searchButton {
+    color: #ffb780;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #ffb780;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+
+.search-container .result-box ul {
+    padding: 15px 10px 0;
+}
+
+.search-container .result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    color: #ffb780;
+    background-color: #2f3640;
+}
+
+.search-container .result-box ul li:last-child {
+    padding: 15px 10px 0;
+}
+
+.search-container .result-box {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    background: rgba(47, 54, 64, 0.6);
+    backdrop-filter: blur(10px);
+    margin-top: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 2; /* Added z-index in order to prevent the result box to hide under other elements*/
+}
+
+@media screen and (max-width:719px) {
+    .searchWrapper{
+        margin-right: 4rem;
     }
-    .search-btn{
-        border: 1px solid green;
-        padding: 1vw 1vw;
-        /* width: 1vw;
-        height: 1vh; */
-    }
-    .search-btn i{
-        color: rgba(223, 222, 222, 0.842);
-    }
-    
 }
