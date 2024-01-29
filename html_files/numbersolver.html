@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Solver</title>
+    <link rel="stylesheet" href="../css_files/number_solver.css">
+</head>
+
+<body>
+
+    <h1>Number Solver</h1>
+    <div class="container">
+        <label for="num1">
+            <h3>Number 1:</h3>
+        </label>
+        <input type="number" id="num1" required>
+
+        <label for="num2">
+            <h3>Number 2:</h3>
+        </label>
+        <input type="number" id="num2" required>
+        <br>
+        <label for="num3">
+            <h3>Number 3:</h3>
+        </label>
+        <input type="number" id="num3" required>
+
+        <label for="num4">
+            <h3>Number 4:</h3>
+        </label>
+        <input type="number" id="num4" required>
+
+        <br><br>
+
+        <label for="target">
+            <h3>Target:</h3>
+        </label>
+        <input type="number" id="target" required>
+
+        <br><br><br>
+
+        <button onclick="solve()">Solve</button>
+
+        <h3>
+            <div id="result"></div>
+        </h3>
+    </div>
+    <script src="../javascript/number_solver.js"></script>
+
+</body>
+
+</html>
