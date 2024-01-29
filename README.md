@@ -106,6 +106,9 @@ See the [open issues](https://github.com/Spandan-Bhattacharya/Solve_it/issues) f
 </div>
 
 
+## Local Installation Guide ## - [Video](https://drive.google.com/file/d/1fzzpo7ddSvj4rDKYDOSLBQHxxnVjVy07/view?usp=sharing)
+
+## How To sync/fetch and raise Pull request video ## - [video](https://drive.google.com/file/d/1Y9prRCP-H2Z18xPJ4K3n2PUIyE71Myll/view?usp=sharing)
 
 ### Creating A Pull Request
 
