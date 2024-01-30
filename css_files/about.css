@@ -15,7 +15,63 @@ body {
     height: 100%;
     position: absolute;
     backdrop-filter: blur(350px);
-    z-index: -1; /* Set a lower z-index */
+    z-index: -1;
+    /* Set a lower z-index */
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: #FFB780;
+    margin-bottom: 6px;
+}
+
+.hamburger {
+    display: none;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10rem;
+    /* border: 2px solid white; */
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:1140px) {
+    .hamburger {
+        display: block;
+        position: relative;
+        right: -45%;
+        transform: translate(50% , 0);
+    }
+    .nav-links {
+        position: absolute;
+        top: 66px;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        /* background: linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%); */
+        background: linear-gradient(180deg, #0a121f 2.5%, #0a1629 43%, #0a121f 100%);
+        opacity: 1;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.2s ease-in-out;
+    }
+
+    .nav-links>div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.nav-links.active {
+    height: 400px;
+    transition: height 0.2s ease-in-out;
 }
 
 .navbar {
@@ -24,8 +80,32 @@ body {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    top: 80px;
-    z-index: 1; /* Set a higher z-index */
+    /* top: 80px; */
+    z-index: 1;
+    /* Set a higher z-index */
+    position: relative;
+    /* border: 2px solid white; */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 3rem; */
+    width: 100%;
+    background: url('../assets/about_bodylogo.png');
+    background-size: 100dvh;
+    background-position: 50% 8%;
+    background-repeat: no-repeat;
+    /* border: 2px solid white; */
+    min-height: 100vh;
 }
 
 .navbar div a {
@@ -35,31 +115,111 @@ body {
     text-decoration: none;
 }
 
-.content-container {
-    text-align: center;
-    max-width: 800px;
-    margin: 20px;
-    box-sizing: border-box;
-    position: relative; /* Added position relative */
+.about-solve-it span{
+    font-size: 9rem;
+}
+
+@media screen  and (max-width : 700px){
+    .about-solve-it {
+        font-size: 1rem;
+    }
+
+    .about-solve-it > span > b {
+        font-size: 7rem;
+    }
+
+    .about-text{
+        font-size: 1rem;
+    }
+
+    .main-container {
+        background-size: 70dvh;
+    }
+    
+}
+
+@media screen and (max-width : 900px) {
+    .main-container {
+        background-size: 80dvh;
+    }
+}
+
+@media screen and (max-width : 775px){
+    .main-container {
+        background-size: 70dvh;
+        background-position: 50% 20%;
+    }
+}
+
+@media screen and (max-width : 590px){
+    .main-container {
+        background-size: 60dvh;
+        background-position: 50% 30%;
+    }
+}
+
+@media screen and (max-width : 460px){
+    .main-container {
+        background-size: 50dvh;
+        background-position: 50% 30%;
+    }
 }
 
 .content-container {
+    /* text-align: center;
+    max-width: 800px;
+    margin: 20px;
+    box-sizing: border-box;
+    position: relative; */
+    /* Added position relative */
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    /* border: 2px solid red; */
+    padding: 3rem;
+}
+
+/* style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 30px ; width: 150vh;" */
+
+.about-text {
+    font-size: 3rem;
+    text-align: center;
+    padding: 0 5rem;
+    /* border: 2px solid red; */
+    width: 80%;
+}
+
+@media screen  and (max-width : 500px){
+    .about-text {
+        padding: 0 1rem;
+    }
+}
+
+/* .content-container {
     text-align: center;
     max-width: 800px;
     margin: -50px auto 20px;
     box-sizing: border-box;
     position: relative;
-}
+} */
 
 .about-solve-it {
-    font-size: 60px;
+    /* font-size: 60px; */
+    font-size: 5.5rem;
     font-weight: 900;
     color: #FFB780;
-    position: absolute;
+    /* position: absolute;
     top: 30%;
-    left: 50%; /* Centering in the x-axis */
-    transform: translate(-50%, -50%);
-    white-space: nowrap; /* Prevent line breaks */
+    left: 50%; */
+    /* Centering in the x-axis */
+    /* transform: translate(-50%, -50%);
+    white-space: nowrap; */
+    /* Prevent line breaks */
+    /* border: 2px solid red; */
+    text-align: center;
 }
 
 /* .footer {
@@ -80,57 +240,65 @@ body {
     font-weight: 400;
 } */
 
-.footer-container{
+.footer-container {
     width: 100%;
-    background:linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%); 
+    background: linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%);
     padding: 20px;
     background: url(Image.png);
     background-position: center;
 }
-.foot-head h2{
+
+.foot-head h2 {
     text-align: center;
     color: aqua;
     font-weight: 600;
 }
-.foot-head p{
+
+.foot-head p {
     text-align: center;
     font-size: 1.70rem;
 }
-.foot-navlinks h3{
+
+.foot-navlinks h3 {
     text-align: center;
     color: aqua;
     font-weight: 600;
 }
+
 .foot-navlinks {
     text-align: center;
 }
-.foot-navlinks a{
+
+.foot-navlinks a {
     color: #ffb780;
     font-size: 18px;
     padding: 10px;
 }
+
 .foot-social {
     text-align: center;
 }
-.foot-social h3{
+
+.foot-social h3 {
     color: aqua;
     font-weight: 600;
 }
-.foot-social a{
+
+.foot-social a {
     font-size: 30px;
 }
 
-.foot-last{
+.foot-last {
     margin-top: 10px;
     padding: 2rem;
     padding-bottom: 1rem;
-   font-family:  Ubuntu, sans-serif;
-   font-size: medium;
-   text-align: center;
-   border-top: 1px solid #9D5CFF;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    font-family: Ubuntu, sans-serif;
+    font-size: medium;
+    text-align: center;
+    border-top: 1px solid #9D5CFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .made-with-passion {
@@ -145,8 +313,9 @@ body {
 }
 
 .heart {
-color: #9D5CFF;
- font-size: 29px !important; /* Add !important to ensure the style is applied  */
+    color: #9D5CFF;
+    font-size: 29px !important;
+    /* Add !important to ensure the style is applied  */
 }
 
 
@@ -159,6 +328,8 @@ color: #9D5CFF;
     margin: 15px auto;
     background: #9D5CFF;
 }
+
 .navbar div a:hover {
-border-bottom: 2px solid #9D5CFF;
-transition: width 0.3s ease;}
+    border-bottom: 2px solid #9D5CFF;
+    transition: width 0.3s ease;
+}
