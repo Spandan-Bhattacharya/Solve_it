@@ -104,7 +104,7 @@ body{
     background-size: 100dvh;
     background-position: 50% 8%;
     background-repeat: no-repeat;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     min-height: 100vh;
 }
 
@@ -113,6 +113,56 @@ body{
     font-weight: 400;
     color: #FFB780;
     text-decoration: none;
+}
+
+.about-solve-it span{
+    font-size: 9rem;
+}
+
+@media screen  and (max-width : 700px){
+    .about-solve-it {
+        font-size: 1rem;
+    }
+
+    .about-solve-it > span > b {
+        font-size: 7rem;
+    }
+
+    .about-text{
+        font-size: 1rem;
+    }
+
+    .main-container {
+        background-size: 70dvh;
+    }
+    
+}
+
+@media screen and (max-width : 900px) {
+    .main-container {
+        background-size: 80dvh;
+    }
+}
+
+@media screen and (max-width : 775px){
+    .main-container {
+        background-size: 70dvh;
+        background-position: 50% 20%;
+    }
+}
+
+@media screen and (max-width : 590px){
+    .main-container {
+        background-size: 60dvh;
+        background-position: 50% 30%;
+    }
+}
+
+@media screen and (max-width : 460px){
+    .main-container {
+        background-size: 50dvh;
+        background-position: 50% 30%;
+    }
 }
 
 .content-container {
