@@ -69,6 +69,34 @@ button:hover {
         0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
         0px 11px 7px 0px rgba(0, 0, 0, 0.01);
 }
+.backHome, .backHome a{
+    padding: 12px;
+    background-color: linear-gradient(180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%),
+#7f45e2;;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+
+.backHome a{
+    text-decoration: none;
+}
+
+
+.backHome a:hover, .backHome:hover{
+    text-decoration: none;
+    background-color: #92d3ff;
+    color:rgb(35, 107, 159);
+}
+
 
 #result {
     display: none;
