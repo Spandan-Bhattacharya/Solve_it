@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Tower of Hanoi</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' href='../css_files/toh.css'>
+  <script src='../javascript/toh.js' type="module" defer></script>
+</head>
+<body>
+    <div class="head">
+    <h1>TOWER OF HENOI</h1>
+    <hr>
+    </div>
+  <div class="container">
+    <div class="stage">
+      <div class="tower">
+      </div>
+      <div class="tower">
+      </div>
+      <div class="tower">
+      </div>
+    </div>
+      <div class="left-sidebar">
+        <div class="new-game">
+          <select name="discs" id="discSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+          <button id="newGameBtn">NEW GAME</button>
+        </div>
+        <div class="speed">
+          <p>SPEED</p>
+          <input type="range" id="speedRange" step="1" max="100" value="100">
+        </div>
+        <div class="buttons">
+          <button id="btnSolve">SOLVE</button>
+        </div>
+      </div>
+      <textarea id="answers" class="ans"></textarea>
+    </div>
+</body>
+</html>
