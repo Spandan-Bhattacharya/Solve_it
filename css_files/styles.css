@@ -988,13 +988,4 @@ ul li a:hover {
     text-decoration: none;
   }
 }
-#contributors-list li:hover {
-  color: rgb(150, 39, 39);
-  transform: translateY(-4px);
-  transition:0.3s;
-}
-.contributor-image:hover{
-  filter: brightness(85%);
-  transform: scale(1.2);
-}
 /*New Footer CSS Code Ends Here*/
