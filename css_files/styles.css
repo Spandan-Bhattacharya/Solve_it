@@ -988,5 +988,12 @@ ul li a:hover {
     text-decoration: none;
   }
 }
-
+#contributors-list li:hover {
+  color: #0FFF50;
+  transform: translateY(-4px);
+  transition:0.3s;
+}
+.contributor-image:hover{
+  transform: scale(1.2);
+}
 /*New Footer CSS Code Ends Here*/
