@@ -1,5 +1,12 @@
 const result = document.getElementById("result");
-
+function reset() {
+    result.style.display = "none";
+    document.getElementById('num1').value = null;
+    document.getElementById('num2').value = null;
+    document.getElementById('num3').value = null;
+    document.getElementById('num4').value = null;
+    document.getElementById('target').value = null;
+}
 function solve() {
     result.style.display = "block";
     const num1 = parseInt(document.getElementById('num1').value);
