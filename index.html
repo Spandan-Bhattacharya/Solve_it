@@ -25,6 +25,7 @@
     ></script>
 
     <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body
     style="
@@ -33,6 +34,10 @@
     
     "
   >
+  <div class="loader_bg">
+    <h1>Solve it!</h1>
+    <div class="loader"></div>
+  </div>
     <!-- navbar begins-->
     <nav class="topnav">
       <div>
@@ -281,6 +286,12 @@
     </footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+      },1500);
+    </script>
     <!-- add a go to top btn -->
     <button id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-arrow-up" style="color: white;"></i></button>
     <script src="javascript/GoToTop.js"></script>
