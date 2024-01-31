@@ -169,8 +169,6 @@ center;
     text-decoration: none;
 }
 
- 
- 
 .contributor-image {
     border: 5px solid rgb(210, 115, 7); 
 width:100px;
@@ -189,35 +187,39 @@ border-radius:
    text-align: center;
 font-size:
 16px;
+
 /* justify-content: center; */
 /* Adjust the font size as needed */
   }
- 
+ /*.contributor-image:hover{
+    border: 5px solid rgb(206, 136, 55);
+ }*/
 .contributor-name:hover {
    
-text-decoration:
-underline;
+text-decoration:underline;
+
   }
- 
+  #contributors-list li:hover {
+    transform: translateY(-4px);
+    transition:0.3s;
+  }
+  .contributor-image:hover{
+    transform: scale(1.2);
+  }
+  .contributor-name a:hover {
+    color: rgb(152, 93, 16);
+  }
+  
  
 
 .contributors-container
 a{
-   
-/* text-decoration:
-none; */
-   
-/* color:
-#ffffff; */
    padding: 20px;
-/* font-size:
-medium; */
   }
  
 .contributors-container
 a:hover{
-   
-color:#ffc400;
+color:brown;
   }
  
 #contributors-list {
