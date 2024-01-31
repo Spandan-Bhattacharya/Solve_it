@@ -169,8 +169,6 @@ center;
     text-decoration: none;
 }
 
- 
- 
 .contributor-image {
     border: 5px solid rgb(210, 115, 7); 
 width:100px;
@@ -189,6 +187,7 @@ border-radius:
    text-align: center;
 font-size:
 16px;
+
 /* justify-content: center; */
 /* Adjust the font size as needed */
   }
@@ -197,6 +196,7 @@ font-size:
    
 text-decoration:
 underline;
+color: brown;
   }
  
  
@@ -217,7 +217,7 @@ medium; */
 .contributors-container
 a:hover{
    
-color:#ffc400;
+color:brown;
   }
  
 #contributors-list {

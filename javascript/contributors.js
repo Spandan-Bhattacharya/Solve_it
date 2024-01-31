@@ -23,7 +23,10 @@ async function displayContributors(contributors){
             <a href="${contributor.html_url}" target="_blank">
             <img class="contributor-image"src="${contributor.avatar_url}" alt="${contributor.login}" width="100" height="100">
             </a>
-            <p class="contributor-name">${contributor.login}</p>
+            <p class="contributor-name">
+            <a href="${contributor.html_url}" target="_blank">${contributor.login}</a>
+            </p>
+            
         `;
         contributorsList.append(li);
     }
