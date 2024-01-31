@@ -1,57 +1,90 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  #container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-  }
+/* fix for long outputs */
+#container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  max-height: 500px;
+  overflow: hidden;
+}
 
-  h1 {
-    color: #333;
-  }
+h1 {
+  color: #333;
+}
 
-  label {
-    display: block;
-    margin-bottom: 8px;
-    color: #555;
-  }
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
 
-  input {
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
-  button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
-  #result {
-    margin-top: 20px;
-    text-align: left;
-  }
+/* fixed the result section to handle long outputs */
+#result {
+  margin-top: 20px;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: scroll;
+}
 
-  p {
-    margin-bottom: 5px;
-    color: #333;
-  }
+/* enhanced the display of results */
+li {
+  margin-bottom: 5px;
+  color: black;
+  padding: 10px;
+}
+
+#result li:nth-child(odd) {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
+/* custom grey scrollbar to match the theme*/
+#result::-webkit-scrollbar {
+  width: 10px;
+}
+
+#result::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#result::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#result::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
