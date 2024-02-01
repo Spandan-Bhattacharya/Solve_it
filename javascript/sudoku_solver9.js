@@ -162,11 +162,9 @@ function resetGrid() {
       for (let j = 0; j < gridSize; j++) {
         const field = document.getElementById(`cell-${i}-${j}`);
         if (field) {
-            const originalColor = field.style.backgroundColor;
-          // Set the value to an initial state or clear it
-          field.value = ""; // You can set it to any default value you prefer
+          field.value = "";
           field.classList.remove("user-input");
-          field.style.backgroundColor = originalColor;
+          field.style.backgroundColor = 'black';
         //   field.classList.remove("output-cell");
         }
       }
