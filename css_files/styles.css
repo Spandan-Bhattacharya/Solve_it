@@ -1009,7 +1009,7 @@ ul li a:hover {
 }
 .loader:before, .loader:after{
   content: "";
-  border: 1em solid #ff5733;
+  border: 1em solid #e1701a;
   border-radius: 50%;
   width: inherit;
   height: inherit;
@@ -1039,7 +1039,8 @@ ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: orangered;
+  color: #e1701a;
   margin: 80px 0;
-  
+  font-size: 7rem;
+  font-weight: bold;
 }
