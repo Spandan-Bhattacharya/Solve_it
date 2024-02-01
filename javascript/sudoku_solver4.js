@@ -156,7 +156,7 @@ function resetGrid() {
        if (field) {
       
         // Reset color 
-        field.style.backgroundColor = 'black';
+        field.style.color = 'black';
         
         // Other reset logic
         field.value = "";
