@@ -41,13 +41,20 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+  .square:nth-child(odd) {
+    background-color: #f0d9b5; /* Light color for odd squares */
+  }
+  
+  .square:nth-child(even) {
+    background-color: #b58863; /* Dark color for even squares */
+  }
 
   .square:hover {
     background-color: #ddd;
   }
 
   .queen {
-    color: red;
+    color:black;
   }
 
   #solutionButton {
