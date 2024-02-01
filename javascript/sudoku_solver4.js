@@ -153,10 +153,14 @@ function resetGrid() {
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
       const field = document.getElementById(`grid${i}${j}`);
-      if (field) {
-        // Set the value to an initial state or clear it
-        field.value = ""; // You can set it to any default value you prefer
-        field.classList.remove("output-cell");
+       if (field) {
+      
+        // Reset color 
+        field.style.color = 'black';
+        
+        // Other reset logic
+        field.value = "";
+        
       }
     }
   }
