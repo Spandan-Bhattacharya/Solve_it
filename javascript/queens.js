@@ -87,5 +87,5 @@ const boardSize = 8;
         initializeChessboard();
       }
 
-    document.addEventListener('DOMContentLoaded', initializeChessboard);
+    document.addEventListener('DOMContentLoaded', initializeChessboard);// game begins
   
