@@ -162,10 +162,10 @@ function resetGrid() {
       for (let j = 0; j < gridSize; j++) {
         const field = document.getElementById(`cell-${i}-${j}`);
         if (field) {
-          // Set the value to an initial state or clear it
-          field.value = ""; // You can set it to any default value you prefer
+          field.value = "";
           field.classList.remove("user-input");
-          field.classList.remove("output-cell");
+         field.style.color = 'black';
+        //   field.classList.remove("output-cell");
         }
       }
     }
