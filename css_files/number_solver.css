@@ -1,117 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-image: url(../assets/bg.webp);
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* background-image: linear-gradient(-45deg, #312473, #2fa4b8); */
+    background-image: radial-gradient(#ff5d71, #EB3349);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
-h3 {
-    display: inline;
-    margin: 15px;
-    margin-right: 0px;
+h1{
+    color: white;
 }
 
 .container {
-    color: #ebebeb;
-    margin: auto;
-    width: 400px;
-    padding: 20px 30px;
-    border-radius: 4.8rem;
-    background: #2d2a37;
-    box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.22) inset,
-        0px 6px 8px 0px rgba(255, 255, 255, 0.1) inset,
-        0px 8px 17px 0px rgba(0, 0, 0, 0.29), 0px 30px 30px 0px rgba(0, 0, 0, 0.26),
-        0px 68px 41px 0px rgba(0, 0, 0, 0.15),
-        0px 120px 48px 0px rgba(0, 0, 0, 0.04),
-        0px 188px 52px 0px rgba(0, 0, 0, 0.01), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    max-width: 500px;;
+    padding: 2rem;
+    background-color: #353842;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-input {
-    width: 50px;
-    margin: 5px;
-    font-size: 1.3rem;
-    text-align: center;
-    color: black;
-    font-family: Rubik;
-    background-color: rgb(221, 195, 160);
-    border: 1px solid black;
-    border-radius: 8px;
-    font-weight: 600;
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
 }
 
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    color: #ebebeb;
-    font-family: Rubik;
-    font-size: 2.4rem;
-    font-weight: 400;
-    letter-spacing: -0.48px;
-    border-radius: 9px;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.05) 0%,
-            rgba(255, 255, 255, 0.05) 100%),
-        #2d2a37;
-    box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.06) inset,
-        0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
-        0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
-        0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+.inputContainer > .input-field input{
+    width: 100%;
 }
 
-button:hover {
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.15) 0%,
-            rgba(255, 255, 255, 0.05) 100%),
-        #7f45e2;
-    box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.1) inset,
-        0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
-        0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
-        0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+.num1n2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
-.backHome, .backHome a{
-    padding: 12px;
-    background-color: linear-gradient(180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(255, 255, 255, 0.05) 100%),
-#7f45e2;;
-    border: none;
-    border-radius: 10px;
-    color: white;
+
+.num3n4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-field {
+    position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-field input{
+    width: 180px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    transition: border .3s ease-in-out;
+}
+
+
+.input-field label {
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+    top: 0;
+    left: 15px;
     font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
+    padding: 0 2px;
+    background:#353842; 
+}
+
+input:focus {
+    border: 2px solid #f99548;
+}
+
+.buttonAligner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.buttonAligner button, .backHome{
+    background-color: #f99548;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "League Spartan", sans-serif;
+    color: #000;
     cursor: pointer;
-    margin-bottom: 12px;
-    margin-top: 10px;
 }
 
-.backHome a{
+a {
     text-decoration: none;
 }
 
-
-.backHome a:hover, .backHome:hover{
-    text-decoration: none;
-    background-color: #92d3ff;
-    color:rgb(35, 107, 159);
+.resultContaier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 #result {
-    display: none;
-    color: #110047;
-    margin-top: 40px;
+    margin-top: 2rem;
     font-size: 18px;
-    padding: 20px 30px;
-    border-radius: 2.4rem;
-    box-shadow:
-        inset 0 0 50px #ffffff6a,
-        inset 20px 0 80px rgba(255, 0, 255, 0.375),
-        inset -20px 0 80px rgba(0, 255, 255, 0.639),
-        inset 20px 0 300px rgba(255, 0, 255, 0.361),
-        inset -20px 0 300px rgba(0, 255, 255, 0.546),
-        0 0 50px #ffffff6c,
-        -10px 0 80px rgba(255, 0, 255, 0.491),
-        10px 0 80px rgba(0, 255, 255, 0.459);
+    color: #f99548;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    .container{
+        max-width: 80%;
+        max-height: 90%;   
+    }
+    .input-field input{
+        width: 65%;
+    }
+    .inputContainer > .input-field input{
+        width: 84%;
+    }
+    .num1n2, .num3n4{
+        gap: 1rem;
+    }
+    .buttonAligner{
+        flex-flow: column;
+        gap: 1rem;
+    }
+    .buttonAligner button, .backHome{
+        padding: 10px 20px;
+        width: 250px;
+    }
+    .resultContaier input{
+        max-width: 50%;
+    }
 }
