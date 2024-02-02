@@ -9,47 +9,46 @@
 </head>
 
 <body>
-
-    <h1>Number Solver</h1>
     <div class="container">
-        <label for="num1">
-            <h3>Number 1:</h3>
-        </label>
-        <input type="number" id="num1" required>
+        <h1>Number Solver</h1>
+        <div class="inputContainer">
+            <div class="num1n2">
+                <div class="input-field">
+                    <input type="number" id="num1" required>
+                    <label for="num1">Number 1</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="num2" required>
+                    <label for="num2">Number 2</label>
+                </div>
+            </div>
 
-        <label for="num2">
-            <h3>Number 2:</h3>
-        </label>
-        <input type="number" id="num2" required>
-        <br>
-        <label for="num3">
-            <h3>Number 3:</h3>
-        </label>
-        <input type="number" id="num3" required>
+            <div class="num3n4">
+                <div class="input-field">
+                    <input type="number" id="num3" required>
+                    <label for="num3">Number 3</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="num4" required>
+                    <label for="num4">Number 4</label>
+                </div>
+            </div>
+            <div class="input-field">
+                <input type="number" id="target" required>
+                <label for="target">Target</label>
+            </div>
+        </div>
 
-        <label for="num4">
-            <h3>Number 4:</h3>
-        </label>
-        <input type="number" id="num4" required>
+        <div class="resultContainer">
+            <p id="result"></p>
+        </div>
 
-        <br><br>
-
-        <label for="target">
-            <h3>Target:</h3>
-        </label>
-        <input type="number" id="target" required>
-
-        <br><br><br>
-
-        <button onclick="solve()">Solve</button>
-        <button onclick="reset()" style="margin-left: 20px;">Reset</button>
-        
-
-        <h3>
-            <div id="result"></div>
-        </h3>
+        <div class="buttonAligner">
+            <button onclick="solve()">Solve</button>
+            <button onclick="reset()">Reset</button>
+            <button class="backHome"><a href="/index.html" style="color:#000">Back To Home</a></button>
+        </div>
     </div>
-    <button class="backHome"><a href="/index.html">Back To Home</a></button>
     <script src="../javascript/number_solver.js"></script>
 
 </body>
