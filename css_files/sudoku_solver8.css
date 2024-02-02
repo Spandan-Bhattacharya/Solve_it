@@ -25,7 +25,7 @@
     }
     table{
         border-collapse :collapse;
-        border: 5px solid #000;
+        border: 5px solid rgba(9, 9, 121, 1);
     
     }
     .cell{
@@ -38,12 +38,14 @@
         background:rgb(244, 213, 99);
     }
     
-    table tr:nth-child(4n) td,
-    table tr:nth-child(4n+4) td{
-        border-bottom:2px solid #000;
+    table tr:nth-child(2n) td,
+    table tr:nth-child(2n) td{
+        border-bottom:2px solid rgba(9, 9, 121, 1);
+        /* border-bottom:2px solid #000; */
     }
     table td:nth-child(4n) {
-        border-right: 2px solid #000;
+        border-right: 2px solid rgba(9, 9, 121, 1);
+        /* border-right: 2px solid #000; */
     }
     input{
         outline:none;
