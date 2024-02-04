@@ -41,7 +41,85 @@ document.getElementById("submitButton").addEventListener("click", (e) => {
   calculateGrid();
 });
 
-function calculateGrid() {
+document.getElementById("checkSolutionButton").addEventListener("click", (e) => {
+  e.preventDefault();
+  checkSolution();
+});
+
+document.getElementById("solveButton").addEventListener("click", (e) => {
+  e.preventDefault();
+  solveSudoku();
+});
+function checkSolution() {
+  let n = 4;
+  let mat = [];
+  let invalidCells = [];
+  let solutionCount = 0;
+
+  for (let i = 0; i < n; i++) {
+    mat[i] = [];
+    for (let j = 0; j < n; j++) {
+      let inputValue = document.getElementById(`grid${i}${j}`).value;
+      if (inputValue === "") {
+        mat[i][j] = ".";
+        document.getElementById(`grid${i}${j}`).classList.add("output-cell");
+      } else {
+        let parsedValue = parseInt(inputValue);
+        if (isNaN(parsedValue) || parsedValue < 1 || parsedValue > 4) {
+          invalidCells.push({ row: i, col: j });
+        } else {
+          mat[i][j] = parsedValue;
+        }
+      }
+    }
+  }
+
+  if (invalidCells.length === 0) {
+    let verdictSection = document.getElementById("verdictSection");
+    if (isValid(mat)) {
+      solveCount([...mat], 0, () => solutionCount++);
+      if (solutionCount === 1) {
+        verdictSection.innerHTML = "OK - Unique Solution";
+      } else {
+        verdictSection.innerHTML = `Invalid input! ${solutionCount} solutions found.`;
+      }
+    } else {
+      verdictSection.innerHTML = "Invalid input! Please enter valid Numbers.";
+    }
+  }
+}
+
+
+function countSolutions(board) {
+  let solutions = 0;
+  solveCount([...board], 0, () => solutions++);
+  return solutions;
+}
+
+
+function solveCount(board, index, callback) {
+  if (index === 16) {
+    callback([...board]);
+    return;
+  }
+
+  let i = Math.floor(index / 4);
+  let j = index % 4;
+
+  if (board[i][j] === ".") {
+    for (let k = 1; k <= 4; k++) {
+      if (check(board, i, j, k.toString())) {
+        board[i][j] = k;
+        solveCount([...board], index + 1, callback);
+        board[i][j] = ".";
+      }
+    }
+  } else {
+    solveCount([...board], index + 1, callback);
+  }
+}
+
+function solveSudoku() {
   let n = 4;
   let mat = [];
   let invalidCells = [];
@@ -55,7 +133,7 @@ function calculateGrid() {
         document.getElementById(`grid${i}${j}`).classList.add("output-cell");
       } else {
         let parsedValue = parseInt(inputValue);
-        if (isNaN(parsedValue) || parsedValue < 1  || parsedValue > 4) {
+        if (isNaN(parsedValue) || parsedValue < 1 || parsedValue > 4) {
           invalidCells.push({ row: i, col: j });
         } else {
           mat[i][j] = parsedValue;
@@ -64,29 +142,24 @@ function calculateGrid() {
     }
   }
 
-  if (invalidCells.length === 0 && isValid(mat)) {
-    solve(mat);
-    for (let i = 0; i < n; i++) {
-      for (let j = 0; j < n; j++) {
-        document.getElementById(`grid${i}${j}`).value = mat[i][j];
+  if (invalidCells.length === 0) {
+    let verdictSection = document.getElementById("verdictSection");
+    if (isValid(mat)) {
+      solve(mat);
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          document.getElementById(`grid${i}${j}`).value = mat[i][j];
+        }
       }
-    }
-  } else {
-    if (!document.getElementById("errorMessage")) {
-      let errorMessage = document.createElement("div");
-      errorMessage.innerHTML = "Invalid input!. Please enter valid Numbers.";
-      errorMessage.style.color = "red";
-      errorMessage.id = "errorMessage";
-      document.body.appendChild(errorMessage);
-
-      setTimeout(function () {
-        document.body.removeChild(errorMessage);
-        // resetInvalidCells(invalidCells);
-        resetGrid();
-      }, 2000);
+      verdictSection.innerHTML = "Sudoku Solved";
+    } else {
+      verdictSection.innerHTML = "Invalid input! Please enter valid Numbers.";
     }
   }
 }
+
+
+
 
 // function resetInvalidCells(invalidCells) {
 //   invalidCells.forEach(cell => {
@@ -149,6 +222,7 @@ function solve(board) {
 
 function resetGrid() {
   const size = 4;
+  document.getElementById("verdictSection").innerHTML = ""; // Clear verdict section
 
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
