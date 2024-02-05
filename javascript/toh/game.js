@@ -1,7 +1,7 @@
 const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
-const ans=document.getElementById('answers');
+const ans = document.getElementById('answers');
 const towers = document.querySelectorAll('.tower')
 
 let towerContent = [[], [], []]
@@ -14,7 +14,7 @@ const sleepTime = 300
 let speed = 100
 
 
-const DISC_COLORS = ['blue', 'green', 'black', 'orange', 'grey', 'aqua','red']
+const DISC_COLORS = ['blue', 'green', 'black', 'orange', 'grey', 'aqua', 'red']
 
 
 const startWidth = 95
@@ -45,7 +45,7 @@ const buildTowers = (towers) => {
 start()
 
 function start() {
-  ans.innerHTML='';
+  ans.innerHTML = '';
   towerContent = [[], [], []]
   buildTowers(towers)
 
@@ -85,9 +85,9 @@ function dragend() {
 
 
 function moveTower(originTowerIndex, currentTowerIndex, disc) {
-    towerContent[currentTowerIndex].push(towerContent[originTowerIndex].pop())
-    originTower.removeChild(disc)
-    currentTower.prepend(disc)
+  towerContent[currentTowerIndex].push(towerContent[originTowerIndex].pop())
+  originTower.removeChild(disc)
+  currentTower.prepend(disc)
 }
 
 function isDroppable(originTowerIndex, currentTowerIndex, disc) {
@@ -136,7 +136,7 @@ class Game {
       start()
     })
 
-    btnSolve.onclick = function() {
+    btnSolve.onclick = function () {
       const movements = getHanoiSolutions(size)
       moves(movements)
     }
@@ -146,12 +146,12 @@ class Game {
 export default Game
 const getHanoiSolutions = (nDiscs) => {
   const solutions = []
-  let count=1;
+  let count = 1;
   const hanoi = (n, origin, destiny, aux) => {
     if (n == 1) {
       // Base case
       solutions.push({ disc: n, origin, destiny })
-      ans.innerHTML+=count+". block goes from "+(origin+1)+" to "+(destiny+1)+"\n";
+      ans.innerHTML += count + ". block goes from " + (origin + 1) + " to " + (destiny + 1) + "\n";
       count++;
       return;
     }
@@ -159,7 +159,7 @@ const getHanoiSolutions = (nDiscs) => {
     hanoi(n - 1, origin, aux, destiny)
 
     solutions.push({ disc: n, origin, destiny })
-    ans.innerHTML+=count+". block goes from "+(origin+1)+" to "+(destiny+1)+"\n";
+    ans.innerHTML += count + ". block goes from " + (origin + 1) + " to " + (destiny + 1) + "\n";
     count++;
     hanoi(n - 1, aux, destiny, origin)
   }
@@ -168,3 +168,41 @@ const getHanoiSolutions = (nDiscs) => {
 
   return solutions;
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var textarea = document.getElementById('answers');
+
+
+  textarea.addEventListener('input', function () {
+    adjustTextareaHeight(textarea);
+  });
+
+  // Initial adjustment on page load
+  adjustTextareaHeight(textarea);
+});
+
+function adjustTextareaHeight(textarea) {
+  // Set the textarea height to its scrollHeight
+  textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
+}
+
+ans.addEventListener('input', function () {
+  adjustTextareaHeight(ans);
+});
+
+adjustTextareaHeight(ans);
+
+
+
+function adjustDiscs() {
+  size = discSelect.selectedIndex + 1;
+  start();
+}
+
+discSelect.addEventListener('change', adjustDiscs);
+
+// Initialize the game
+const game = new Game();
+game.newGame();
