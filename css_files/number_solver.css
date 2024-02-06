@@ -4,9 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    /* background-image: linear-gradient(-45deg, #312473, #2fa4b8); */
-    background-image: radial-gradient(#ff5d71, #EB3349);
-    background-size: cover;
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +14,7 @@ body {
 }
 
 h1{
-    color: white;
+    color: black;
 }
 
 .container {
@@ -26,7 +25,7 @@ h1{
     width: 100%;
     max-width: 500px;;
     padding: 2rem;
-    background-color: #353842;
+    background-color: #c98900;
     border-radius: 1rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -76,9 +75,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     border-radius: 6px;
     font-size: 18px;
     padding: 0 15px;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     background: transparent;
-    color: #fff;
+    color: #000;
     outline: none;
     transition: border .3s ease-in-out;
 }
@@ -87,16 +86,17 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .input-field label {
     position: absolute;
     transform: translateY(-50%);
-    color: #fff;
+    color: #000;
     top: 0;
     left: 15px;
     font-size: 16px;
     padding: 0 2px;
-    background:#353842; 
+    background-color: #c98900;
+
 }
 
 input:focus {
-    border: 2px solid #f99548;
+    border: 2px solid #fff;
 }
 
 .buttonAligner{
@@ -107,15 +107,22 @@ input:focus {
     margin: 2rem 0;
 }
 
-.buttonAligner button, .backHome{
-    background-color: #f99548;
+.buttonAligner button{
+    background-color: #000458;
     padding: 1rem;
     border-radius: 1rem;
     font-weight: bold;
     font-size: 25px;
     font-family: "League Spartan", sans-serif;
-    color: #000;
+    color: #fff;
     cursor: pointer;
+    box-shadow: 15px 5px 10px #ea711c;
+}
+
+.buttonAligner button:hover {
+    background: rgb(1, 47, 173);
+    box-shadow: 0 5px 10px rgba(223, 123, 10, 0.4);
+    transition: 0.5s;
 }
 
 a {
@@ -131,7 +138,7 @@ a {
 #result {
     margin-top: 2rem;
     font-size: 18px;
-    color: #f99548;
+    color: #000;
     width: 100%;
     text-align: center;
 }
