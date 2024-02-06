@@ -24,11 +24,19 @@
     <div class="blurred-background"></div>
     <div class="main-container">
         <div class="navbar">
-            <div><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></div>
-            <div><a href="newContact.html"><i class="fa-solid fa-clipboard-user"></i> Contact</a></div>
-            <div><a href="about.html"><i class="fa-solid fa-square-phone"></i> About</a></div>
-            <div><a href="faq.html"><i class="fa-solid fa-comments"></i> FAQ</a></div>
-            <div><a href="contributors.html"><i class="fa-solid fa-hand-holding-heart"></i> Contributors</a></div>
+            <div class="link-section">
+                <div><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></div>
+                <div><a href="newContact.html"><i class="fa-solid fa-clipboard-user"></i> Contact</a></div>
+                <div><a href="about.html"><i class="fa-solid fa-square-phone"></i> About</a></div>
+                <div><a href="faq.html"><i class="fa-solid fa-comments"></i> FAQ</a></div>
+                <div><a href="contributors.html"><i class="fa-solid fa-hand-holding-heart"></i> Contributors</a></div>
+            </div>
+
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
         <div class="content">
             <div class="intro">
@@ -106,6 +114,18 @@
             </div>
         </div>
     </div>
+
+
+
+    <script>
+
+        let hambuger = document.querySelector('.hamburger');
+
+        hambuger.addEventListener('click' , () => {
+            let navLinks = document.querySelector('.link-section');
+            navLinks.classList.toggle("active");
+        })
+    </script>
 </body>
 
 </html>
