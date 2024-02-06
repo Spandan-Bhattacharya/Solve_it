@@ -386,3 +386,65 @@ button:hover {
         width: 15rem;
     }
 }
+
+ .link-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar {
+    justify-content: space-evenly; 
+    position: relative;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+}
+
+.line {
+    height: 3px;
+    width: 20px;
+    background-color :#FFB780;
+}
+
+@media screen and (max-width : 750px){
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+        z-index: 1;
+        position: relative;
+    }
+
+    .link-section {
+        position: absolute;
+        height: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0%;
+        top: 98%;
+        background: linear-gradient(180deg, #0a121f 2.5%, #0a1629 43%, #0a121f 100%);;
+        transition: height 0.2s linear;
+        z-index: -2;
+        overflow: hidden;
+        opacity: 1;
+    }
+}
+
+.link-section.active{
+    height: 400px;
+    transition: height 0.2s ease-in-out; 
+ } 
+
