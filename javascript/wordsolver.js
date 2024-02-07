@@ -16,6 +16,7 @@ async function solveWords() {
   var inputLetters = document
     .getElementById("inputLetters")
     .value.toLowerCase();
+  var inputLength = inputLetters.length;
 
   if (inputLetters.trim() !== "") {
     try {
@@ -33,10 +34,9 @@ async function solveWords() {
             break;
           }
         }
-        if (isValid) {
-          var length = word.length.toString();
-          results[length] = results[length] || [];
-          results[length].push(word);
+        if (isValid && word.length === parseInt(inputLength)) {
+          results[inputLength] = results[inputLength] || [];
+          results[inputLength].push(word);
         }
       }
 
