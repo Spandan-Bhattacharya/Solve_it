@@ -33,13 +33,32 @@ async function solveWords() {
             break;
           }
         }
+        
         if (isValid) {
-          var length = word.length.toString();
-          results[length] = results[length] || [];
-          results[length].push(word);
+          // comparing the count of letters in input word and the new word
+          mapping_input_letters = {};
+          mapping_new_word = {};
+          for (var j = 0; j < inputLetters.length; j++)
+            mapping_input_letters[inputLetters[j]] = (mapping_input_letters[inputLetters[j]] || 0) + 1;
+
+          for (var j = 0; j < word.length; j++)
+            mapping_new_word[word[j]] = (mapping_new_word[word[j]] || 0) + 1;
+
+          var isValid = true;
+          for (var key in mapping_new_word) {
+            if (mapping_input_letters[key] < mapping_new_word[key]) {
+              isValid = false;
+              break;
+            }
+          }
+          if (isValid) {
+            var length = word.length.toString();
+            results[length] = results[length] || [];
+            results[length].push(word);
+          }
         }
       }
-
+      
       displayResults(results);
     } catch (error) {
       console.error("Error:", error);
