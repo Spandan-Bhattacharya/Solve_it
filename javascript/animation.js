@@ -10,21 +10,20 @@ tl.from(".herocontainer img", {
 tl.from(".topnav", {
     opacity: 0,
     y: -20,
-    // delay:2,
-    duration: 0.5,
+    duration: 0.3,
 })
 
 tl.from(".topnav img", {
     opacity: 0,
     x: -10,
-    duration: 0.5,
+    duration: 0.3,
 })
 
 tl.from(".list a, .searchWrapper", {
     opacity: 0,
     y: 10,
-    stagger: 0.2,
-    duration: 1,
+    stagger: 0.1,
+    duration: 0.5,
 })
 
 tl.from(".herocontainer h3, .herocontainer p", {
@@ -76,21 +75,20 @@ tl2.from(".link-section a", {
     opacity: 0,
     y: -20,
     delay:1,
-    stagger:0.2,
+    stagger:0.15,
     duration: 0.5,
 })
 
 tl2.from(".intro" , {
     opacity:0,
-    // scale:0.5,
     x:-10,
-    duration:0.5,
+    duration:0.4,
 })
 
 tl2.from(".form-section" , {
     opacity:0,
     y:10,
-    duration:0.5,
+    duration:0.4,
 })
 
 tl2.from(".foot-head,.foot-navlinks,.foot-social,.foot-last" , {
@@ -105,7 +103,7 @@ tl3.from(".nav-links a", {
     opacity: 0,
     y: -20,
     delay:1,
-    stagger:0.2,
+    stagger:0.1,
     duration: 0.5,
 })
 tl3.from(".about-solve-it" , {
