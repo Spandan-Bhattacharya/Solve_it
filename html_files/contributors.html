@@ -69,15 +69,42 @@
       <!-- <div> =======</div> -->
     </div>
   </div>
-  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    var tl = gsap.timeline();
+
+    tl.from(".link-section a", {
+      opacity: 0,
+      y: -20,
+      delay: 1,
+      stagger: 0.1,
+      duration: 0.5,
+    })
+
+    tl.from(".contributors-container", {
+      opacity: 0,
+      duration: 0.6,
+    })
+    tl.from(".foot-head,.foot-navlinks,.foot-social,.foot-last", {
+      opacity: 0,
+      duration: 1,
+    });
+  </script>
+
   <script>
     let hambuger = document.querySelector('.hamburger');
 
-    hambuger.addEventListener('click' , () => {
-        let navLinks = document.querySelector('.link-section');
-        navLinks.classList.toggle("active");
+    hambuger.addEventListener('click', () => {
+      let navLinks = document.querySelector('.link-section');
+      navLinks.classList.toggle("active");
     })
-</script>
+  </script>
 
   <script src="/javascript/contributors.js"></script>
 </body>

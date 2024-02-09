@@ -164,6 +164,7 @@ html {
   display: flex;
   left: 15%;
   justify-content: space-around;
+  z-index: 999;
 }
 .openMenu {
   display: flex;
@@ -214,10 +215,12 @@ background: linear-gradient(90deg, rgba(3,1,36,1) 0%, rgba(8,8,112,1) 37%, rgba(
   }
   .search-space{
     height: 12vh;
+    z-index: 999;
   }
   .topnav .list{
     display: block;
     position: absolute;
+    top: 0;
     left: 0;
     width: 0;
   }
@@ -272,7 +275,9 @@ h3 {
   gap: 30px;
   z-index: 200;
 }
-
+.herocontainer{
+  z-index: 80;
+}
 .hero-section .herocontainer h1 {
   margin-top: 130px;
   font-size: 8rem;
