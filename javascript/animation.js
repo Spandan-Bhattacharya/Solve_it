@@ -2,8 +2,7 @@ var tl = gsap.timeline();
 
 tl.from(".herocontainer img", {
     opacity: 0,
-    scale: 1.25,
-    duration: 1,
+    duration: 1.5,
     delay: 2,
 })
 
@@ -28,7 +27,6 @@ tl.from(".list a, .searchWrapper", {
 
 tl.from(".herocontainer h3, .herocontainer p", {
     opacity: 0,
-    y: 20,
     duration: 0.5,
     stagger: 0.2,
 })

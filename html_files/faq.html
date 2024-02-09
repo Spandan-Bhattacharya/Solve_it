@@ -139,52 +139,6 @@
 
     <!-- add a go to top btn -->
     <button id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-arrow-up" style="color: white;"></i></button>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="../javascript/animation.js"></script> -->
-    <script>
-
-        var tl = gsap.timeline();
-
-        tl.from(".topnav", {
-            opacity: 0,
-            y: -20,
-            delay: 1,
-            duration: 0.3,
-        })
-
-        tl.from(".topnav img", {
-            opacity: 0,
-            x: -10,
-            duration: 0.4,
-        })
-
-        tl.from(".list a, .searchWrapper", {
-            opacity: 0,
-            y: 10,
-            stagger: 0.1,
-            duration: 0.5,
-        })
-        tl.from(".faqHeading", {
-            opacity: 0,
-            x: 10,
-            duration: 0.4,
-        })
-        tl.from(".faqs", {
-            opacity: 0,
-            duration: 0.4,
-        })
-        tl.from("footer", {
-            opacity: 0,
-            y: 10,
-        });
-
-
-    </script>
     <script src="../javascript/GoToTop.js"></script>
     <script src="../javascript/script.js" async defer></script>
     <script src="../javascript/autocomplete.js"></script>
