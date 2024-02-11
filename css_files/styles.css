@@ -1107,8 +1107,10 @@ ul li a:hover {
 .wrap div{
   height: 60px;
   width: 60px;
-  border: 2px solid rgba(255,255,255,0.7);
-  background: #e7b039;
+  /* border: 2px solid rgba(255,255,255,0.7); */
+  border: 2px solid #e7b039;
+  /* background: #e7b039; */
+  background: rgba(255,255,255,0);;
   border-radius: 50px;
   position: absolute;
   top: 10%;
@@ -1244,6 +1246,13 @@ div .dot{
   left: 90%;
   animation: sparkleanimation 7s linear infinite;
 }
+.wrap div:nth-child(23){
+  top: 20%;
+  left: 60%;
+  animation: sparkleanimation 7s linear infinite;
+}
+
+
 
 @keyframes sparkleanimation {
   0%{
