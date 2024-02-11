@@ -206,7 +206,7 @@ html {
     left: 0;
     top: 0;
     background: rgb(3,1,36);
-background: linear-gradient(90deg, rgba(3,1,36,1) 0%, rgba(8,8,112,1) 37%, rgba(8,181,255,1) 100%, rgba(0,137,222,1) 100%);
+background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     flex-direction: column;
     justify-content: flex-start;
     transition: 0.2s;
@@ -788,7 +788,7 @@ ul li a:hover {
 /*New Footer CSS Code Starts Here --> */
 
 .newFooter {
-  height: auto;
+  height: auto; 
   width: 100%;
   padding: 5rem 0;
   display: flex;
