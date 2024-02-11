@@ -43,11 +43,11 @@ body {
     justify-content: center;
   }
   
-  .square:nth-child(odd) {
+  .white {
     background-color: #f0d9b5; /* Light color for odd squares */
   }
   
-  .square:nth-child(even) {
+  .black {
     background-color: #b58863; /* Dark color for even squares */
   }
   
