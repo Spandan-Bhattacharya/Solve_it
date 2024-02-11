@@ -119,7 +119,7 @@ function solveCount(board, index, callback) {
   }
 }
 
-function solveSudoku() {
+async function solveSudoku() {
   let n = 4;
   let mat = [];
   let invalidCells = [];
@@ -147,7 +147,7 @@ function solveSudoku() {
     if (isValid(mat)) {
       solve(mat);
       for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
+        for (let j = 0; j < n;j++) {
           document.getElementById(`grid${i}${j}`).value = mat[i][j];
         }
       }
@@ -221,23 +221,24 @@ function solve(board) {
 }
 
 function resetGrid() {
-  const size = 4;
-  document.getElementById("verdictSection").innerHTML = ""; // Clear verdict section
+  // const size = 4;
+  // document.getElementById("verdictSection").innerHTML = ""; // Clear verdict section
 
-  for (let i = 0; i < size; i++) {
-    for (let j = 0; j < size; j++) {
-      const field = document.getElementById(`grid${i}${j}`);
-       if (field) {
+  // for (let i = 0; i < size; i++) {
+  //   for (let j = 0; j < size; j++) {
+  //     const field = document.getElementById(`grid${i}${j}`);
+  //      if (field) {
       
-        // Reset color 
-        field.style.color = 'black';
+  //       // Reset color 
+  //       field.style.color = 'black';
         
-        // Other reset logic
-        field.value = "";
+  //       // Other reset logic
+  //       field.value = "";
         
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
+  location.reload();
 }
 
 // function gridReset(){

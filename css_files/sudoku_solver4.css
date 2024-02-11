@@ -68,11 +68,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
+    min-height: 100vh;
 }
 .grid-container{
     text-align: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     /* background-color: #eccdcd; */
 }
