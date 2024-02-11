@@ -24,9 +24,29 @@
     <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); position: relative;">
+<!-- <body style="background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); position: relative;"> -->
+
+<body>
+    <div class="blurred-background"></div>
     <!-- navbar begins-->
-    <nav class="topnav">
+    <div class="navbar">
+        <div class="link-section">
+            <div><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></div>
+            <div><a href="newContact.html"><i class="fa-solid fa-clipboard-user"></i> Contact</a></div>
+            <div><a href="about.html"><i class="fa-solid fa-square-phone"></i> About</a></div>
+            <div><a href="faq.html"><i class="fa-solid fa-comments"></i> FAQ</a></div>
+            <div><a href="contributors.html"><i class="fa-solid fa-hand-holding-heart"></i> Contributors</a></div>
+        </div>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+
+    <!-- <nav class="topnav">
         <div>
             <img src="../assets/bodylogo.png" alt="img" />
         </div>
@@ -53,10 +73,10 @@
                     <i class="fa-brands fa-square-x-twitter"></i>
                 </a>
             </span>
-        </div>
+        </div> -->
 
-        <!-- Search Box -->
-        <div class="searchWrapper">
+    <!-- Search Box -->
+    <!-- <div class="searchWrapper">
             <div class="search-container">
                 <div class="searchBox">
                     <input class="searchInput" type="text" id="input-box" placeholder="Search" autocomplete="off" />
@@ -66,9 +86,9 @@
                 </div>
                 <div class="result-box"></div>
             </div>
-        </div>
+        </div> -->
 
-    </nav>
+    <!-- </nav> -->
     <!-- navbar ends -->
 
     <!-- Watermark -->
@@ -88,18 +108,49 @@
 
     <!-- Footer Section -->
 
-    <footer class="newFooter">
+    <div class="footer-container">
+        <div class="foot-head">
+          <h2>Solve it!</h2>
+          <p>
+            Solve it! is a website that contains solvers for common games like
+            Sudoku, Nonogram, Crosswords and more!
+          </p>
+        </div>
+        <div class="foot-navlinks">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="/html_files/about.html">About</a>
+          <a href="/html_files/newContact.html">Contact</a>
+          <a href="/html_files/faq.html">FAQ</a>
+          <a href="/html_files/contributors.html">Contributors</a>
+        </div>
+        <div class="foot-social">
+          <h3>Social Links</h3>
+          <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
+          <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+              style="font-size: 1.25em; margin: 2px"></i></a>
+          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+              style="font-size: 1.25em; margin: 2px"></i></a>
+        </div>
+        <div class="foot-last">
+          <div>Made with Passion at Solve it!</div>
+          <div class="heart">&#9829;</div>
+          <!-- <div> =======</div> -->
+        </div>
+      </div>
+
+    <!-- <footer class="newFooter">
         <div class="footer-content1">
             <div class="heading">
                 <h1>Solve It !</h1>
             </div>
             <div class="quick-links">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li> -->
                     <!-- <div class="round"></div> -->
-                    <li><a href="../html_files/about.html">About</a></li>
+                    <!-- <li><a href="../html_files/about.html">About</a></li> -->
                     <!-- <div class="round"></div> -->
-                    <li><a href="../html_files/newContact.html">Contact</a></li>
+                    <!-- <li><a href="../html_files/newContact.html">Contact</a></li>
                     <li><a href="" onclick="window.location.reload()">FAQ</a></li>
                     <li><a href="contributors.html">Contributors</a></li>
                 </ul>
@@ -134,8 +185,16 @@
                 <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-facebook"></i></a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
+    <script>
+        let hambuger = document.querySelector('.hamburger');
+
+        hambuger.addEventListener('click', () => {
+            let navLinks = document.querySelector('.link-section');
+            navLinks.classList.toggle("active");
+        })
+    </script>
 
     <!-- add a go to top btn -->
     <button id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-arrow-up" style="color: white;"></i></button>
