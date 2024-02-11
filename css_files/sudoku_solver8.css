@@ -1,10 +1,11 @@
 *{
     margin:0;
     padding:0;
+    font-family: poppins;
+    font-family: Ubuntu;
     }
     body{
         
-        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
          display:flex;
         align-items: center;
@@ -15,6 +16,7 @@
     }
     h1{
         font-weight:500;
+        color: rgb(149, 202, 235);
     }
     .sudoku-container{
         margin-top :21px;
