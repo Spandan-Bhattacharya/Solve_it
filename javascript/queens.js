@@ -14,10 +14,7 @@ function initializeChessboard() {
       square.dataset.row = row + 1;
       square.dataset.col = col + 1;
       square.textContent = queensPlacement.includes(col + 1) ? '♛' : ' ';
-      if(row%2===0)
-        square.classList.add(queensPlacement.includes(col) ? 'queen' : getSquareColor(col+1));
-      else
-      square.classList.add(queensPlacement.includes(col) ? 'queen' : getSquareColor(col));
+      square.classList.add(queensPlacement.includes(col + 1) ? 'queen' : getSquareColor(row, col));
       square.addEventListener('click', () => toggleQueen(row, col));
       chessboard.appendChild(square);
     }
@@ -26,8 +23,8 @@ function initializeChessboard() {
   document.addEventListener('keydown', handleKeyPress);
 }
 
-function getSquareColor(col) {
-  return (col) % 2 === 0 ? 'white' : 'black';
+function getSquareColor(row, col) {
+  return (row + col) % 2 === 0 ? 'white' : 'black';
 }
 
 function toggleQueen(row, col) {
@@ -128,6 +125,6 @@ function handleKeyPress(event) {
 function updateSquare(row, col, content, className) {
   const square = document.querySelector(`.square[data-row="${row + 1}"][data-col="${col + 1}"]`);
   square.textContent = content;
-  square.classList.add(className); // append the arg. className to that specific square
+  square.className = 'square ' + className;
 }
 
