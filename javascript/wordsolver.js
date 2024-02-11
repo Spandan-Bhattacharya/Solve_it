@@ -81,3 +81,8 @@ function displayResults(results) {
     }
   }
 }
+
+// function to redirect to home
+function homeRedirect () {
+  window.location.href = '../index.html';
+}
