@@ -1253,7 +1253,6 @@ div .dot{
 }
 
 
-
 @keyframes sparkleanimation {
   0%{
     transform: scale(0) translateY(0) rotate(70deg);
