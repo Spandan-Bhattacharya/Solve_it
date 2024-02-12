@@ -1,26 +1,35 @@
-function setGrid() {
-  const input = document.querySelector("#grid");
-  const size = 6;
 
-  for (let i = 0; i < size; i++) {
-    let rows = document.createElement("div");
-    input.appendChild(rows);
-    rows.className = "rows";
+document.addEventListener('DOMContentLoaded', function(){
+  const gridSize=6;
+  const solveButton= document.getElementById("solve-btn");
+  solveButton.addEventListener('click',solveSudoku);
 
-    for (let j = 0; j < size; j++) {
-      let field = document.createElement("input");
-      field.type = "text";
-      field.className = "cells";
-      field.id = `grid${i}${j}`;
-      field.addEventListener("input", handleInput);
-      let flex = document.createElement("div");
-      flex.className = "flex";
-      flex.style.display = "inline";
-      rows.appendChild(flex);
-      flex.appendChild(field);
-    }
+  const sudokuGrid = document.getElementById("sudoku-grid");
+
+  //creating sudoku grid and input cells
+
+  for(let row=0;row<gridSize;row++){
+      const newRow= document.createElement("tr");
+      for(let col=0;col<gridSize;col++){
+          const cell =document.createElement("td");
+          const input = document.createElement("input");
+          input.type="text";
+          input.className="cell";
+          input.id=`cell-${row}-${col}`;
+          input.addEventListener("keydown", function (e) {
+              if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+                  e.preventDefault();
+              }
+          });
+          input.addEventListener("input", handleInput);
+          cell.appendChild(input);
+          newRow.appendChild(cell);
+
+      }
+      sudokuGrid.appendChild(newRow);
+
   }
-}
+});
 
 function handleInput(event) {
   const inputValue = event.target.value.replace(/[^0-9]/g, '');
@@ -36,144 +45,140 @@ function handleInput(event) {
   }
 }
 
-document.getElementById("submitButton").addEventListener("click", (e) => {
-  e.preventDefault(); // Prevents the form from being submitted and page refresh
-  calculateGrid();
-});
+async function solveSudoku(){
+  const gridSize=6;
+  const sudokuArray=[];
 
-function calculateGrid() {
-  let n = 6;
-  let mat = [];
-  let invalidCells = [];
+//fill the sudoku array
 
-  for (let i = 0; i < n; i++) {
-    mat[i] = [];
-    for (let j = 0; j < n; j++) {
-      let inputValue = document.getElementById(`grid${i}${j}`).value;
-      if (inputValue === "") {
-        mat[i][j] = ".";
-        document.getElementById(`grid${i}${j}`).classList.add("output-cell");
-      } else {
-        let parsedValue = parseInt(inputValue);
-        if (isNaN(parsedValue) || parsedValue < 1  || parsedValue > 6) {
-          invalidCells.push({ row: i, col: j });
-        } else {
-          mat[i][j] = parsedValue;
-        }
-      }
-    }
-  }
-
-  if (invalidCells.length === 0 && isValid(mat)) {
-    solve(mat);
-    for (let i = 0; i < n; i++) {
-      for (let j = 0; j < n; j++) {
-        document.getElementById(`grid${i}${j}`).value = mat[i][j];
-      }
-    }
-  } else {
-    if (!document.getElementById("errorMessage")) {
-      let errorMessage = document.createElement("div");
-      errorMessage.innerHTML = "Invalid input!. Please enter valid Numbers.";
-      errorMessage.style.color = "red";
-      errorMessage.id = "errorMessage";
-      document.body.appendChild(errorMessage);
-
-      setTimeout(function () {
-        document.body.removeChild(errorMessage);
-        // resetInvalidCells(invalidCells);
-        resetGrid();
-      }, 2000);
-    }
+for(let row=0;row<gridSize;row++){
+  sudokuArray[row]=[];
+  for(let col=0;col<gridSize;col++){
+      const cellId=`cell-${row}-${col}`;
+      const cellValue= document.getElementById(cellId).value;
+      sudokuArray[row][col]=cellValue !== "" ? parseInt(cellValue):0;
   }
 }
+ //Indentifying user-input and mark
 
-// function resetInvalidCells(invalidCells) {
-//   invalidCells.forEach(cell => {
-//     document.getElementById(`grid${cell.row}${cell.col}`).value = "";
-//   });
-// }
+ for(let row=0;row<gridSize;row++){
+      for(let col=0;col<gridSize;col++){
+          const cellId=`cell-${row}-${col}`;
+          const cell=document.getElementById(cellId);
 
-function isValid(board) {
-  let n = 6;
-  //check columns
-  let f = 1;
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      if (board[i][j] != ".") {
-        if (check(board, i, j, board[i][j]) == 0) return false;
-      }
-    }
-  }
-  return true;
-}
-function check(board, i, j, cond) {
-  let a = true;
-  let b = cond;
-  for (let k = 0; k < 6; k++) {
-    if ((board[i][k] == b && k ^ j) || (board[k][j] == b && k ^ i)) a = false;
-  }
-
-  let r = Math.floor(i / 2) * 2;
-  let c = Math.floor(j / 3) * 3;
-  for (let p = r; p < r + 2; p++) {
-    for (let q = c; q < c + 3; q++) {
-      if (board[p][q] == b && p != i && q != j) a = false;
-    }
-  }
-  return a;
-}
-
-function solve(board) {
-  for (let i = 0; i < 6; i++) {
-    for (let j = 0; j < 6; j++) {
-      if (board[i][j] == ".") {
-        for (let k = "1"; k <= "6"; k++) {
-          if (check(board, i, j, k)) {
-            board[i][j] = parseInt(k);
-            if (solve(board)) {
-              return 1;
-            } else {
-              board[i][j] = ".";
-            }
-          } else {
-            continue;
+          if(sudokuArray[row][col]!==0){
+              cell.classList.add("user-input");
+          }else {
+              cell.classList.add("output-cell");
           }
-        }
-        return 0;
+
+
       }
-    }
+          
   }
-  return 1;
+
+  //Solving the soduko and dosplaying the solution
+  if(solveSudokuHelper(sudokuArray)){
+      for(let row=0;row<gridSize;row++){
+          for(let col=0;col<gridSize;col++){
+              const cellId=`cell-${row}-${col}`;
+              const cell=document.getElementById(cellId);
+
+              //filling in solved valued and applying animations
+               if(!cell.classList.contains("user-input")){
+                  cell.value=sudokuArray[row][col];
+                  cell.classList.add("solved");
+                  await sleep(60); //delay for visualisation
+               }
+          }
+
+      }
+  }else{
+      alert("No solution exists for the given Sudoku puzzle.");
+  }
 }
 
+function solveSudokuHelper(board){
+  const gridSize=6;
+
+  for(let row = 0 ;row < gridSize ; row++){
+      for(let col=0;col<gridSize;col++){
+          if(board[row][col]===0 ){
+              for(let num=1;num<=6;num++){
+                  if(isValidMove(board,row,col,num)){
+                      board[row][col]=num;
+
+                      //recursively check if there is a solution
+
+                      if(solveSudokuHelper(board)){
+                          return true; //solved
+                      }
+
+                      board[row][col]=0;  //Backtrack
+                  }
+              }
+              return false; //No valid number found
+          }
+      }
+  }
+
+  return true ;//All cekks filled
+}
+
+function isValidMove(board,row,col,num){
+  const gridSize = 6;
+
+  //Check row and column for conflicts
+
+  for(let i=0;i<gridSize;i++){
+      if(board[row][i] === num || board [i][col] === num){
+          return false;//Conflict found
+      }
+  }
+
+  //Check the 3*3 subgrid conflicts
+
+  const startRow= Math.floor(row / 2)*2;
+  const startCol= Math.floor(col / 3)*3;
+
+  for(let i= startRow; i < startRow + 2 ;i++){
+      for(let j= startCol; j<startCol + 3 ; j++){
+          if(board[i][j]==num){
+              return false; //Conflict found
+          }
+      }
+  }
+  
+  return true; //No conflicts found
+
+}
+
+function sleep(ms){
+  return new Promise(resolve => setTimeout(resolve,ms));
+}
 function resetGrid() {
-  const size = 6;
+  const gridSize = 6;
 
-  for (let i = 0; i < size; i++) {
-    for (let j = 0; j < size; j++) {
-      const field = document.getElementById(`grid${i}${j}`);
-       if (field) {
-      
-        // Reset color 
-        field.style.color = 'black';
-        
-        // Other reset logic
+  for (let i = 0; i < gridSize; i++) {
+    for (let j = 0; j < gridSize; j++) {
+      const field = document.getElementById(`cell-${i}-${j}`);
+      if (field) {
         field.value = "";
-        
+        field.classList.remove("user-input");
+       field.style.color = '#1e25e8';
+      //   field.classList.remove("output-cell");
       }
     }
   }
 }
 
-// function gridReset(){
-//  document.getElementById("resetButton").addEventListener("click", () => {
-//     resetGrid();
-//   });
-// }
+function gridReset() {
+  document.getElementById("resetButton").addEventListener("click", (e) => {
+    e.preventDefault(); // Prevents the form from being submitted and page refresh
+    resetGrid();
+  });
+}
 
-document.getElementById("resetButton").addEventListener("click", (e) => {
-  e.preventDefault(); // Prevents the form from being submitted and page refresh
-  resetGrid();
-});
+// Call gridReset to attach the event listener to the resetButton
+gridReset();
 
