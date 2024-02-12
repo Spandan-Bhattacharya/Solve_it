@@ -105,3 +105,43 @@ li {
 #result::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.back-home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding: 7px 15px;
+  gap: 7px;
+  background-color: #4CAF50;
+  outline: 3px #4CAF50 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  height: 41px;
+}
+
+.back-home-btn .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+  margin-top: 19px;
+}
+
+.back-home-btn svg path {
+  transition: 400ms;
+}
+
+.back-home-btn:hover {
+  background-color: transparent;
+}
+
+.back-home-btn:hover .text {
+  color: #4CAF50;
+}
+
+.back-home-btn:hover svg path {
+  fill: #4CAF50;
+}
