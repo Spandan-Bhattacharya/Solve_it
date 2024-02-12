@@ -2,13 +2,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f0f0;
   }
   
   #container {
+    height: fit-content;
+    margin: 50px;
+    margin-top: 0px;
     text-align: center;
     background-color: #fff;
     padding: 20px;
@@ -28,6 +29,7 @@ body {
     border: 2px solid #3498db;
     border-radius: 10px;
     overflow: hidden;
+    width: fit-content;
   }
   
   .square {
@@ -43,13 +45,13 @@ body {
     justify-content: center;
   }
   
-  .square:nth-child(odd) {
-    background-color: #f0d9b5; /* Light color for odd squares */
+  /* .square:nth-child(odd) {
+    background-color: #f0d9b5;
   }
   
   .square:nth-child(even) {
-    background-color: #b58863; /* Dark color for even squares */
-  }
+    background-color: #b58863;
+  } */
   
   .queen {
     color: red;
@@ -59,6 +61,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .button {
@@ -88,5 +91,28 @@ body {
   .resetButton:hover {
     background-color: #218c54;
   }
+
+  
+.backHome a:hover,
+.backHome:hover {
+    
+    background-color: #92d3ff;
+    color: rgb(35, 107, 159);
+}
+
+.backHome,
+.backHome a {
+  text-decoration: none;
+    padding: 12px;
+    background-color: #1665cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
   
   

@@ -2,15 +2,19 @@
 document.addEventListener('DOMContentLoaded', initializeChessboard);
 
 let queensPlacement = [];
-
 function initializeChessboard() {
   const chessboard = document.getElementById('chessboard');
   queensPlacement = [];
   
-  for (let row = 0; row < 8; row++) {
-    for (let col = 0; col < 8; col++) {
+  for (let row = 0; row < Number(document.getElementById("size").value); row++) {
+    for (let col = 0; col < Number(document.getElementById("size").value); col++) {
       const square = document.createElement('div');
       square.classList.add('square');
+      if(((row+1)%2==0&&(col+1)%2==0)||((row+1)%2!=0&&(col+1)%2!=0)){
+        square.style.backgroundColor="#b58863";
+      }else{
+        square.style.backgroundColor="#f0d9b5";
+      }
       square.dataset.row = row + 1;
       square.dataset.col = col + 1;
       square.textContent = queensPlacement.includes(col + 1) ? '♛' : ' ';
@@ -38,7 +42,7 @@ function toggleQueen(row, col) {
 }
 
 function placeQueen(row, col) {
-  if (queensPlacement.length < 8) {
+  if (queensPlacement.length < Number(document.getElementById("size").value)) {
     queensPlacement.push({ row, col });
     updateSquare(row, col, '♛', 'queen');
   }
@@ -50,26 +54,26 @@ function removeQueen(row, col) {
 }
 
 function solveQueens() {
-    queensPlacement = queensPlacement.filter(q => q.row <= 8 && q.col <= 8);
-    queensPlacement.length = Math.min(queensPlacement.length, 8);
+    queensPlacement = queensPlacement.filter(q => q.row <= Number(document.getElementById("size").value) && q.col <= Number(document.getElementById("size").value));
+    queensPlacement.length = Math.min(queensPlacement.length, Number(document.getElementById("size").value));
   
     // Clear the chessboard
     const chessboard = document.getElementById('chessboard');
+    chessboard.style.gridTemplateColumns=`repeat(${Number(document.getElementById("size").value)}, 50px)`;
     chessboard.innerHTML = '';
   
     // Reinitialize the chessboard
     initializeChessboard();
-    solve(0);
-    displaySolution();
+    solve(0)? displaySolution():document.getElementById("nosol").innerText="No Solution Exist";
   }
   
 
 function solve(row) {
-  if (row === 8) {
+  if (row === Number(document.getElementById("size").value)) {
     return true;
   }
 
-  for (let col = 0; col < 8; col++) {
+  for (let col = 0; col < Number(document.getElementById("size").value); col++) {
     if (isSafe(row, col)) {
       placeQueen(row, col);
 
@@ -98,6 +102,7 @@ function isSafe(row, col) {
 }
 
 function displaySolution() {
+  document.getElementById("nosol").innerText="";
   queensPlacement.forEach(queen => {
     const square = document.querySelector(`.square[data-row="${queen.row + 1}"][data-col="${queen.col + 1}"]`);
     square.classList.add('queen');
