@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N-Queens Problem Solver</title>
-    <link rel="stylesheet" href="../css_files/queens.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N-Queens Problem Solver</title>
+  <link rel="stylesheet" href="../css_files/queens.css">
 </head>
+
 <body>
-    <div id="container">
-        <h1>N-Queens Problem Solver</h1>
-        <div id="chessboard" class="chessboard"></div>
-        <div id="buttons">
-          <button class="button solveButton" onclick="solveQueens()">Solve</button>
-          <button class="button resetButton" onclick="resetGame()">Reset</button>
-        </div>
-      </div>
-    
+  <div id="container">
+    <h1>N-Queens Problem Solver</h1>
+    <label for="size">Choose a Size:</label>
+    <select id="size" name="size">
+      <option value="1">1X1</option>
+      <option value="2">2X2</option>
+      <option value="3">3X3</option>
+      <option value="4">4X4</option>
+      <option value="5">5X5</option>
+      <option value="6">6X6</option>
+      <option value="7">7X7</option>
+      <option value="8" selected>8X8</option>
+      <option value="9">9X9</option>
+      <option value="10">10x10</option>
+    </select>
+    <div id="chessboard" class="chessboard"></div>
+    <div id="buttons">
+      <button class="button solveButton" onclick="solveQueens()">Solve</button>
+      <button class="button resetButton" onclick="resetGame()">Reset</button>
+    </div>
+    <button class="backHome" ><a href="../index.html">Back To Home</a></button>
+    <h2 id="nosol"></h2>
+  </div>
+
 </body>
 <script src="../javascript/queens.js"></script>
+
 </html>
