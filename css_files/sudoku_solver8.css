@@ -96,3 +96,13 @@
     .output-cell {
         color: #1e25e8;
     }
+
+    @media (max-width:400px){
+
+        .cell{
+            width:10vw;
+            height:10vw;
+            font-size: 5vw;
+        }
+  
+    }
