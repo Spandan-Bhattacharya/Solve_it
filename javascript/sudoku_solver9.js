@@ -164,7 +164,7 @@ function resetGrid() {
         if (field) {
           field.value = "";
           field.classList.remove("user-input");
-         field.style.color = 'black';
+         field.style.color = '#1e25e8';
         //   field.classList.remove("output-cell");
         }
       }
