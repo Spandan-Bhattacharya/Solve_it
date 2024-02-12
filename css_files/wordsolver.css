@@ -25,9 +25,9 @@ body {
 h1 {
   font-size: 50px;
   text-align: center;
-  font-family:'Times New Roman', Times, serif;
-  color: hsl(51, 100%, 56%);
-  text-shadow: 2px 2px 4px black;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(149, 202, 235);
+  text-shadow: 1px 1px 10px rgb(46, 46, 46);
 }
 
 label {
@@ -54,14 +54,14 @@ button {
   box-shadow: 1px 3px 6px black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   cursor: pointer;
-  background: rgb(1, 47, 173);
+  background: #3D88EC;
   color: white;
   width: 100%;
 }
 
 button:hover{
-  color:#ffffff;
-  background: #000458;
+  background-color: #92d3ff;
+  color:rgb(35, 107, 159);
   transition: 0.2s;
   scale: 1.05;
 }
