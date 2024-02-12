@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);;
+  background-image: url(../assets/bg.webp);
   margin: 0;
   padding: 0;
   align-items: center;
@@ -26,7 +26,8 @@ h1 {
   font-size: 50px;
   text-align: center;
   font-family:'Times New Roman', Times, serif;
-  color: hsl(49, 100%, 64%);
+  color: hsl(51, 100%, 56%);
+  text-shadow: 2px 2px 4px black;
 }
 
 label {
