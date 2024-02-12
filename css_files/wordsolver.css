@@ -1,27 +1,33 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  background-image: url(../assets/bg.webp);
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
 /* fix for long outputs */
 #container {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
+  min-height: 200px;
   max-height: 500px;
   overflow: hidden;
+  margin:auto;
+  transition: .5s;
 }
 
 h1 {
-  color: #333;
+  font-size: 50px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(149, 202, 235);
+  text-shadow: 1px 1px 10px rgb(46, 46, 46);
 }
 
 label {
@@ -36,17 +42,28 @@ input {
   width: 100%;
   box-sizing: border-box;
   font-size: 16px;
+  outline: none;
 }
 
 button {
+  margin: auto;
   padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
   font-size: 16px;
+  border: 1px;
+  border-radius: 4px;
+  box-shadow: 1px 3px 6px black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+  background: #3D88EC;
+  color: white;
+  width: 100%;
+}
+
+button:hover{
+  background-color: #92d3ff;
+  color:rgb(35, 107, 159);
+  transition: 0.2s;
+  scale: 1.05;
 }
 
 /* fixed the result section to handle long outputs */
