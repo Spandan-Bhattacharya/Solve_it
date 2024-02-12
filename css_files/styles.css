@@ -295,7 +295,7 @@ h3 {
   text-align: center;
   margin: auto;
   padding: 20px;
-  color: rgb(0, 0, 0);
+  color: #c5c5c5;
 }
 
 .hero-section {
@@ -411,6 +411,7 @@ h3 {
   left: 0;
   padding-top: 230px;
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 .home-container .box .content .trynow-button {
