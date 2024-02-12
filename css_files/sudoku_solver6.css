@@ -1,152 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: poppins;
-
+* {
+    margin: 0;
+    padding: 0;
 }
-.cells{
-    /* box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box; */
-    /* border: 2px solid #070707; */
-    padding: 10px;
-    height: 90px;
-    width: 90px;
-    font-size: 26px;
-    font-weight: 600;
-    /* border-radius: 6px; */
-    /* margin: 5px; */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #052145;
-    background-color: rgb(244, 213, 99);
-    border: 1px solid rgba(9, 9, 121, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-div{
-    background-color: rgba(255, 255, 0, 0);
+
+h1 {
+    font-weight: 500;
+    color: #fff;
+    font-size: 3rem;
 }
-.rows{
+
+.sudoku-container {
+    margin-top: 21px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 0, 0);
-}
-#grid00, #grid01, #grid02, #grid03,#grid04,#grid05, #grid20, #grid21, #grid22, #grid23,#grid24,#grid25{
-    border-top: 4px solid rgba(9, 9, 121, 1);
-}
-#grid20, #grid21, #grid22, #grid23,#grid24,#grid25, #grid40, #grid41, #grid42, #grid43,#grid44,#grid45{
-    border-top: 4px solid rgba(9, 9, 121, 1);
+
+
 }
 
-#grid00, #grid10, #grid20, #grid30,#grid40,#grid50{
-    border-left: 4px solid rgba(9, 9, 121, 1);
-}
-#grid05, #grid15, #grid25, #grid35,#grid45,#grid55{
-    border-right: 4px solid rgba(9, 9, 121, 1);
-}
-#grid02, #grid12, #grid22, #grid32,#grid42,#grid52{
-    border-right: 4px solid rgba(9, 9, 121, 1);
-}
-#grid50, #grid51, #grid52, #grid53,#grid54,#grid55{
-    border-bottom: 4px solid rgba(9, 9, 121, 1);
+table {
+    border-collapse: collapse;
+    border: 5px solid rgba(9, 9, 121, 1);
+    /* border: 5px solid #000; */
+
 }
 
-body{
-    background-image: url(../assets/bg.webp);
-    /* background-color: rgba(9, 9, 121, 1); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-.grid-container{
+.cell {
+    width: 100px;
+    height: 100px;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
-    
-    /* background-color: #eccdcd; */
-}
-.form-horizontal{
-    background-color: rgba(255, 255, 0, 0);
+    font-size: 50px;
+    border: 1px solid #999;
+    transform: all 0.3s ease-in-out;
+    background: rgb(244, 213, 99);
 }
 
-.solver-name-header{
-    display: flex; /* Makes .solver-name-header a flex container */
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Centers the content vertically */
-  text-align: center; /* Centers the text */
-  height: 100%; /* Takes up the full height of its parent */
+table tr:nth-child(2n) td,
+table tr:nth-child(2n+2) td {
+    border-bottom: 3px solid rgba(9, 9, 121, 1);
+    /* border-bottom: 2px solid #000; */
+}
+
+table td:nth-child(3n) {
+    border-right: 3px solid rgba(9, 9, 121, 1);
+    /* border-right: 2px solid #000; */
+}
+
+input {
+    outline: none;
+
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-buton {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+button {
     margin-top: 20px;
-    background-color: rgba(255, 192, 203, 0);
-    font-family: poppins;
-}
-
-.solver-name-header span{
-  font-size: 40px;
-  text-align: center;
-  color: rgb(149, 202, 235);
-  font-weight: 500;
-  background-color: rgba(255, 192, 203, 0);
-}
-.button-container {
-    display: flex; /* Makes .button-container a flex container */
-    justify-content: center; /* Centers the buttons horizontally */
-    gap: 15px; /* Adds space between the buttons */
-  }
-  .btn-s{
-    display: block; /* Makes the element a block element */
-    margin-top: 25px;
-    margin-bottom: 15px;
-    align-items: center;
-    padding: 15px;
-    background-color: #3d88ec;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-family: poppins;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.backHome, .backHome a{
-    display: block; /* Makes the element a block element */
-    margin-left: auto; /* Auto margin on the left */
-    margin-right: auto; /* Auto margin on the right */
-    padding: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #1665cc;
+    color: #fff;
     border: none;
-    border-radius: 10px;
-    color: white;
-    font-family: poppins;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.01rem;
+    border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
 }
 
-.backHome a{
-    text-decoration: none;
-    font-family: poppins;
-}
-.btn-s:hover{
+.btn-s:hover {
     background-color: #92d3ff;
     color: #1665cc;
 }
 
-.backHome a:hover, .backHome:hover{
+.backHome a:hover,
+.backHome:hover {
     text-decoration: none;
     background-color: #92d3ff;
-    color:rgb(35, 107, 159);
+    color: rgb(35, 107, 159);
 }
 
-#errorMessage text{
-    font-size: 18px;
+.backHome,
+.backHome a {
+    padding: 12px;
+    background-color: #1665cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
     font-weight: 600;
-    background-color: #92d3ff67;
-    display: inline;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .output-cell {
