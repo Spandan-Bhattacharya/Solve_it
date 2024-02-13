@@ -149,6 +149,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80%;
+  text-align: center;
 }
 
 body {
@@ -157,11 +159,14 @@ body {
 }
 
 .head {
-  /* box-shadow: -6px -6px 20px rgba(255, 255, 255, 1), 6px 6px 20px rgba(0, 0, 0, 0.1); */
   background-image:url("../assets/bg.webp");
   margin-top: -10px;
   padding-top: 5px;
   color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
 }
 
 .ans {
@@ -169,8 +174,6 @@ body {
   width: 500px;
   text-align: center;
   border-radius: 40px;
-  /* box-shadow: -6px -6px 20px rgb(154, 173, 201), 6px 6px 20px rgba(0, 0, 0, 0.1); */
-  /* border: 2px solid red; */
   border: 5px solid rgba(9, 9, 121, 1);
   background: #ebf5fc;
   transition: all 0.2s ease-in-out;
@@ -186,29 +189,8 @@ section {
   gap: 100px;
 }
 
-/* .textarea {
-  resize: none;
-  overflow-y: hidden;
-} */
-
-#back{
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border-radius: 5px;
-  margin: 6px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
 
 @media (max-width:719px){
-  h1{
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-  }
-
   .ans {
     width: 290px;
   }
