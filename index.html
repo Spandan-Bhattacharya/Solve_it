@@ -23,9 +23,10 @@
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
   <style>
-    .box span{
+    .box span {
       display: none;
     }
+
     .reveal {
       position: relative;
       opacity: 0;
@@ -194,6 +195,8 @@
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
     </div>
+
+
     <section class="hero-section" id="hero">
       <div class="herocontainer">
         <img src="assets/bodylogo.png" alt="img" height="450px" width="450px" />
@@ -208,8 +211,42 @@
     <br /><br />
     <!-- grid begins -->
 
+    <div class="category-section">
+      <h1 class="reveal">Categories</h1>
+      <div class="home-container" id="solvers">
+        <div class="box">
+          <span>Puzzles</span>
+          <div class="content">
+            <h1>Puzzles</h1>
+            <p>Get To Solve Exciting Puzzles</p>
+            <a style="cursor: pointer;">
+              <div class="trynow-button Puzzle">Puzzle</div>
+            </a>
+          </div>
+        </div>
+        <div class="box" style="background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+        color: white;">
+          <span style="color: white;">Games</span>
+          <div class="content" >
+            <h1 style="color: white;">Games</h1>
+            <p style="color: white;">Get Amazing Games</p>
+            <a style="cursor: pointer;">
+              <div class="trynow-button Games">Games</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hide reveal" id="Result">Results :</h1>
+      <!-- <button class="Puzzle">Puzzle</button>
+      <button class="Games">Games</button> -->
+    </div>
+
     <div class="home-container" id="solvers">
-      <div class="box activebox">
+
+      <!-- PUZZLE SECTION STARTS HERE -->
+
+      <div class="box activebox puzzle hide">
         <span>Sudoku Solver: 4x4</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
@@ -222,7 +259,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box puzzle hide">
         <span>Sudoku Solver: 6x6</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
@@ -234,7 +271,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box puzzle hide">
         <span>Sudoku Solver: 8x8</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
@@ -246,7 +283,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box puzzle hide">
         <span>Sudoku Solver: 9x9</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
@@ -258,7 +295,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box puzzle hide">
         <span>Word Unjumbler</span>
         <div class="content">
           <h1>Word Unjumbler</h1>
@@ -270,7 +307,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box puzzle hide">
         <span>Number Solver</span>
         <div class="content">
           <h1>Number Solver</h1>
@@ -282,20 +319,7 @@
         </div>
       </div>
 
-      <div class="box">
-        <span>Tower of Hanoi</span>
-        <div class="content">
-          <h1>Tower Of Hanoi</h1>
-          <h3>Puzzle</h3>
-          <p>It helps to solve tower of hanoi!</p>
-          <a href="./html_files/toh.html">
-            <div class="trynow-button">TRY NOW!</div>
-          </a>
-        </div>
-      </div>
-
-
-      <div class="box">
+      <div class="box puzzle hide">
         <span>8 Puzzle Solver</span>
         <div class="content">
           <h1>8 Puzzle Solver</h1>
@@ -307,7 +331,24 @@
         </div>
       </div>
 
-      <div class="box">
+
+      <!-- PUZZLE SECTION ENDS HERE -->
+
+      <!-- GAME SECTION STARTS HERE -->
+
+      <div class="box game hide">
+        <span>Tower of Hanoi</span>
+        <div class="content">
+          <h1>Tower Of Hanoi</h1>
+          <h3>Puzzle</h3>
+          <p>It helps to solve tower of hanoi!</p>
+          <a href="./html_files/toh.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
         <span>N Queen Solver</span>
         <div class="content">
           <h1>N-Queen Solver</h1>
@@ -318,6 +359,9 @@
           </a>
         </div>
       </div>
+
+
+      <!-- GAME SECTION ENDS HERE -->
     </div>
 
 
@@ -341,24 +385,6 @@
 
 
   </div>
-  <!-- <footer class="footer">
-      <div class="fbox">
-        <h2 style="color: #110D2C;">Solve it !</h2>
-        <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;">Quick links</h3>
-        <a href="#">Home</a>
-        <a href="html_files/about.html">About</a>
-        <a href="html_files/contact.html">Contact</a>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;" >Social links</h3>
-        <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin" style="font-size: 1.25em;margin: 2px;"></i></a>
-      </div>
-    </footer> -->
 
   <footer class="newFooter">
     <div class="footer-content1">
@@ -405,6 +431,52 @@
       </div>
     </div>
   </footer>
+
+  <script>
+
+    let puzzleBtn = document.querySelector('.Puzzle');
+    let gamesBtn = document.querySelector('.Games');
+
+    let arr_puzzle = document.querySelectorAll('.puzzle');
+    let arr_games = document.querySelectorAll('.game');
+
+    let result = document.querySelector('#Result');
+
+    puzzleBtn.addEventListener('click', () => {
+
+      result.classList.remove("hide");
+      result.classList.add("visible");
+      Array.from(arr_puzzle).forEach((e) => {
+
+        e.classList.remove("hide");
+        e.classList.add("visible");
+      })
+      Array.from(arr_games).forEach((e) => {
+        e.classList.remove("visible");
+        e.classList.add("hide");
+      })
+    })
+
+    gamesBtn.addEventListener('click', () => {
+
+      result.classList.remove("hide");
+      result.classList.add("visible");
+
+      Array.from(arr_games).forEach((e) => {
+        e.classList.remove("hide");
+        e.classList.add("visible");
+      })
+      Array.from(arr_puzzle).forEach((e) => {
+        e.classList.remove("visible");
+        e.classList.add("hide");
+      })
+    })
+
+
+  </script>
+
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
