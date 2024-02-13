@@ -115,5 +115,9 @@ body {
     cursor: pointer;
     margin-bottom: 10px;
 }
+
+#size{
+  border-radius: 10px;
+}
   
   
