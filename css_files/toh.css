@@ -6,7 +6,7 @@
   gap: 50px;
 }
 
-body{
+body {
   min-height: 100vh;
   width: 100vw;
   background-position: center;
@@ -55,8 +55,8 @@ body{
   border: 5px solid rgba(9, 9, 121, 1);
 }
 
-.stage:hover{
-  box-shadow:  0 0 10px rgba(255, 255, 255, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.1);
+.stage:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
 }
 
@@ -136,9 +136,15 @@ button:hover {
 .ans {
   font-size: 18px;
   font-weight: bold;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.ans:hover{
+.ans::-webkit-scrollbar {
+  display: none;
+}
+
+.ans:hover {
   box-shadow: 0 0 20px rgb(154, 173, 201), 6px 6px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 20px rgb(154, 173, 201), 6px 6px 20px rgba(0, 0, 0, 0.1);
   transform: scale(0.999999);
@@ -155,12 +161,12 @@ h1 {
 
 body {
   margin: 0;
-  background-image:url("../assets/bg.webp");
+  background-image: url("../assets/bg.webp");
 }
 
 .head {
   /* box-shadow: -6px -6px 20px rgba(255, 255, 255, 1), 6px 6px 20px rgba(0, 0, 0, 0.1); */
-  background-image:url("../assets/bg.webp");
+  background-image: url("../assets/bg.webp");
   margin-top: -10px;
   padding-top: 5px;
   color: white;
@@ -193,16 +199,40 @@ section {
   gap: 100px;
 }
 
-#back{
-  border-radius: 5px;
-  margin: 6px;
-  padding: 10px;
-  font-size: 16px;
+#back {
   cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  background:linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
-@media (max-width:719px){
+#back:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgb(154, 173, 201), 6px 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgb(154, 173, 201), 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  padding-top: 15px;
+}
+
+@media (max-width:719px) {
   .ans {
     width: 290px;
   }
+}
+
+#btnSolve,
+#newGameBtn {
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  background:linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  margin-top: 5px;
+  cursor: pointer;
 }
