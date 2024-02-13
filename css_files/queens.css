@@ -8,33 +8,34 @@ body {
   
   #container {
     height: fit-content;
-    margin: 50px;
-    margin-top: 0px;
+    margin-top: 20px;
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
+    background-color: #2688c0;
+    padding-left: 2vw;
+    padding-right: 2vw;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   }
   
   h1 {
-    color: #3498db;
+    color: #ffffff;
+    margin: 5px;
+    font-weight: 800;
   }
   
   .chessboard {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
+    grid-template-columns: repeat(8, 35px);
     gap: 2px;
     margin: 20px auto;
-    border: 2px solid #3498db;
+    border: 2px solid #000000;
     border-radius: 10px;
     overflow: hidden;
     width: fit-content;
+    background-color: gray;
   }
   
   .square {
-    width: 50px;
-    height: 50px;
     box-sizing: border-box;
     text-align: center;
     line-height: 50px;
@@ -54,7 +55,7 @@ body {
   } */
   
   .queen {
-    color: red;
+    color: black;
   }
   
   #buttons {
@@ -75,21 +76,21 @@ body {
   }
   
   .solveButton {
-    background-color: #3498db;
+    background-color: #1665cc;
     color: #fff;
   }
   
   .solveButton:hover {
-    background-color: #2980b9;
+    background-color: #3db1ff;
   }
   
   .resetButton {
-    background-color: #27ae60;
+    background-color:  #1665cc;
     color: #fff;
   }
   
   .resetButton:hover {
-    background-color: #218c54;
+    background-color: #3db1ff;
   }
 
   

@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>N-Queens Problem Solver</title>
   <link rel="stylesheet" href="../css_files/queens.css">
+  <link rel="stylesheet" href="../css_files/styles.css">
 </head>
 
-<body>
+<body background="../assets/bg.webp">
   <div id="container">
     <h1>N-Queens Problem Solver</h1>
     <label for="size">Choose a Size:</label>
-    <select id="size" name="size">
+    <select id="size" name="size" onchange="changeSize()">
       <option value="1">1X1</option>
       <option value="2">2X2</option>
       <option value="3">3X3</option>

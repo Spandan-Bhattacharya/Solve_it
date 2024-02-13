@@ -2,6 +2,21 @@
 document.addEventListener('DOMContentLoaded', initializeChessboard);
 
 let queensPlacement = [];
+
+function changeSize(){
+  document.getElementById("nosol").innerText="";
+  let ss=Number(document.getElementById("size").value);
+  let curr=50;
+  if(ss>5){
+    curr=50-(4*(ss-5));
+  }
+  const chessboard = document.getElementById('chessboard');
+  chessboard.style.gridTemplateColumns=`repeat(${Number(document.getElementById("size").value)}, ${curr}px)`;
+  chessboard.innerHTML = '';
+
+  // Reinitialize the chessboard
+  initializeChessboard();
+}
 function initializeChessboard() {
   const chessboard = document.getElementById('chessboard');
   queensPlacement = [];
@@ -14,6 +29,15 @@ function initializeChessboard() {
         square.style.backgroundColor="#b58863";
       }else{
         square.style.backgroundColor="#f0d9b5";
+      }
+      let ss=Number(document.getElementById("size").value);
+      if(ss>5){
+        let curr=50-(4*(ss-5));
+        square.style.height=`${curr}px`;
+        square.style.width=`${curr}px`;
+      }else{
+        square.style.height="50px";
+        square.style.width="50px";
       }
       square.dataset.row = row + 1;
       square.dataset.col = col + 1;
@@ -58,8 +82,13 @@ function solveQueens() {
     queensPlacement.length = Math.min(queensPlacement.length, Number(document.getElementById("size").value));
   
     // Clear the chessboard
+    let ss=Number(document.getElementById("size").value);
+    let curr=50;
+    if(ss>5){
+      curr=50-(4*(ss-5));
+    }
     const chessboard = document.getElementById('chessboard');
-    chessboard.style.gridTemplateColumns=`repeat(${Number(document.getElementById("size").value)}, 50px)`;
+    chessboard.style.gridTemplateColumns=`repeat(${Number(document.getElementById("size").value)}, ${curr}px)`;
     chessboard.innerHTML = '';
   
     // Reinitialize the chessboard
