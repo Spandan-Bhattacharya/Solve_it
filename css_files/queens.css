@@ -44,6 +44,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
   }
   
   /* .square:nth-child(odd) {
@@ -53,10 +54,6 @@ body {
   .square:nth-child(even) {
     background-color: #b58863;
   } */
-  
-  .queen {
-    color: black;
-  }
   
   #buttons {
     display: flex;
