@@ -13,6 +13,17 @@
 
 <body background="../assets/bg.webp">
   <h1>Sudoku Solver </h1>
+  <div class="info">
+  <label for="size">Choose a difficulty:</label>
+    <select id="size" name="size" onchange="changeDifficulty(value)">
+      <option value="0" selected>Easy</option>
+      <option value="1">Medium</option>
+      <option value="2">Hard</option>
+    </select>
+    <div class="lives-container">
+        <span id="lives">Lives: 3</span>
+    </div>
+</div>
   <div class="sudoku-container">
     <table>
       <tbody id="sudoku-grid"></tbody>
@@ -25,8 +36,8 @@
     <button id="solve-btn" class="btn-s">Solve Puzzle</button>
     <button id="resetButton" class="btn-s">Reset</button>
   </div>
-  <button class="backHome"><a href="/index.html">Back To Home</a></button>
-  <script src="../javascript/sudoku_game_6x6.js" ></script>
+  <button class="backHome"><a href="../index.html">Back To Home</a></button>
+  <script src="../javascript/sudoku_game_6x6.js"></script>
 </body>
 
 </html>
