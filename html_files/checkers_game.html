@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checker Game</title>
+    <link rel="stylesheet" href="../css_files/checkers_game.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: black;">Checker Game</h1>
+        <div class="next-player counter">
+            <div class="occupied whitePiece" id="next-player"></div>
+            Player
+        </div>
+        <div class="game" id="game"></div>
+        <div class="counter" id="remain">
+            <div>
+                <div class="occupied whitePiece"></div>
+                <span id="white-player-count-pieces">10</span>
+            </div>
+            <div>
+                <div class="occupied blackPiece"></div>
+                <span id="black-player-count-pieces">10</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="easyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>The <strong id="winner"></strong> player won the game !!</p>
+                <p> <span id="loser"></span>, whould you take your revenge ???</p>
+
+                <div class="btn-container">
+                    <button class="btn" onclick="location.reload()">Yes </button>
+                    <button class="btn" onclick="modalClose()">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; top: 5px; right: 5px;">
+        <button class="backHome"><a href="../index.html">Back</a></button>
+    </div>
+    <script src="../javascript/checkers_game.js"></script>
+</body>
+
+</html>
