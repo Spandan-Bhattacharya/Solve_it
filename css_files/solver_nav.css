@@ -1,0 +1,120 @@
+/* navigation bar css begins */
+.topnav {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    height: 67px;
+    z-index: 2;
+    padding: 1rem 4rem;
+    background-color: rgba(9, 9, 121, 1)
+  }
+  
+
+.topnav a:hover {
+    background-color: rgba(0, 212, 255, 1);
+    border-radius: 10px;
+    color: #0a1629;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  
+  .topnav a.active {
+    border-radius: 10px;
+  }
+  
+  .topnav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav .list{
+    display: flex;
+    justify-content: space-around;
+    z-index: 999;
+  }
+  .openMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: none;
+  }
+  .openMenu i{
+    position: absolute;
+    font-size: 24px;
+    right: 4rem;
+    cursor: pointer;
+    z-index: 10001;
+  
+  }
+  .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 40vw;
+  }
+  .list .icons{
+    display: none;
+  }
+  
+  @media (max-width:719px) {
+    body.scroll{
+      overflow: hidden;
+    }
+    .openMenu {
+      display: flex;
+    }
+    .list {
+      position: fixed;
+      width: 0%;
+      height: 100dvh;
+      left: 0;
+      top: 0;
+      background: rgb(3,1,36);
+      background: linear-gradient(90deg, rgba(3,1,36,1) 0%, rgba(8,8,112,1) 37%, rgba(8,181,255,1) 100%, rgba(0,137,222,1) 100%);
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: 0.2s;
+      overflow: hidden;
+      z-index: 999;
+    }
+    .search-space{
+      height: 12vh;
+      z-index: 999;
+    }
+    .topnav .list{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+    }
+    .list a {
+      display: block;
+      width: 100%;
+    }
+    .list.move {
+      width: 100%;
+      transition: 0.2s;
+    }
+    .list .icons{
+      display: flex;      
+      margin:0 15vw;
+    }
+    .list .icons a{
+      /* border: 1px solid red; */
+      text-decoration: none;
+      color: #000000;
+      filter: drop-shadow(1px 3px 5px white);
+    }
+    .list .icons a i{
+      font-size: 12vw;
+    }
+  
+  }
+ 

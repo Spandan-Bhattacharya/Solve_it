@@ -4,41 +4,153 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sudoku Solver 6x6 </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css_files/sudoku_solver6.css" />
-    </head>
-    <body onload="setGrid()">
-        <div class="solver-name-header">
-          <!-- solver-name-header class not yet implemented -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sudoku Solver 6x6 </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css_files/sudoku_solver6.css" />
+    <link rel="stylesheet" href="../css_files/solver_footer.css" />
+    <link rel="stylesheet" href="../css_files/solver_nav.css" />
+    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
     
-             
-                   
-                    <span>Sudoku Solver</span>
-                  </div>
-                <form class="form-horizontal" id="logarithm">
-                    
-                    <br/><br/>
-                    <div id="grid">
+    <style>
+        .reveal {
+          position: relative;
+          opacity: 0;
+          transition: all 0.2s ease-in-out;
+        }
+    
+        .reveal.active {
+          opacity: 1;
+        }
+    
+        .active.fade-bottom {
+          animation: fade-bottom 1s ease-in-out;
+        }
+    
+        .active.fade-left {
+          animation: fade-left 1s ease-in-out;
+        }
+    
+        .active.fade-right {
+          animation: fade-right 1s ease-in-out;
+        }
+    
+        @keyframes fade-bottom {
+          0% {
+            transform: translateY(50px);
+            opacity: 0;
+          }
+    
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+    
+        @keyframes fade-left {
+          0% {
+            transform: translateX(-100px);
+            opacity: 0;
+          }
+    
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+    
+        @keyframes fade-right {
+          0% {
+            transform: translateX(100px);
+            opacity: 0;
+          }
+    
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      </style>
+    
+</head>
+
+<body onload="setGrid()">
+        <div>
+          <nav class="topnav">
+                
+            <div class="openMenu">
+              <i class="fa-solid fa-bars" id="bar"></i>
+            </div>
+            <div class="list">
+              <div class="search-space"></div>
+        
+              <!-- Top Nav-Bar Texts -->
+              <div>
+                <a  href="/#solvers">Solvers</a>
+              </div>
+              <div>
+                <a href="/">Home</a>
+              </div>
+              <div>
+                <a href="faq.html">FAQ</a>
+              </div>
+              <div>
+                <a href="newContact.html">Contact</a>
+              </div>
+              <div>
+                <a href="about.html">About</a>
+              </div>
+        
+            </div>
+          </nav>
+        </div>    
+        <div class="solver-name-header">
+            <span>Sudoku Solver</span>
+        </div>
+        <form class="form-horizontal" id="logarithm">
+
+            <br /><br />
+            <div id="grid">
+
+            </div>
+            <!-- reset button not yet implemented -->
+            <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button> -->
+            <div class="button-container">
+                <button id="resetButton" class="btn-s">Reset</button>
+                <button type="button" id="submitButton" class="btn-s">Submit</button><br /><br /><br />
+            </div>
+            <div class="outterbox">
+                <div class="box" id="resultboxgrid" style="display:none"><span id="resultgrid"></span></div>
+            </div>
+            <button class="backHome"><a href="/index.html">Back To Home</a></button>
+        </form>
+
+        <footer class="newFooter">
+          <div class="footer-head">
+            <div class="heading">
+              <h1>Solve It !</h1>
+            </div>
             
-                    </div>
-                     <!-- reset button not yet implemented -->
-                     <!-- <button type="button" id="gridset" onclick="gridReset()">Reset</button> -->
-                    <div class="button-container">
-                    <button id="resetButton" class="btn-s">Reset</button>
-                    <button type="button" id="submitButton" class="btn-s">Submit</button><br/><br/><br/>
-                </div>
-                    <div class="outterbox">
-                        <div class="box" id="resultboxgrid" style="display:none"><span id="resultgrid"></span></div>
-                    </div>
-                    <button class="backHome"><a href="/index.html">Back To Home</a></button>
-                </form>
+            <div class="copyright" style="color: white;">
+              @Spandan-Bhattacharya & Team 2024
+            </div>
+          </div>
           
             
-            <script src="../javascript/sudoku_solver6.js" async defer></script>
-        </body>
+          </div>
+          <div class="footer-content">
+            <h1>About The Game</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptate totam autem, iusto impedit voluptates dolorum quibusdam exercitationem dolorem est.</p>
+          </div>
+        </footer>
+      
+
+        <script src="../javascript/sudoku_solver6.js" async defer></script>
+        <script src="../javascript/script.js"></script>
+</body>
+
 </html>
