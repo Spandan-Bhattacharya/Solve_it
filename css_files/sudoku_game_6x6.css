@@ -54,7 +54,7 @@ table tr:nth-child(2n+2) td {
     /* border-bottom: 2px solid #000; */
 }
 
-table td:nth-child(2n) {
+table td:nth-child(3n) {
     border-right: 3px solid rgba(9, 9, 121, 1);
     /* border-right: 2px solid #000; */
 }
