@@ -76,7 +76,18 @@ function removeQueen(row, col) {
 function solveQueens() {
   console.log(queensPlacement);
 
+  if(queensPlacement.length>0){
+    if(solve(0)){ 
+      displaySolution();
+    }else{
+      alert("No Solution Exist including entered positions, to get a random solution click 'ok'");
+      resetGame();
+      solve(0) ? displaySolution() : document.getElementById("nosol").innerText = "No Solution Exist";
+    }
+  
+  }else{
   solve(0) ? displaySolution() : document.getElementById("nosol").innerText = "No Solution Exist";
+  }
 }
 
 
