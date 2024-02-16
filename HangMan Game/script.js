@@ -80,7 +80,7 @@ function solveFunction() {
                 incorrectGuesses++;
 
                 let guess = document.querySelector(".guesses");
-                guess.innerHTML = `Guesses : <span style="color: red;">${incorrectGuesses} / 6`;
+                guess.innerHTML = `Incorrect Guesses : <span style="color: red;">${incorrectGuesses} / 6`;
                 let image = document.querySelector(".image-section img");
                 image.src = `images/hangman-${incorrectGuesses}.svg`;
 
@@ -108,7 +108,7 @@ reset.addEventListener("click", () => {
     keyboard.innerHTML = ``;
 
     let guess = document.querySelector(".guesses");
-    guess.innerHTML = `Guesses : <span style="color: red;">0 / 6`;
+    guess.innerHTML = `Incorrect Guesses : <span style="color: red;">0 / 6`;
     let image = document.querySelector(".image-section img");
     image.src = `images/hangman-0.svg`;
 
