@@ -32,7 +32,7 @@ for (var i = 0; i < buttons.length; i++) {
 
 
 		var buttonNo = this.classList[1];
-		makeMove(this, buttonNo.slice(4));
+		makeMove(this, buttonNo.slice(4), buttons);
 
 	});
 
@@ -40,11 +40,14 @@ for (var i = 0; i < buttons.length; i++) {
 
 
 //Make Move on the passed button and disable it
-function makeMove(button, buttonNo) {
+function makeMove(button, buttonNo, buttons) {
 
 	var row = buttonNo % 7 === 0 ? Math.floor(buttonNo / 7) - 1 : Math.floor(buttonNo / 7);
 	var col = buttonNo % 7 === 0 ? 6 : (buttonNo % 7) - 1;
-
+	while (row < 5 && filledGrid[row + 1][col] == Number(-1)) {
+		row++;
+	}
+	button=buttons[row * 7 + col];
 	if (playerNumber === 1) {
 
 		button.classList.add("btn-player-1");
