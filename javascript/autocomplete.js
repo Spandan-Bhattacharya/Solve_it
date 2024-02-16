@@ -1,38 +1,42 @@
 const availableKeywords = [
-    'Sudoku Solver: 4x4',
-    'Sudoku Solver: 6x6',
-    'Sudoku Solve: 8x8',
-    'Sudoku Solve: 9x9',
-    'Sudoku Solve: 10x10',
-    'find way',
-    'treasure hunt',
-    'find error',
+  'Sudoku Solver: 4x4',
+  'Sudoku Solver: 6x6',
+  'Sudoku Solver: 8x8',
+  'Sudoku Solver: 9x9',
+  'Word Unjumbler',
+  'Number Solver',
+  'Tower of Hanoi',
+  '8 Puzzle Solver',
+  'N Queen Solver',
 ];
 
 const resultBox = document.querySelector(".result-box");
 const inputBox = document.getElementById("input-box");
 const searchButton = document.querySelector(".searchButton");
 
+let boxs = document.getElementsByClassName("box");
+let box, title, txtvalue;
+
 document.addEventListener("click", function (event) {
-    const isSearchBox = event.target.closest(".searchBox");
-    if ((!isSearchBox && event.target !== inputBox && event.target !== resultBox) || event.target === searchButton || event.target === searchButton.children[0]) {
-        resultBox.innerHTML = "";
-    }
+  const isSearchBox = event.target.closest(".searchBox");
+  if ((!isSearchBox && event.target !== inputBox && event.target !== resultBox) || event.target === searchButton || event.target === searchButton.children[0]) {
+    resultBox.innerHTML = "";
+  }
 });
 
 function filterKeywords(input) {
-    return availableKeywords.filter(keyword => keyword.toLowerCase().includes(input.toLowerCase()));
+  return availableKeywords.filter(keyword => keyword.toLowerCase().includes(input.toLowerCase()));
 }
 
 function display(result) {
-    const content = result.map(list => `<li onclick='selectInput(this)'>${list}</li>`);
-    resultBox.innerHTML = `<ul>${content.join('')}</ul>`;
+  const content = result.map(list => `<li onclick="selectInput(this)">${list}</li>`);
+  resultBox.innerHTML = `<ul>${content.join('')}</ul>`;
 }
 
 inputBox.addEventListener("keyup", function () {
-    const input = inputBox.value.trim();
-    const result = input.length ? filterKeywords(input) : [];
-    display(result);
+  const input = inputBox.value.trim();
+  const result = input.length ? filterKeywords(input) : [];
+  display(result);
 });
 
 inputBox.addEventListener("click", function () {
@@ -67,13 +71,30 @@ searchButton.addEventListener("click", () => {
   } else {
     inputBox.style.width = "0px";
     inputBox.style.padding = "0px";
+    inputBox.value = '';
+    for (i = 0; i < boxs.length; i++) {
+      box = boxs[i];
+      box.style.display = '';
+    }
     document.querySelector(".searchButton i").classList.remove("fa-times");
     document.querySelector(".searchButton i").classList.add("fa-search");
   }
 });
 
-
 function selectInput(list) {
   inputBox.value = list.innerHTML;
   resultBox.innerHTML = "";
+  //Search
+  for (i = 0; i < boxs.length; i++) {
+    box = boxs[i];
+    title = box.getElementsByTagName("span");
+    txtvalue = title[0].innerText;
+    if (txtvalue == list.innerText) {
+      box.style.display = '';
+    } else {
+      box.style.display = 'none';
+    }
+
+  }
+  window.location.href = "#solvers";
 }

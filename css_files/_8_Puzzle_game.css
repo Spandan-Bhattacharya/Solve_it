@@ -1,0 +1,81 @@
+body {
+    font-family: 'Helvetica';
+}
+
+.game_title {
+    text-align: center;
+}
+
+#game_area {
+    height: 306px;
+    width: 306px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.number-block {
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(0, 8, 56);
+    text-align: center;
+    font-size: 78px;
+    cursor: pointer;
+    background-color: #da916a;
+}
+
+.void_class {
+    background: black;
+    color: grey;
+    cursor: not-allowed;
+}
+
+#game_controls {
+    height: 100px;
+    width: 300px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.reset_btn {
+    padding: 12px;
+    background-color: #1665cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.reset_btn.focus,
+.reset_btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.backHome a:hover,
+.backHome:hover {
+    text-decoration: none;
+    background-color: #92d3ff;
+    color: rgb(35, 107, 159);
+}
+
+.backHome,
+.backHome a {
+    text-decoration: none;
+    padding: 12px;
+    background-color: #1665cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

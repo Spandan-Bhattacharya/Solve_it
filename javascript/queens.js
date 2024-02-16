@@ -3,18 +3,45 @@ document.addEventListener('DOMContentLoaded', initializeChessboard);
 
 let queensPlacement = [];
 
+function changeSize() {
+  document.getElementById("nosol").innerText = "";
+  let ss = Number(document.getElementById("size").value);
+  let curr = 50;
+  if (ss > 5) {
+    curr = 50 - (4 * (ss - 5));
+  }
+  const chessboard = document.getElementById('chessboard');
+  chessboard.style.gridTemplateColumns = `repeat(${Number(document.getElementById("size").value)}, ${curr}px)`;
+  chessboard.innerHTML = '';
+
+  // Reinitialize the chessboard
+  initializeChessboard();
+}
 function initializeChessboard() {
   const chessboard = document.getElementById('chessboard');
   queensPlacement = [];
-  
-  for (let row = 0; row < 8; row++) {
-    for (let col = 0; col < 8; col++) {
+
+  for (let row = 0; row < Number(document.getElementById("size").value); row++) {
+    for (let col = 0; col < Number(document.getElementById("size").value); col++) {
       const square = document.createElement('div');
       square.classList.add('square');
+      if (((row + 1) % 2 == 0 && (col + 1) % 2 == 0) || ((row + 1) % 2 != 0 && (col + 1) % 2 != 0)) {
+        square.style.backgroundColor = "#b58863";
+      } else {
+        square.style.backgroundColor = "#f0d9b5";
+      }
+      let ss = Number(document.getElementById("size").value);
+      if (ss > 5) {
+        let curr = 50 - (4 * (ss - 5));
+        square.style.height = `${curr}px`;
+        square.style.width = `${curr}px`;
+      } else {
+        square.style.height = "50px";
+        square.style.width = "50px";
+      }
       square.dataset.row = row + 1;
       square.dataset.col = col + 1;
       square.textContent = queensPlacement.includes(col + 1) ? '♛' : ' ';
-      square.classList.add(queensPlacement.includes(col + 1) ? 'queen' : getSquareColor(row, col));
       square.addEventListener('click', () => toggleQueen(row, col));
       chessboard.appendChild(square);
     }
@@ -23,9 +50,6 @@ function initializeChessboard() {
   document.addEventListener('keydown', handleKeyPress);
 }
 
-function getSquareColor(row, col) {
-  return (row + col) % 2 === 0 ? 'white' : 'black';
-}
 
 function toggleQueen(row, col) {
   const existingQueen = queensPlacement.find(q => q.row === row && q.col === col);
@@ -38,38 +62,46 @@ function toggleQueen(row, col) {
 }
 
 function placeQueen(row, col) {
-  if (queensPlacement.length < 8) {
+  if ((queensPlacement.length < Number(document.getElementById("size").value) && isSafe(row, col))) {
     queensPlacement.push({ row, col });
-    updateSquare(row, col, '♛', 'queen');
+    updateSquare(row, col, '♛');
   }
 }
 
 function removeQueen(row, col) {
   queensPlacement = queensPlacement.filter(q => !(q.row === row && q.col === col));
-  updateSquare(row, col, getSquareColor(row, col) === 'white' ? ' ' : ' ', 'queen');
+  updateSquare(row, col, '');
 }
 
 function solveQueens() {
-    queensPlacement = queensPlacement.filter(q => q.row <= 8 && q.col <= 8);
-    queensPlacement.length = Math.min(queensPlacement.length, 8);
+  console.log(queensPlacement);
+
+  if(queensPlacement.length>0){
+    if(solve(0)){ 
+      displaySolution();
+    }else{
+      alert("No Solution Exist including entered positions, to get a random solution click 'ok'");
+      resetGame();
+      solve(0) ? displaySolution() : document.getElementById("nosol").innerText = "No Solution Exist";
+    }
   
-    // Clear the chessboard
-    const chessboard = document.getElementById('chessboard');
-    chessboard.innerHTML = '';
-  
-    // Reinitialize the chessboard
-    initializeChessboard();
-    solve(0);
-    displaySolution();
+  }else{
+  solve(0) ? displaySolution() : document.getElementById("nosol").innerText = "No Solution Exist";
   }
-  
+}
+
 
 function solve(row) {
-  if (row === 8) {
+  if (row === Number(document.getElementById("size").value)) {
     return true;
   }
+  for (const queen of queensPlacement) {
+    if (queen.row == row) {
+      return solve(row + 1);
+    }
+  }
 
-  for (let col = 0; col < 8; col++) {
+  for (let col = 0; col < Number(document.getElementById("size").value); col++) {
     if (isSafe(row, col)) {
       placeQueen(row, col);
 
@@ -98,6 +130,7 @@ function isSafe(row, col) {
 }
 
 function displaySolution() {
+  document.getElementById("nosol").innerText = "";
   queensPlacement.forEach(queen => {
     const square = document.querySelector(`.square[data-row="${queen.row + 1}"][data-col="${queen.col + 1}"]`);
     square.classList.add('queen');
@@ -105,12 +138,12 @@ function displaySolution() {
 }
 
 function resetGame() {
-    queensPlacement = [];
-    const chessboard = document.getElementById('chessboard');
-    chessboard.innerHTML = ''; // Clear the chessboard
-    initializeChessboard(); // Reinitialize the chessboard
-  }
-  
+  queensPlacement = [];
+  const chessboard = document.getElementById('chessboard');
+  chessboard.innerHTML = ''; // Clear the chessboard
+  initializeChessboard(); // Reinitialize the chessboard
+}
+
 function handleKeyPress(event) {
   if (event.key === 'Delete' || event.key === 'Backspace') {
     const selectedSquare = document.querySelector('.selected');
@@ -122,9 +155,7 @@ function handleKeyPress(event) {
   }
 }
 
-function updateSquare(row, col, content, className) {
+function updateSquare(row, col, content) {
   const square = document.querySelector(`.square[data-row="${row + 1}"][data-col="${col + 1}"]`);
   square.textContent = content;
-  square.className = 'square ' + className;
 }
-

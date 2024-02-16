@@ -23,6 +23,10 @@
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
   <style>
+    .box span {
+      display: none;
+    }
+
     .reveal {
       position: relative;
       opacity: 0;
@@ -163,7 +167,36 @@
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
     </div>
+
+
     <section class="hero-section" id="hero">
       <div class="herocontainer">
         <img src="assets/bodylogo.png" alt="img" height="450px" width="450px" />
@@ -178,9 +211,43 @@
     <br /><br />
     <!-- grid begins -->
 
+    <div class="category-section">
+      <h1 class="reveal">Categories</h1>
+      <div class="home-container" id="solvers">
+        <div class="box">
+          <span>Puzzles</span>
+          <div class="content">
+            <h1>Puzzles</h1>
+            <p>Get To Solve Exciting Puzzles</p>
+            <a style="cursor: pointer;">
+              <div class="trynow-button Puzzle">Puzzle</div>
+            </a>
+          </div>
+        </div>
+        <div class="box" style="background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+        color: white;">
+          <span style="color: white;">Games</span>
+          <div class="content">
+            <h1 style="color: white;">Games</h1>
+            <p style="color: white;">Get Amazing Games</p>
+            <a style="cursor: pointer;">
+              <div class="trynow-button Games">Games</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hide reveal" id="Result">Results :</h1>
+      <!-- <button class="Puzzle">Puzzle</button>
+      <button class="Games">Games</button> -->
+    </div>
+
     <div class="home-container" id="solvers">
-      <div class="box activebox">
-        <span></span>
+
+      <!-- PUZZLE SECTION STARTS HERE -->
+
+      <div class="box activebox puzzle hide">
+        <span>Sudoku Solver: 4x4</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
           <h3>4x4</h3>
@@ -191,8 +258,9 @@
           </a>
         </div>
       </div>
-      <div class="box">
-        <span></span>
+
+      <div class="box puzzle hide">
+        <span>Sudoku Solver: 6x6</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
           <h3>6x6</h3>
@@ -202,19 +270,9 @@
           </a>
         </div>
       </div>
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h1>Sudoku Solver</h1>
-          <h3>9x9</h3>
-          <p>Solves any valid 9x9 sudoku!!</p>
-          <a href="./html_files/sudoku_solver_9x9.html">
-            <div class="trynow-button">TRY NOW!</div>
-          </a>
-        </div>
-      </div>
-      <div class="box">
-        <span></span>
+
+      <div class="box puzzle hide">
+        <span>Sudoku Solver: 8x8</span>
         <div class="content">
           <h1>Sudoku Solver</h1>
           <h3>8x8</h3>
@@ -225,8 +283,20 @@
         </div>
       </div>
 
-      <div class="box">
-        <span></span>
+      <div class="box puzzle hide">
+        <span>Sudoku Solver: 9x9</span>
+        <div class="content">
+          <h1>Sudoku Solver</h1>
+          <h3>9x9</h3>
+          <p>Solves any valid 9x9 sudoku!!</p>
+          <a href="./html_files/sudoku_solver_9x9.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box puzzle hide">
+        <span>Word Unjumbler</span>
         <div class="content">
           <h1>Word Unjumbler</h1>
           <h3>Word solver</h3>
@@ -237,8 +307,8 @@
         </div>
       </div>
 
-      <div class="box">
-        <span></span>
+      <div class="box puzzle hide">
+        <span>Number Solver</span>
         <div class="content">
           <h1>Number Solver</h1>
           <h3>4 digits</h3>
@@ -248,32 +318,33 @@
           </a>
         </div>
       </div>
-      <div class="box">
-        <span></span>
+
+      <div class="box puzzle hide">
+        <span>8 Puzzle Solver</span>
         <div class="content">
-          <h1>Tower Of henoi</h1>
+          <h1>8 Puzzle Solver</h1>
           <h3>Puzzle</h3>
-          <p>It helps to solve tower of henoi!</p>
+          <p> It helps to solve 8 puzzle!</p>
+          <a href="./html_files/_8_puzzle.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box puzzle hide">
+        <span>Tower of Hanoi</span>
+        <div class="content">
+          <h1>Tower Of Hanoi</h1>
+          <h3>Puzzle</h3>
+          <p>It helps to solve tower of hanoi!</p>
           <a href="./html_files/toh.html">
             <div class="trynow-button">TRY NOW!</div>
           </a>
         </div>
       </div>
 
-
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h1>8 Puzzle Solver</h1>
-          <h3>Puzzle</h3>
-          <p> It helps to solve 8 puzzle !</p>
-          <a href="./html_files/_8_puzzle.html">
-            <div class="trynow-button">TRY NOW!</div>
-          </a>
-        </div>
-      </div>
-      <div class="box">
-        <span></span>
+      <div class="box puzzle hide">
+        <span>N Queen Solver</span>
         <div class="content">
           <h1>N-Queen Solver</h1>
           <h3>Chessboard</h3>
@@ -283,6 +354,126 @@
           </a>
         </div>
       </div>
+      <!-- PUZZLE SECTION END -->
+
+      <!-- GAMES SECTION BEGIN-->
+
+      <div class="box game hide">
+        <span>Sudoku Game: 4x4</span>
+        <div class="content">
+          <h1>Sudoku Game</h1>
+          <h3>4x4</h3>
+          <p>Play 4x4 sudoku!!</p>
+
+          <a href="html_files/sudoku_game_4x4.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+        <span>Sudoku Game: 6x6</span>
+        <div class="content">
+          <h1>Sudoku Game</h1>
+          <h3>6x6</h3>
+          <p>Play 6x6 sudoku!!</p>
+          <a href="html_files/sudoku_game_6x6.html">
+
+            <div class="trynow-button">TRY NOW!</div>
+
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+        <span>Sudoku Game: 8x8</span>
+        <div class="content">
+          <h1>Sudoku Game</h1>
+          <h3>8x8</h3>
+          <p>Play 8x8 sudoku!!</p>
+          <a href="./Sudoku_Game_8x8/index.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+        <span>Sudoku Game: 9x9</span>
+        <div class="content">
+          <h1>Sudoku Game</h1>
+          <h3>9x9</h3>
+          <p>Play 9x9 sudoku!!</p>
+          <a href="./Sudoku_Game_9x9/index.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+        <span>Simon Game</span>
+        <div class="content">
+          <h1>Simon Game</h1>
+          <h3>Game</h3>
+          <p>Remember the sequence in which keys are played!</p>
+          <a href="./Simon Game/index.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+        <span>Checker Game</span>
+        <div class="content">
+          <h1>Checker Game</h1>
+          <h3>Game</h3>
+          <p>Play Checkers with your friend</p>
+          <a href="./html_files/checkers_game.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="box game hide">
+        <span>8 Puzzle Game</span>
+        <div class="content">
+          <h1>8 Puzzle Game</h1>
+          <h3>Game</h3>
+          <p> Lets PLAY!!! Try to solve 8 puzzle!</p>
+          <a href="./html_files/_8_Puzzle_game.html">
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+
+        <span>Connect 4 Game</span>
+        <div class="content">
+          <h1>Connect 4 Game</h1>
+          <h3>Game</h3>
+          <p> Play Connect 4 with your friends</p>
+          <a href="./html_files/Connect4.html">
+
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="box game hide">
+        <span>Tic-Tac-Toe Game</span>
+        <div class="content">
+          <h1>Tic-Tac-Toe Game</h1>
+          <h3>Game</h3>
+          <p> Lets PLAY!!!</p>
+          <a href="./Tic-Tac-Toe/index.html">
+
+            <div class="trynow-button">TRY NOW!</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- GAME SECTION ENDS HERE -->
     </div>
 
 
@@ -306,24 +497,6 @@
 
 
   </div>
-  <!-- <footer class="footer">
-      <div class="fbox">
-        <h2 style="color: #110D2C;">Solve it !</h2>
-        <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;">Quick links</h3>
-        <a href="#">Home</a>
-        <a href="html_files/about.html">About</a>
-        <a href="html_files/contact.html">Contact</a>
-      </div>
-      <div class="fbox">
-        <h3 style="font-weight: bold;" >Social links</h3>
-        <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github" style="font-size: 1.25em;margin: 2px;"></i></a>
-        <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin" style="font-size: 1.25em;margin: 2px;"></i></a>
-      </div>
-    </footer> -->
 
   <footer class="newFooter">
     <div class="footer-content1">
@@ -370,6 +543,52 @@
       </div>
     </div>
   </footer>
+
+  <script>
+
+    let puzzleBtn = document.querySelector('.Puzzle');
+    let gamesBtn = document.querySelector('.Games');
+
+    let arr_puzzle = document.querySelectorAll('.puzzle');
+    let arr_games = document.querySelectorAll('.game');
+
+    let result = document.querySelector('#Result');
+
+    puzzleBtn.addEventListener('click', () => {
+
+      result.classList.remove("hide");
+      result.classList.add("visible");
+      Array.from(arr_puzzle).forEach((e) => {
+
+        e.classList.remove("hide");
+        e.classList.add("visible");
+      })
+      Array.from(arr_games).forEach((e) => {
+        e.classList.remove("visible");
+        e.classList.add("hide");
+      })
+    })
+
+    gamesBtn.addEventListener('click', () => {
+
+      result.classList.remove("hide");
+      result.classList.add("visible");
+
+      Array.from(arr_games).forEach((e) => {
+        e.classList.remove("hide");
+        e.classList.add("visible");
+      })
+      Array.from(arr_puzzle).forEach((e) => {
+        e.classList.remove("visible");
+        e.classList.add("hide");
+      })
+    })
+
+
+  </script>
+
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>

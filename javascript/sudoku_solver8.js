@@ -79,6 +79,7 @@ async function solveSudoku() {
         if (!cell.classList.contains("user-input")) {
           cell.value = sudokuArray[row][col];
           cell.classList.add("solved");
+          await sleep(20); //delay for visualisation
         }
       }
     }
@@ -149,6 +150,7 @@ function resetGrid() {
       const field = document.getElementById(`cell-${i}-${j}`);
       if (field) {
         field.value = "";
+        field.style.color = "#1e25e8";
         field.classList.remove("user-input");
         field.classList.remove("output-cell");
       }
