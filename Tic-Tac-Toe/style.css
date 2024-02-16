@@ -10,7 +10,7 @@ body {
 }
 
 .background {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: rgb(10, 10, 30);
 }
@@ -18,7 +18,7 @@ body {
 .heading-container {
     color: white;
     background-color: rgb(7, 40, 40);
-    height: 4rem;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -28,6 +28,7 @@ body {
 
 .heading-container h1 {
     text-shadow: 0 0 20px black;
+    text-align: center;
 }
 
 .container {
@@ -143,3 +144,50 @@ body {
 }
 
 
+
+@media screen and (max-width: 1014px){
+    .boxtext {
+        font-size: 3rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 5vh;
+        align-items: center;
+    }
+
+    .gif-icon {
+        height: 20vh;
+        border-radius: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .heading-container {
+        color: white;
+        background-color: rgb(7, 40, 40);
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        font-size: 18px;
+        letter-spacing: 1.5px;
+    }
+
+    .changeOfTurn {
+        font-size: 2rem;
+    }
+
+    .reset {
+        font-size: 1.5rem;
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+@media screen  and (max-width : 413px){
+    .boxtext {
+        font-size: 2rem;
+    }
+}
