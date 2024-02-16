@@ -18,19 +18,20 @@ body {
 }
 
 .heading-container {
-    color: white;
     background-color: rgb(7, 40, 40);
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;  
-    font-size: 18px;
+    font-size: 25px;
     letter-spacing: 1.5px;
 }
 
 .heading-container h1 {
-    text-shadow: 0 0 20px black;
+    background: linear-gradient(#F2B433 100%, #EEB238 100%, #D48300 100%);;
     text-align: center;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .container {
@@ -144,6 +145,9 @@ body {
 
 .changeOfTurn {
     font-size: 3rem;
+    background: linear-gradient(#F2B433 100%, #EEB238 100%, #D48300 100%);;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 
