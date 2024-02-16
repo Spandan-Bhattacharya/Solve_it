@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    /* background: rgb(119, 46, 229); */
+    background: url(../assets/bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.heading-container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    background: gold;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.image-section img{
+    padding-left: 3rem;
+}
+
+.game-container {
+    min-height: 70vh;
+    padding: 5rem 2rem;
+    width: 70vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.game-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 6px;
+    padding: 0 2rem;
+}
+
+.letter {
+    font-size: 3rem;
+    border: none;
+    width: 2.5rem;
+    border-bottom: 2px solid black;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.hint-container {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.keys {
+    font-size: 1.5rem;
+    width: 3rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    /* background: rgb(139, 77, 232); */
+    background: url(../assets/bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 5px;
+}
+
+.pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pop {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 2px solid rgb(139, 77, 232);
+    border-radius: 1rem;
+}
+
+.message {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.guesses {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.gif-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-section img {
+    width: 20vw;
+}
+
+.reset {
+    font-size: 1.7rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 1180px) {
+    .game-container {
+        flex-wrap: wrap;
+        width: 90vw;
+    }
+
+    .image-section {
+        margin-bottom: 3rem;
+    }
+
+    .pop {
+        width: 70vw;
+    }
+
+    .letter {
+        font-size: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width : 590px) {
+    .letter {
+        font-size: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .game-container {
+        width: 90vw;
+    }
+
+    .pop {
+        width: 70vw;
+    }
+}
