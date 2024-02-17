@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: url(../assets/bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.head {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    background: linear-gradient(#F2B433 100%, #EEB238 100%, #D48300 100%);;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.result-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: auto;
+    width: auto;
+
+}
+
+.result-container img {
+    height: 150px;
+}
+
+.user {
+    transform: rotate(90deg);
+}
+
+.cpu {
+    transform: rotateY(180deg) rotateZ(90deg);
+}
+
+.options span img {
+    height: 70px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.options span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.options span p{
+    text-align: center;
+}
+
+.animate1 {
+    animation-name: animate1;
+    animation-iteration-count: 3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+.animate2 {
+    animation-name: animate2;
+    animation-iteration-count: 3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: rotate(80deg);
+    }
+    50%{
+        transform: rotate(100deg);
+    }
+    100%{
+        transform: rotate(80deg);
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        transform: rotateY(180deg) rotateZ(80deg);
+    }
+    50%{
+        transform: rotateY(180deg) rotateZ(100deg);
+    }
+    100%{
+        transform: rotateY(180deg) rotateZ(80deg);
+    }
+}
