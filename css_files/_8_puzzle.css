@@ -21,7 +21,8 @@ h1 {
 }
 
 .container {
-    width: 50vw;
+    width: fit-content;
+    padding: 10px;
     margin: auto;
     background-color: aliceblue;
     border-radius: 10px;
@@ -126,4 +127,11 @@ button:hover {
 #solution-tables td {
     padding: 10px;
     text-align: center;
+}
+
+@media (max-width:770px) {
+    .cell {
+        height: 15vw;
+        width: 15vw;
+    }
 }
