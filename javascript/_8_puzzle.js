@@ -121,6 +121,14 @@ function solvePuzzle() {
             puzzleState[(row * 3) + col] = cellValue !== "" ? parseInt(cellValue) : 0;
         }
     }
+
+    if(existSolution(puzzleState) === false) {
+        alert("No solution exists for this Puzzle !");
+        reset();
+        return;
+    }
+
+
     if (isValidOrder(puzzleState)) {
     } else {
         alert('Invalid input. Please enter a valid list of numbers.');
@@ -133,6 +141,20 @@ function solvePuzzle() {
     } else {
         alert('Solution not found within the iteration limit.');
     }
+}
+
+
+
+function existSolution(arr) {
+    let inv_count = 0;
+    for(let i = 0; i < 9 - 1; i++) {
+        for(let j = i + 1; j < 9; j++) {
+            if(arr[j] && arr[i] && arr[i] > arr[j]) inv_count++;
+        }
+    }
+
+    if(inv_count % 2 == 0) return true;
+    return false;
 }
 
 // A* algorithm for solving the puzzle
