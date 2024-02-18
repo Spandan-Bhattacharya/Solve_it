@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrossWord</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container crosswordDisplay">
+
+    <div class="row">
+      <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
+      <div class="btn btn-default disabled" id="btnCreate">Create</div>
+      <div class="btn btn-default disabled" id="btnPlay">Play</div>
+
+      <button id="btnReset">Reset</button>
+      <button id="btnCheck">Check Answers</button>
+      <a href="../index.html"><button>Back to Home</button></a>
+    </div>
+    <br><br><br>
+    <div class="center crossword" id="crossword"></div>
+
+    <div class="btn" id="btnGen">Generate</div>
+
+
+    <div class="col-lg-6 ">
+      <div class="clueBlock" id="cluesAcross">
+        <div class="clueDirection" id="directionAcross">ACROSS</div>
+
+        <div class="line">
+          <input class="word" type="text" value="Function" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Named section of code (8)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Array" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Collection of items (5)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="String" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Sequence of characters (6)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Integer" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Whole number (7)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Boolean" />
+          <span class="lineNum"></span>
+          <input class="clue" value="True or false (7)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Object" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Instance of a class (6)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Class" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Blueprint for objects (5)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Method" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Class function (6)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Interface" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Contract for interaction (10)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="API" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Application interface (3)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Debugging" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Finding and fixing errors (9)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Git" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Version control system (3)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Repository" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Code storage (10)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Branch" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Parallel version (6)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Merge" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Combine changes (5)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Agile" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Development methodology (5)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Scrum" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Agile framework (5)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Refactoring" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Code restructuring (11)" />
+        </div>
+        <div class="line">
+          <input class="word" type="text" value="Library" />
+          <span class="lineNum"></span>
+          <input class="clue" value="Code collection (7)" />
+        </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="col-lg-6">
+      <div class="clueBlock" id="cluesDown">
+        <div class="clueDirection" id="directionDown">DOWN</div>
+      </div>
+
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
