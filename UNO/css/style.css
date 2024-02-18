@@ -364,3 +364,53 @@ button:hover {
     }
     
 }
+@media (max-width: 812px) {
+    body {
+        margin-top: -5vw;
+        margin-bottom: 0;
+    }
+    .cpu-hand{
+        margin-top: 60px;
+    }
+    .cpu-box {
+        margin-bottom: 1vw;
+    }
+
+    img {
+        width: 6vw;
+        margin-left: 0;
+    }
+
+    .player-box {
+        margin-top: 1vw;
+    }
+
+    .play-card,
+    .cpu-play-card {
+        transform: translateY(-13vw);
+    }
+
+    .shout img {
+        transform: scale(2);
+    }
+
+    .player-draw {
+        transform: translateY(17vw) translateX(-10vw);
+    }
+
+    .cpu-draw {
+        transform: translateY(-17vw) translateX(-10vw);
+    }
+
+    .color-picker {
+        margin-top: 0;
+    }
+
+    .color-picker p {
+        font-size: 1.4rem;
+    }
+
+    .color-picker button {
+        height: 2vw;
+    }
+}

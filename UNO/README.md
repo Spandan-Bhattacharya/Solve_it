@@ -4,7 +4,8 @@
 🔴 Technologies used, **HTML, CSS, JS**
 
 # **Screenshots 📸**
-![image](https://github.com/Priyanshi662/FunFusion/assets/125949765/4e633906-df09-4080-a15a-4fee042b89a7)
+![UNO](https://github.com/Spandan-Bhattacharya/Solve_it/assets/125949765/89596821-cb22-4996-884b-acb36487822d)
+
 
 
 <br>
