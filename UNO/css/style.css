@@ -11,7 +11,7 @@ html {
 
  body {
             box-sizing: border-box;
-            background-image: linear-gradient(to bottom right, #e7c864, #ea6c5e);
+            background-image: linear-gradient(to bottom right, #87CEEB, #1E90FF);
             background-size: 100vw 100vh;
             width: 100vw;
             height: 100vh;
