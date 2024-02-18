@@ -1,3 +1,54 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const gridSize = 3;
+    const sudokuGrid = document.getElementById("sudoku-grid");
+
+    //creating sudoku grid and input cells
+
+    for (let row = 0; row < gridSize; row++) {
+        const newRow = document.createElement("tr");
+        for (let col = 0; col < gridSize; col++) {
+            const cell = document.createElement("td");
+            const input = document.createElement("input");
+            input.type = "text";
+            input.className = "cell";
+            input.id = `cell-${row}-${col}`;
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+                    e.preventDefault();
+                }
+            });
+            input.addEventListener("input", handleInput);
+            cell.appendChild(input);
+            newRow.appendChild(cell);
+
+        }
+        sudokuGrid.appendChild(newRow);
+
+    }
+});
+
+function handleInput(event) {
+    const inputValue = event.target.value.replace(/[^0-9]/g, '');
+    event.target.value = inputValue;
+    const parsedValue = parseInt(inputValue);
+
+    if (!isNaN(parsedValue) && parsedValue >= 0 && parsedValue <= 8) {
+        if (parsedValue == 0) {
+            event.target.classList.remove("output-cell");
+            event.target.style.color = "white";
+            event.target.style.backgroundColor = "black";
+        } else {
+            event.target.classList.remove("output-cell");
+            event.target.style.color = "black";
+            event.target.style.backgroundColor = "";
+        }
+    } else {
+        event.target.classList.add("output-cell");
+        event.target.style.color = "red";
+        event.target.style.backgroundColor = "";
+    }
+}
+
 let puzzleState = [];
 const goalState = [1, 2, 3, 4, 5, 6, 7, 8, 0];
 const maxIterations = 10000;
@@ -14,15 +65,20 @@ function getRandomPermutation() {
 // Function to display the puzzle board
 function displayBoard(numbers) {
     puzzleState = [...numbers];
-    const board = document.getElementById('board');
-    board.innerHTML = '';
-
-    numbers.forEach((number) => {
-        const tile = document.createElement('div');
-        tile.classList.add('tile');
-        tile.textContent = number === 0 ? '' : number;
-        board.appendChild(tile);
-    });
+    gridSize = 3
+    for (let row = 0; row < gridSize; row++) {
+        for (let col = 0; col < gridSize; col++) {
+            const cellId = `cell-${row}-${col}`;
+            document.getElementById(cellId).value = puzzleState[(row * 3) + col];
+            if(puzzleState[(row * 3) + col]===0){
+                document.getElementById(cellId).style.backgroundColor = "black";
+                document.getElementById(cellId).style.color = "white";
+            }else{
+                document.getElementById(cellId).style.backgroundColor = ""; 
+                document.getElementById(cellId).style.color = "black";
+            }
+        }
+    }
 }
 
 // Function to randomize the puzzle
@@ -31,23 +87,25 @@ function randomize() {
     displayBoard(randomNumbers);
 }
 
-// Function to prompt the user for a custom order
-function customOrder() {
-    const inputOrder = prompt('Enter a comma-separated list of numbers (0 to 8):');
-    const customNumbers = inputOrder.split(',').map(Number);
-
-    // Check if the input is valid
-    if (isValidOrder(customNumbers)) {
-        displayBoard(customNumbers);
-    } else {
-        alert('Invalid input. Please enter a valid list of numbers.');
+// Function to Reset
+function reset() {
+    gridSize = 3
+    for (let row = 0; row < gridSize; row++) {
+        for (let col = 0; col < gridSize; col++) {
+            const cellId = `cell-${row}-${col}`;
+            document.getElementById(cellId).value = '';
+            document.getElementById(cellId).style.backgroundColor = ""; 
+            document.getElementById(cellId).style.color = "black";
+        }
     }
 }
 
 // Function to check if the custom order is valid
 function isValidOrder(numbers) {
     const targetNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    const duplicates = numbers.filter((item, index) => numbers.indexOf(item) !== index);
     return (
+        duplicates.length === 0 &&
         numbers.length === 9 &&
         numbers.every((number) => targetNumbers.includes(number))
     );
@@ -55,6 +113,19 @@ function isValidOrder(numbers) {
 
 // Function to solve the puzzle using A*
 function solvePuzzle() {
+    gridSize = 3
+    for (let row = 0; row < gridSize; row++) {
+        for (let col = 0; col < gridSize; col++) {
+            const cellId = `cell-${row}-${col}`;
+            const cellValue = document.getElementById(cellId).value;
+            puzzleState[(row * 3) + col] = cellValue !== "" ? parseInt(cellValue) : 0;
+        }
+    }
+    if (isValidOrder(puzzleState)) {
+    } else {
+        alert('Invalid input. Please enter a valid list of numbers.');
+        return;
+    }
     const solution = aStarAlgorithm(puzzleState);
 
     if (solution) {

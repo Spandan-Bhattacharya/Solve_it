@@ -4,12 +4,13 @@ body {
     margin: 20px;
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
-h1{
+
+h1 {
     color: #fad44a;
-    
+
 }
 
-#back{
+#back {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -19,23 +20,42 @@ h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.container{
-    width: 50vw;
+.container {
+    width: fit-content;
+    padding: 10px;
     margin: auto;
     background-color: aliceblue;
     border-radius: 10px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#board {
-    display: grid;
-    grid-template-columns: repeat(3, 80px);
-    gap: 8px;
-    margin:auto;
-    width: fit-content;
+.sudoku-container {
+    margin-top: 21px;
+    display: flex;
+    justify-content: center;
+
+
 }
 
-.tile {
+table {
+    border-collapse: collapse;
+    border: 5px solid rgba(9, 9, 121, 1);
+    /* border: 5px solid #000; */
+
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 50px;
+    border: 1px solid #999;
+    transform: all 0.3s ease-in-out;
+    background: rgb(244, 213, 99);
+}
+
+
+/* .tile {
     color: rgb(0, 0, 0);
     width: 80px;
     font-family:'Courier New', Courier, monospace;
@@ -53,7 +73,7 @@ h1{
 .tile:hover{
     background-color: rgb(255, 160, 35);
     transition: 0.2s;
-}
+} */
 
 button {
     margin: 10px;
@@ -68,44 +88,50 @@ button {
     color: white
 }
 
-button:hover{
-    color:#ffffff;
+button:hover {
+    color: #ffffff;
     background: #000458;
     transition: 0.2s;
     scale: 1.05;
-    
+
 }
 
 
 
-#solution-tables{
-    
+#solution-tables {
+
     background-color: rgb(255, 255, 255);
     width: 50vw;
-    margin:auto;
+    margin: auto;
     margin-top: 5%;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    
+
 }
 
-table {
+#solution-tables table {
     margin: 20px auto;
     border-collapse: collapse;
 }
 
-table,
-th,
-td {
+#solution-tables table,
+#solution-tables th,
+#solution-tables td {
     border: 1px solid #000000;
 }
 
-th,
-td {
+#solution-tables th,
+#solution-tables td {
     padding: 10px;
     text-align: center;
 }
 
+@media (max-width:770px) {
+    .cell {
+        height: 15vw;
+        width: 15vw;
+    }
+}
