@@ -88,7 +88,7 @@ function Generate() {
     mode = 1;
     GetWordsFromInput();
 
-    for (var i = 0, isSuccess = false; i < 19 && !isSuccess; i++) {
+    for (var i = 0, isSuccess = false; i < 20 && !isSuccess; i++) {
         CleanVars();
         isSuccess = PopulateBoard();
     }
