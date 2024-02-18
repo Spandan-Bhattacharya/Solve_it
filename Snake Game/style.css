@@ -9,11 +9,10 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 .wrapper {
@@ -23,7 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -35,4 +35,26 @@ h1 {
 
 canvas {
     border: 3px solid white;
+}
+
+.keys {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(3, 56, 42);
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#reset {
+    background-color: rgb(5, 182, 17);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
