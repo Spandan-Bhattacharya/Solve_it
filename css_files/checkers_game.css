@@ -330,7 +330,7 @@ body {
   .backHome{
       margin-bottom: 30px;
   }
-  @media screen and (max-width:525px) {
+  /* @media screen and (max-width:525px) {
     body{
         width: 100%;
     }
@@ -361,4 +361,37 @@ body {
         padding: 0px 9px;
     }
     
+} */
+
+@media screen and (max-width:525px) {
+  body{
+      width: 100%;
+  }
+  html{
+      overflow-x: hidden;
+  }
+
+  .navbar{
+      width: 100%;
+  }
+  .left-nav ul li a{
+      padding: 0px 9px;
+  }
+  
+}
+@media screen and (max-width:380px) {
+  body{
+      width: 100%;
+  }
+  html{
+      overflow-x: hidden;
+  }
+
+  .navbar{
+      width: 100%;
+  }
+  .left-nav ul li a{
+      padding: 0px 9px;
+  }
+  
 }
