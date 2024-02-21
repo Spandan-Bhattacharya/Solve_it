@@ -11,10 +11,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 h1 {
@@ -126,7 +126,6 @@ label {
     font-size: 1.5rem;
     padding: 5px;
     border-radius: 10px;
-    margin-left: 50px;
 }
 
 .info {
@@ -145,4 +144,39 @@ option {
     font-size: 1.3rem;
     border-radius: 10px;
     padding: 2px;
+}
+
+#hearts{
+    display: flex;
+}
+
+#choose-size{
+    margin: 10px;
+    background-color: rgb(255, 175, 47);
+    padding:5px ;
+    border-radius: 10px;
+    line-height: 1.7rem;
+}
+
+#timer-container{
+    font-size: 1.1rem;
+    margin: 10px;
+    background-color: rgb(248, 255, 47);
+    padding:5px ;
+    border-radius: 10px;
+    line-height: 1.8rem;
+}
+#timer-container span{
+    font-size: 1.4rem;
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+@media (max-width:500px){
+    .cell{
+        height: 14vw;
+        width: 14vw;
+        font-size: 11vw;
+    }
 }
