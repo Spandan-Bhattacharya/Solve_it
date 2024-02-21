@@ -127,7 +127,6 @@ label{
     font-size: 1.5rem;
     padding:5px ;
     border-radius: 10px;
-    margin-left: 50px;
 }
 
 .info{
@@ -226,7 +225,40 @@ html{
 }
 .head{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 .backHome{
     margin-bottom: 30px;
+}
+@media screen and (max-width:525px) {
+    body{
+        width: 100%;
+    }
+    html{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+    .left-nav ul li a{
+        padding: 0px 9px;
+    }
+    
+}
+@media screen and (max-width:380px) {
+    body{
+        width: 100%;
+    }
+    html{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+    .left-nav ul li a{
+        padding: 0px 9px;
+    }
+    
 }
