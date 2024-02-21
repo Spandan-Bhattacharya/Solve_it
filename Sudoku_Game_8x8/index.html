@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewreport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <title>8x8 Sudoku Solver</title>
   <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
@@ -26,16 +26,24 @@
   </nav>
   <h1 class="head">8x8 Sudoku Solver</h1>
   <div class="info">
-  <label for="size">Choose a difficulty:</label>
-    <select id="size" name="size" onchange="changeDifficulty(value)">
-      <option value="0" selected>Easy</option>
-      <option value="1">Medium</option>
-      <option value="2">Hard</option>
-    </select>
-    <div class="lives-container">
-        <span id="lives">Lives: 5</span>
+    <div id="choose-size">
+      <label for="size">Difficulty:</label><br>
+      <select id="size" name="size" onchange="changeDifficulty(value)">
+        <option value="0" selected>Easy</option>
+        <option value="1">Medium</option>
+        <option value="2">Hard</option>
+      </select>
     </div>
-</div>
+
+    <div id="timer-container">
+      Time Remaining <br><span id="timer">10:00</span>
+    </div>
+
+    <div class="lives-container">
+      <span id="lives">Lives: <span id="hearts"><span id="h-1">❤️</span><span id="h-2">❤️</span><span
+            id="h-3">❤️</span></span></span>
+    </div>
+  </div>
   <div class="sudoku-container">
     <table>
       <tbody id="sudoku-grid"></tbody>

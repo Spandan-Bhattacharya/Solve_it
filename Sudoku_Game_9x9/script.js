@@ -19,8 +19,9 @@ const difficulties = [
     ],
 ];
 
-let lives = 5;
-let wrongInputs = 0;
+let lives = 3;
+let totalSeconds = 600; // 10 minutes in seconds
+let timerInterval;
 
 document.addEventListener('DOMContentLoaded', function () {
     const gridSize = 9;
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
     changeDifficulty(0);
+    updateTimer();
 });
 
 function changeDifficulty(difficulty) {
@@ -95,10 +97,10 @@ function handleInput(event) {
         event.target.classList.add("output-cell");
         event.target.style.color = "red";
         if (!isNaN(parsedValue)) {
-            wrongInputs++;
+            document.getElementById(`h-${lives}`).style.display="none";
+            lives--;
         }
-        document.getElementById("lives").textContent = `Lives: ${lives - wrongInputs}`;
-        if (wrongInputs >= 5) {
+        if (lives<=0) {
             gameOver();
         }
     }
@@ -223,9 +225,14 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 function resetGrid() {
-    lives = 5;
-    document.getElementById("lives").textContent = `Lives: ${lives}`;
-    wrongInputs = 0;
+    clearInterval(timerInterval);
+    totalSeconds = (3 - currentDifficulty) * 600;
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 1000);
+    lives = 3;
+    document.getElementById(`h-1`).style.display="";
+    document.getElementById(`h-2`).style.display="";
+    document.getElementById(`h-3`).style.display="";
     const gridSize = 9;
     console.log(currentDifficulty);
     const puzzle = difficulties[currentDifficulty][Math.floor(Math.random() * difficulties[currentDifficulty].length)];
@@ -251,8 +258,28 @@ function gridReset() {
 }
 
 function complete() {
-    alert("Congratulation !!! You Solved The Game")
+    alert("Congratulation !!! You Solved The Game");
+    clearInterval(timerInterval);
 }
+
+function updateTimer() {
+    let timerElement = document.getElementById('timer');
+    let minutes, seconds;
+    console.log(totalSeconds);
+    minutes = Math.floor(totalSeconds / 60);
+    seconds = totalSeconds % 60;
+    timerElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+    if (totalSeconds <= 0) {
+        clearInterval(timerInterval);
+        alert("Time's UP");
+        resetGrid();
+    } else {
+        totalSeconds--;
+    }
+}
+
+timerInterval = setInterval(updateTimer, 1000); // Update the timer every second
 
 // Call gridReset to attach the event listener to the resetButton
 gridReset();
