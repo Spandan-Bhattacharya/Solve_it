@@ -8,6 +8,26 @@ const availableKeywords = [
   'Tower of Hanoi',
   '8 Puzzle Solver',
   'N Queen Solver',
+  'Sorting Visualizer',
+  'Sudoku Game: 4x4',
+  'Sudoku Game: 6x6',
+  'Sudoku Game: 8x8',
+  'Sudoku Game: 9x9',
+  'Simon Game',
+  'Checker Game',
+  '8 Puzzle Game',
+  'Connect 4 Game',
+  'Tic-Tac-Toe Game',
+  'HangMan Game',
+  'Word Scramble',
+  'Rock Paper Scissor',
+  'Crosswords',
+  '2048',
+  'Snake Game',
+  'Tetris',
+  'UNO',
+  'Word Guessing',
+
 ];
 
 const resultBox = document.querySelector(".result-box");
@@ -72,10 +92,35 @@ searchButton.addEventListener("click", () => {
     inputBox.style.width = "0px";
     inputBox.style.padding = "0px";
     inputBox.value = '';
-    for (i = 0; i < boxs.length; i++) {
-      box = boxs[i];
-      box.style.display = '';
+    let puzzles = document.querySelectorAll(".puzzle");
+    let games = document.querySelectorAll(".game");
+    let game;
+    let puzzle;
+
+    for (i = 0; i < games.length; i++) {
+      game = games[i];
+      let temp=Array.from(game.classList);
+      if(temp.indexOf("visible")>=0){
+        game.classList.remove("visible");
+        game.classList.add("hide");
+      }
+      
     }
+
+    for (i = 0; i < puzzles.length; i++) {
+      puzzle = puzzles[i];
+      let temp=Array.from(puzzle.classList);
+      if(temp.indexOf("visible")>=0){
+        puzzle.classList.remove("visible");
+        puzzle.classList.add("hide");
+      }
+    }
+    document.querySelectorAll(".pg .box").forEach((e) => {
+      e.classList.remove("hide");
+      e.classList.add("visible");
+    });
+    document.querySelector('#Result').classList.remove("visible");
+    document.querySelector('#Result').classList.add("hide");
     document.querySelector(".searchButton i").classList.remove("fa-times");
     document.querySelector(".searchButton i").classList.add("fa-search");
   }
@@ -85,14 +130,29 @@ function selectInput(list) {
   inputBox.value = list.innerHTML;
   resultBox.innerHTML = "";
   //Search
+
+  let result = document.querySelector('#Result');
+  document.querySelectorAll(".pg .box").forEach((e) => {
+    e.classList.remove("visible");
+    e.classList.add("hide");
+  });
   for (i = 0; i < boxs.length; i++) {
     box = boxs[i];
     title = box.getElementsByTagName("span");
     txtvalue = title[0].innerText;
     if (txtvalue == list.innerText) {
-      box.style.display = '';
-    } else {
-      box.style.display = 'none';
+      
+      result.classList.remove("hide");
+      result.classList.add("visible");
+      box.classList.remove("hide");
+      box.classList.add("visible");
+    }else{
+      let temp=Array.from(box.classList);
+      if(temp.indexOf("visible")>=0){
+        box.classList.remove("visible");
+        box.classList.add("hide");
+      }
+     
     }
 
   }

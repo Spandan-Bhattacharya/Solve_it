@@ -14,6 +14,8 @@
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="../css_files/styles.css">
+    <link rel="stylesheet" href="../css_files/footer.css">
     <link rel="stylesheet" href="../css_files/newContact.css">
 
 
@@ -23,21 +25,47 @@
 
     <div class="blurred-background"></div>
     <div class="main-container">
-        <div class="navbar">
-            <div class="link-section">
-                <div><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></div>
-                <div><a href="newContact.html"><i class="fa-solid fa-clipboard-user"></i> Contact</a></div>
-                <div><a href="about.html"><i class="fa-solid fa-square-phone"></i> About</a></div>
-                <div><a href="faq.html"><i class="fa-solid fa-comments"></i> FAQ</a></div>
-                <div><a href="contributors.html"><i class="fa-solid fa-hand-holding-heart"></i> Contributors</a></div>
+        <nav class="topnav">
+            <div>
+              <img src="../assets/bodylogo.png" alt="img" />
             </div>
-
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            <div class="openMenu">
+              <i class="fa-solid fa-bars" id="bar"></i>
             </div>
-        </div>
+            <div class="list">
+              <div class="search-space"></div>
+        
+              <!-- Top Nav-Bar Texts -->
+              <div>
+                <a class="active" href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+              </div>
+              <div>
+                <a href="../html_files/newContact.html"><i class="fa-solid fa-square-phone"></i> Contact</a>
+              </div>
+              <div>
+                <a href="../html_files/about.html"><i class="fa-solid fa-clipboard-user"></i> About</a>
+              </div>
+              <div>
+                <a href="../html_files/faq.html"><i class="fa-solid fa-comments"></i> FAQ</a>
+              </div>
+              <div>
+                <a href="../html_files/contributors.html"><i class="fa-solid fa-hand-holding-heart"></i> Contributors</a>
+              </div>
+        
+              <span class="icons">
+                <a href="#">
+                  <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
+              </span>
+            </div>
+        
+          </nav>
         <div class="content">
             <div class="intro">
                 <div class="picture">
@@ -84,35 +112,51 @@
                 </form>
             </div>
         </div>
-        <div class="footer-container">
-            <div class="foot-head">
-                <h2>Solve it!</h2>
-                <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and
-                    more!</p>
+        <footer class="newFooter">
+            <div class="footer-content1">
+              <div class="heading">
+                <h1>Solve It !</h1>
+              </div>
+              <div class="quick-links">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <!-- <div class="round"></div> -->
+                  <li><a href="html_files/about.html">About</a></li>
+                  <!-- <div class="round"></div> -->
+                  <li><a href="html_files/newContact.html">Contact</a></li>
+                  <li><a href="./html_files/faq.html">FAQ</a></li>
+                  <li><a href="contributors.html">Contributors</a></li>
+                </ul>
+              </div>
+              <div class="copyright" style="color: white;">
+                @Spandan-Bhattacharya & Team 2024
+              </div>
             </div>
-            <div class="foot-navlinks">
-                <h3>Quick Links</h3>
-                <a href="../index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="newContact.html">Contact</a>
-                <a href="./faq.html">FAQ</a>
-                <a href="./contributors.html">Contributors</a>
+            <div class="footer-content2">
+              <div class="inside">
+                <i class="fi fi-rs-marker"></i>
+                <a href="https://maps.app.goo.gl/whMTLG4nNhzLTvYq9">
+                  <span>Jalpaiguri Government Engineering College</span>
+                </a>
+              </div>
+              <div class="inside">
+                <i class="fi fi-rr-envelope"></i>
+                <a href="mailto:spandanbhattacharya.sb@gmail.com">
+                  <span>spandanbhattacharya.sb@gmail.com</span>
+                </a>
+              </div>
             </div>
-            <div class="foot-social">
-                <h3>Social Links</h3>
-                <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter"
-                        style="font-size: 1.25em;margin: 2px;"></i></a>
-                <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-                        style="font-size: 1.25em;margin: 2px;"></i></a>
-                <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-                        style="font-size: 1.25em;margin: 2px;"></i></a>
+            <div class="footer-content3">
+              <h1>About The Game</span></h1>
+              <p>Solve it! is a website that contains solvers for common games like Sudoku, Nonogram, Crosswords and more!</p>
+              <div class="icons">
+                <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fi fi-brands-linkedin"></i></a>
+                <a href="https://github.com/Spandan-Bhattacharya"><i class="fi fi-brands-github"></i></a>
+                <a href="https://twitter.com/TeamJWOC"><i class="fi fi-brands-facebook"></i></a>
+              </div>
             </div>
-            <div class="foot-last">
-                <div>We would love to hear from you! Reach out to us anytime!!</div>
-                <div class="heart"> &#9829; </div>
-                <!-- <div> =======</div> -->
-            </div>
-        </div>
+          </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
