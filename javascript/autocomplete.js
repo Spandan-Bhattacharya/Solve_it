@@ -45,6 +45,46 @@ document.addEventListener("click", function (event) {
 });
 
 function filterKeywords(input) {
+  var filter, puzzles, puzzle, games, game, title, i, txtValue;
+  filter = input.toLowerCase();
+  games = document.getElementsByClassName('game');
+  console.log(filter);
+  for (i = 0; i < games.length; i++) {
+    game = games[i];
+    title = game.getElementsByTagName('span');
+    txtValue = title[0].innerText;
+    // let temp = Array.from(game.classList);
+    console.log(txtValue.toLowerCase());
+    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+
+      game.classList.remove("hide");
+      game.classList.add("visible");
+
+    } else{
+      game.classList.remove("visible");
+      game.classList.add("hide");
+    }
+  }
+
+  puzzles = document.getElementsByClassName('puzzle');
+  for (i = 0; i < puzzles.length; i++) {
+    puzzle = puzzles[i];
+    title = puzzle.getElementsByTagName('span');
+    txtValue = title[0].innerText;
+    // let temp = Array.from(puzzle.classList);
+    console.log(txtValue.toLowerCase());
+
+    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+
+      puzzle.classList.remove("hide");
+      puzzle.classList.add("visible");
+
+    } else{
+      puzzle.classList.remove("visible");
+      puzzle.classList.add("hide");
+    }
+  }
+
   return availableKeywords.filter(keyword => keyword.toLowerCase().includes(input.toLowerCase()));
 }
 
@@ -53,7 +93,7 @@ function display(result) {
   resultBox.innerHTML = `<ul>${content.join('')}</ul>`;
 }
 
-inputBox.addEventListener("keyup", function () {
+inputBox.addEventListener("keyup", (e) => {
   const input = inputBox.value.trim();
   const result = input.length ? filterKeywords(input) : [];
   display(result);
@@ -99,18 +139,18 @@ searchButton.addEventListener("click", () => {
 
     for (i = 0; i < games.length; i++) {
       game = games[i];
-      let temp=Array.from(game.classList);
-      if(temp.indexOf("visible")>=0){
+      let temp = Array.from(game.classList);
+      if (temp.indexOf("visible") >= 0) {
         game.classList.remove("visible");
         game.classList.add("hide");
       }
-      
+
     }
 
     for (i = 0; i < puzzles.length; i++) {
       puzzle = puzzles[i];
-      let temp=Array.from(puzzle.classList);
-      if(temp.indexOf("visible")>=0){
+      let temp = Array.from(puzzle.classList);
+      if (temp.indexOf("visible") >= 0) {
         puzzle.classList.remove("visible");
         puzzle.classList.add("hide");
       }
@@ -141,18 +181,18 @@ function selectInput(list) {
     title = box.getElementsByTagName("span");
     txtvalue = title[0].innerText;
     if (txtvalue == list.innerText) {
-      
+
       result.classList.remove("hide");
       result.classList.add("visible");
       box.classList.remove("hide");
       box.classList.add("visible");
-    }else{
-      let temp=Array.from(box.classList);
-      if(temp.indexOf("visible")>=0){
+    } else {
+      let temp = Array.from(box.classList);
+      if (temp.indexOf("visible") >= 0) {
         box.classList.remove("visible");
         box.classList.add("hide");
       }
-     
+
     }
 
   }
