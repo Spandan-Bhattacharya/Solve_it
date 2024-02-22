@@ -1,6 +1,17 @@
-body{
-    background-color: gray;
-}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/bg.webp');
+  }
+  
 #pong{
     border: 2px solid #FFF;
     position: absolute;
@@ -14,4 +25,5 @@ h1{
     color: red;
     font-size: 50px;
     text-align: center;
+    z-index: 1;
 }
