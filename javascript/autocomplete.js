@@ -8,6 +8,9 @@ const availableKeywords = [
   'Tower of Hanoi',
   '8 Puzzle Solver',
   'N Queen Solver',
+
+  'Bingo Game'
+
   'Sorting Visualizer',
   'Sudoku Game: 4x4',
   'Sudoku Game: 6x6',
@@ -27,6 +30,7 @@ const availableKeywords = [
   'Tetris',
   'UNO',
   'Word Guessing',
+
 
 ];
 

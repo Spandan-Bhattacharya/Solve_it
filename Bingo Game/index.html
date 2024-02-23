@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, 
+	initial-scale=1.0"> 
+	<title>Bingo Game</title> 
+	<link rel="stylesheet" href="style.css"> 
+</head> 
+
+<body background="../assets/bg.webp"> 
+	<div class="bingo-container">
+		<a href="../index.html"><Button id="back">Back</Button> </a>
+		<h1>Bingo Game</h1> 
+		<div class="player-cards"> 
+			<h1 id="p1-h1">Player 1's Card</h1> 
+			<div class="player-card" id="player1Card"> 
+			</div> 
+			<div class="player-card" id="player2Card"> 
+			</div> 
+			<h1 id="p2-h1">Player 2's Card</h1> 
+		</div> 
+		<div class="controls"> 
+			<button id="startButton"> 
+				Start 
+			</button> 
+			<button id="resetButton" disabled> 
+				Reset 
+			</button> 
+		</div> 
+		<div class="input-container"> 
+			<label for="numberInput"> 
+				Enter a number (1-25): 
+			</label> 
+			<input type="number"
+				id="numberInput"
+				min="1" max="25" disabled> 
+			<button id="markButton" disabled> 
+				Mark 
+			</button> 
+		</div> 
+		<div id="turnDisplay"></div> 
+		<!-- Display win message here -->
+		<div id="winDisplay"></div> 
+	</div> 
+	<script src="app.js"></script> 
+</body> 
+
+</html>
