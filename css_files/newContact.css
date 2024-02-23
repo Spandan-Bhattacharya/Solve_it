@@ -29,6 +29,8 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 25%;
     gap: 2rem;
+    z-index: -500;
+    position: relative;
 }
 
 .main-container {
@@ -37,14 +39,15 @@ body {
     width: 100vw;
     /* border: 2px solid white; */
     gap: 2rem;
+    z-index: -200;
 }
 
 .blurred-background {
     width: 100%;
     height: 100%;
-    position: absolute;
+    /* position: absolute; */
     /* backdrop-filter: blur(350px); */
-    z-index: -1;
+    z-index: -100;
     /* Set a lower z-index */
 }
 
@@ -82,6 +85,8 @@ body {
     color: #0A121F;
     padding: 5rem;
     background: linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%);
+    position: relative;
+    z-index: -100;
 }
 
 .intro {
@@ -91,6 +96,7 @@ body {
     gap: 1rem;
     background: linear-gradient(#F2B433 100%, #EEB238 100%, #D48300 100%);
     border-radius: 2rem;
+    z-index: -50;
 }
 
 .picture {
@@ -161,6 +167,7 @@ body {
     position: relative;
     color: #0A121F;
     width: 30rem;
+    z-index: -50;
 }
 
 .form-section form {
@@ -447,4 +454,3 @@ button:hover {
     height: 400px;
     transition: height 0.2s ease-in-out; 
  } 
-
