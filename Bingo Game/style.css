@@ -109,3 +109,9 @@ label {
 	margin-top: 30px; 
 	animation: celebrate 1s ease-in-out infinite; 
 }
+
+#back{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
