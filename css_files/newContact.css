@@ -29,6 +29,8 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 25%;
     gap: 2rem;
+    z-index: -500;
+    position: relative;
 }
 
 .main-container {
@@ -37,14 +39,15 @@ body {
     width: 100vw;
     /* border: 2px solid white; */
     gap: 2rem;
+    z-index: -200;
 }
 
 .blurred-background {
     width: 100%;
     height: 100%;
-    position: absolute;
+    /* position: absolute; */
     /* backdrop-filter: blur(350px); */
-    z-index: -1;
+    z-index: -100;
     /* Set a lower z-index */
 }
 
@@ -82,6 +85,8 @@ body {
     color: #0A121F;
     padding: 5rem;
     background: linear-gradient(0deg, rgba(16, 14, 44, 0.70) 0%, rgba(16, 14, 44, 0.70) 100%);
+    position: relative;
+    z-index: -100;
 }
 
 .intro {
@@ -91,6 +96,7 @@ body {
     gap: 1rem;
     background: linear-gradient(#F2B433 100%, #EEB238 100%, #D48300 100%);
     border-radius: 2rem;
+    z-index: -50;
 }
 
 .picture {
@@ -111,7 +117,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50% , -50%);
 }
 
 .info-section {
@@ -148,7 +154,7 @@ body {
     transition: transform 0.2s linear;
 }
 
-.icon-section a:hover {
+.icon-section a:hover{
     transform: translateY(-7px);
     transition: transform 0.2s linear;
 }
@@ -161,6 +167,7 @@ body {
     position: relative;
     color: #0A121F;
     width: 30rem;
+    z-index: -50;
 }
 
 .form-section form {
@@ -349,51 +356,45 @@ button:hover {
 }
 
 
-@media screen and (max-width : 1200px) {
+@media screen and (max-width : 1200px){
     .content {
         flex-direction: column;
         gap: 2rem;
     }
-
-    .form-section {
+    .form-section{
         width: 30rem;
     }
 }
 
-@media screen and (max-width : 530px) {
+@media screen and (max-width : 530px){
     .content {
         flex-direction: column;
         gap: 2rem;
     }
-
-    .form-section {
+    .form-section{
         width: 25rem;
     }
 }
-
-@media screen and (max-width : 420px) {
+@media screen and (max-width : 420px){
     .content {
         flex-direction: column;
         gap: 2rem;
     }
-
-    .form-section {
+    .form-section{
         width: 20rem;
     }
 }
-
-@media screen and (max-width : 300px) {
+@media screen and (max-width : 300px){
     .content {
         flex-direction: column;
         gap: 2rem;
     }
-
-    .form-section {
+    .form-section{
         width: 15rem;
     }
 }
 
-.link-section {
+ .link-section {
     display: flex;
     justify-content: space-around;
     gap: 3rem;
@@ -402,7 +403,7 @@ button:hover {
 }
 
 .navbar {
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
     position: relative;
 }
 
@@ -419,10 +420,10 @@ button:hover {
 .line {
     height: 3px;
     width: 20px;
-    background-color: #FFB780;
+    background-color :#FFB780;
 }
 
-@media screen and (max-width : 750px) {
+@media screen and (max-width : 750px){
     .hamburger {
         display: flex;
     }
@@ -441,8 +442,7 @@ button:hover {
         align-items: center;
         left: 0%;
         top: 98%;
-        background: linear-gradient(180deg, #0a121f 2.5%, #0a1629 43%, #0a121f 100%);
-        ;
+        background: linear-gradient(180deg, #0a121f 2.5%, #0a1629 43%, #0a121f 100%);;
         transition: height 0.2s linear;
         z-index: -2;
         overflow: hidden;
@@ -450,7 +450,7 @@ button:hover {
     }
 }
 
-.link-section.active {
+.link-section.active{
     height: 400px;
-    transition: height 0.2s ease-in-out;
-}
+    transition: height 0.2s ease-in-out; 
+ } 

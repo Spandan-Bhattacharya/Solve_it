@@ -34,9 +34,6 @@ const resultBox = document.querySelector(".result-box");
 const inputBox = document.getElementById("input-box");
 const searchButton = document.querySelector(".searchButton");
 
-let boxs = document.getElementsByClassName("box");
-let box, title, txtvalue;
-
 document.addEventListener("click", function (event) {
   const isSearchBox = event.target.closest(".searchBox");
   if ((!isSearchBox && event.target !== inputBox && event.target !== resultBox) || event.target === searchButton || event.target === searchButton.children[0]) {
@@ -60,7 +57,7 @@ function filterKeywords(input) {
       game.classList.remove("hide");
       game.classList.add("visible");
 
-    } else{
+    } else {
       game.classList.remove("visible");
       game.classList.add("hide");
     }
@@ -79,11 +76,13 @@ function filterKeywords(input) {
       puzzle.classList.remove("hide");
       puzzle.classList.add("visible");
 
-    } else{
+    } else {
       puzzle.classList.remove("visible");
       puzzle.classList.add("hide");
     }
   }
+  document.getElementById("puzz").style.display="block";
+  document.getElementById("gum").style.display="block";
 
   return availableKeywords.filter(keyword => keyword.toLowerCase().includes(input.toLowerCase()));
 }
@@ -132,35 +131,22 @@ searchButton.addEventListener("click", () => {
     inputBox.style.width = "0px";
     inputBox.style.padding = "0px";
     inputBox.value = '';
-    let puzzles = document.querySelectorAll(".puzzle");
-    let games = document.querySelectorAll(".game");
+    let games = document.getElementsByClassName('game');
     let game;
-    let puzzle;
-
     for (i = 0; i < games.length; i++) {
       game = games[i];
-      let temp = Array.from(game.classList);
-      if (temp.indexOf("visible") >= 0) {
-        game.classList.remove("visible");
-        game.classList.add("hide");
-      }
-
+      game.classList.remove("visible");
+      game.classList.add("hide");
     }
 
+    let puzzles = document.getElementsByClassName('puzzle');
+    let puzzle;
     for (i = 0; i < puzzles.length; i++) {
       puzzle = puzzles[i];
-      let temp = Array.from(puzzle.classList);
-      if (temp.indexOf("visible") >= 0) {
-        puzzle.classList.remove("visible");
-        puzzle.classList.add("hide");
-      }
+      puzzle.classList.remove("visible");
+      puzzle.classList.add("hide");
+
     }
-    document.querySelectorAll(".pg .box").forEach((e) => {
-      e.classList.remove("hide");
-      e.classList.add("visible");
-    });
-    document.querySelector('#Result').classList.remove("visible");
-    document.querySelector('#Result').classList.add("hide");
     document.querySelector(".searchButton i").classList.remove("fa-times");
     document.querySelector(".searchButton i").classList.add("fa-search");
   }
@@ -170,31 +156,44 @@ function selectInput(list) {
   inputBox.value = list.innerHTML;
   resultBox.innerHTML = "";
   //Search
+  let games = document.getElementsByClassName('game');
+  let game;
+  let txtValue;
+  let title;
 
-  let result = document.querySelector('#Result');
-  document.querySelectorAll(".pg .box").forEach((e) => {
-    e.classList.remove("visible");
-    e.classList.add("hide");
-  });
-  for (i = 0; i < boxs.length; i++) {
-    box = boxs[i];
-    title = box.getElementsByTagName("span");
-    txtvalue = title[0].innerText;
-    if (txtvalue == list.innerText) {
+  for (i = 0; i < games.length; i++) {
+    game = games[i];
+    title = game.getElementsByTagName('span');
+    txtValue = title[0].innerText;
+    if (txtValue==list.innerText) {
 
-      result.classList.remove("hide");
-      result.classList.add("visible");
-      box.classList.remove("hide");
-      box.classList.add("visible");
+      game.classList.remove("hide");
+      game.classList.add("visible");
+
     } else {
-      let temp = Array.from(box.classList);
-      if (temp.indexOf("visible") >= 0) {
-        box.classList.remove("visible");
-        box.classList.add("hide");
-      }
-
+      game.classList.remove("visible");
+      game.classList.add("hide");
     }
-
   }
+
+  let puzzles = document.getElementsByClassName('puzzle');
+  let puzzle;
+  for (i = 0; i < puzzles.length; i++) {
+    puzzle = puzzles[i];
+    title = puzzle.getElementsByTagName('span');
+    txtValue = title[0].innerText;
+
+    if (txtValue==list.innerText) {
+
+      puzzle.classList.remove("hide");
+      puzzle.classList.add("visible");
+
+    } else {
+      puzzle.classList.remove("visible");
+      puzzle.classList.add("hide");
+    }
+  }
+
+
   window.location.href = "#solvers";
 }
