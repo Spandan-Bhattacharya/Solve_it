@@ -8,6 +8,7 @@ const availableKeywords = [
   'Tower of Hanoi',
   '8 Puzzle Solver',
   'N Queen Solver',
+  'Bingo Game'
 ];
 
 const resultBox = document.querySelector(".result-box");
