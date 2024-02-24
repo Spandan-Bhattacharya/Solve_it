@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HangMan Game</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HangMan Game</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css_files/model.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="image">
-          <img src="../assets/bodylogo.png" alt="loading">
+  <nav class="navbar">
+    <div class="image">
+      <img src="../assets/bodylogo.png" alt="loading">
+    </div>
+    <div class="left-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="newContact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <div class="pop-up">
+      <div class="pop">
+        <div class="gif-section">
+          <img src="images/victory.gif" alt="">
         </div>
-        <div class="left-nav">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="newContact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contributors.html">Contributors</a></li>
-          </ul>
-        </div>
-      </nav>
-    <div class="wrapper">
-        <div class="pop-up">
-            <div class="pop">
-                <div class="gif-section">
-                    <img src="images/victory.gif" alt="">
-                </div>
-                <div class="message"></div>
-                <button class="reset">Play Again</button>
-            </div>
-        </div>
-        <div class="heading-container">
-            <h1>HangMan Game</h1>
-        </div>
-        <div class="game-container">
-            <div class="image-section">
-                <img src="images/hangman-0.svg" alt="">
-            </div>
-            <div class="game-section">
-                <div class="word-container"></div>
-                <div class="hint-container"></div>
-                <div class="guesses">Incorrect Guesses : <span style="color: red;">0 / 6</span></div>
-                <div class="keyboard"></div>
-            </div>
-        </div>
+        <div class="message"></div>
+        <button class="reset">Play Again</button>
+      </div>
+    </div>
+    <div class="heading-container">
+      <h1>HangMan Game</h1>
+    </div>
+    <div class="game-container">
+      <div class="image-section">
+        <img src="images/hangman-0.svg" alt="">
+      </div>
+      <div class="game-section">
+        <div class="word-container"></div>
+        <div class="hint-container"></div>
+        <div class="guesses">Incorrect Guesses : <span style="color: red;">0 / 6</span></div>
+        <div class="keyboard"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./word-list.js"></script>
+  <script src="./script.js"></script>
+
+  <div class="footer-container">
+    <div class="foot-head">
+      <h2>Solve it!</h2>
+      <p>
+        Solve it! is a website that contains solvers for common games like
+        Sudoku, Nonogram, Crosswords and more!
+      </p>
+    </div>
+    <div class="foot-navlinks">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="/html_files/about.html">About</a>
+      <a href="/html_files/newContact.html">Contact</a>
+      <a href="/html_files/faq.html">FAQ</a>
+      <a href="/html_files/contributors.html">Contributors</a>
+    </div>
+    <div class="foot-social">
+      <h3>Social Links</h3>
+      <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+          style="font-size: 1.25em; margin: 2px"></i></a>
     </div>
 
-    <script src="./word-list.js"></script>
-    <script src="./script.js"></script>
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play Hangman:</h2>
+        <p>
+          1. Hangman is a word-guessing game where one player thinks of a word and the other player tries to guess it by suggesting letters within a certain number of guesses.<br>
+          2. The word to guess is represented by a row of dashes, representing each letter of the word.<br>
+          3. The player guessing the word selects a letter. If the letter is in the word, it is revealed in the correct positions. If not, a part of a hanged man is drawn as a penalty.<br>
+          4. The game ends when the word is guessed correctly (all letters are revealed) or when the hanged man is completed (all guesses are used).<br>
+        </p>
+      </div>
+    </div>
 
-    <div class="footer-container">
-        <div class="foot-head">
-          <h2>Solve it!</h2>
-          <p>
-            Solve it! is a website that contains solvers for common games like
-            Sudoku, Nonogram, Crosswords and more!
-          </p>
-        </div>
-        <div class="foot-navlinks">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="/html_files/about.html">About</a>
-          <a href="/html_files/newContact.html">Contact</a>
-          <a href="/html_files/faq.html">FAQ</a>
-          <a href="/html_files/contributors.html">Contributors</a>
-        </div>
-        <div class="foot-social">
-          <h3>Social Links</h3>
-          <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-        </div>
+    <script src="../javascript/instruction.js"></script>
 </body>
+
 </html>

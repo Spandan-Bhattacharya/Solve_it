@@ -2,87 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css_files/model.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="image">
-          <img src="../assets/bodylogo.png" alt="loading">
+  <nav class="navbar">
+    <div class="image">
+      <img src="../assets/bodylogo.png" alt="loading">
+    </div>
+    <div class="left-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="newContact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <h1 class="head">Rock Paper Scissor Game</h1>
+    <div class="game-container">
+      <div class="result-container">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <img src="./images/rock.png" alt="" class="user">
+          <p style="font-size: 1.5rem;">User</p>
         </div>
-        <div class="left-nav">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="newContact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contributors.html">Contributors</a></li>
-          </ul>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <img src="./images/rock.png" alt="" class="cpu">
+          <p style="font-size: 1.5rem;">Cpu</p>
         </div>
-      </nav>
-    <div class="wrapper">
-        <h1 class="head">Rock Paper Scissor Game</h1>
-        <div class="game-container">
-            <div class="result-container">
-                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                    <img src="./images/rock.png" alt="" class="user">
-                    <p style="font-size: 1.5rem;">User</p>
-                </div>
-                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                    <img src="./images/rock.png" alt="" class="cpu">
-                    <p style="font-size: 1.5rem;">Cpu</p>
-                </div>
 
-            </div>
-            <h1></h1>
-            <div class="options">
-                <span id="rock">
-                    <img src="./images/rock.png" alt="" id="rock">
-                    <p id="rock">Rock</p>
-                </span>
-                <span id="paper">
-                    <img src="./images/paper.png" alt="" id="paper">
-                    <p id="paper">Paper</p>
-                </span>
-                <span id="scissor">
-                    <img src="./images/scissor.png" alt="" id="scissor">
-                    <p id="scissor">Scissor</p>
-                </span>
-            </div>
-        </div>
+      </div>
+      <h1></h1>
+      <div class="options">
+        <span id="rock">
+          <img src="./images/rock.png" alt="" id="rock">
+          <p id="rock">Rock</p>
+        </span>
+        <span id="paper">
+          <img src="./images/paper.png" alt="" id="paper">
+          <p id="paper">Paper</p>
+        </span>
+        <span id="scissor">
+          <img src="./images/scissor.png" alt="" id="scissor">
+          <p id="scissor">Scissor</p>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+  <div class="footer-container">
+    <div class="foot-head">
+      <h2>Solve it!</h2>
+      <p>
+        Solve it! is a website that contains solvers for common games like
+        Sudoku, Nonogram, Crosswords and more!
+      </p>
+    </div>
+    <div class="foot-navlinks">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="/html_files/about.html">About</a>
+      <a href="/html_files/newContact.html">Contact</a>
+      <a href="/html_files/faq.html">FAQ</a>
+      <a href="/html_files/contributors.html">Contributors</a>
+    </div>
+    <div class="foot-social">
+      <h3>Social Links</h3>
+      <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+          style="font-size: 1.25em; margin: 2px"></i></a>
     </div>
 
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play Rock-Paper-Scissors:</h2>
+        <p>
+          1. Rock, Paper, Scissors is a hand game usually played between two people, where each player simultaneously
+          forms one of three shapes with an outstretched hand.<br>
+          2. The shapes are "rock" (a fist), "paper" (an open hand), and "scissors" (a fist with the index and middle
+          fingers extended, forming a V).<br>
+          3. Rock beats scissors, scissors beats paper, and paper beats rock. If both players choose the same shape, the
+          game is a tie and is usually played again.<br>
+          4. Players typically count to three in unison and then simultaneously reveal their hands.<br>
+        </p>
 
-    <script src="./script.js"></script>
-    <div class="footer-container">
-        <div class="foot-head">
-          <h2>Solve it!</h2>
-          <p>
-            Solve it! is a website that contains solvers for common games like
-            Sudoku, Nonogram, Crosswords and more!
-          </p>
-        </div>
-        <div class="foot-navlinks">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="/html_files/about.html">About</a>
-          <a href="/html_files/newContact.html">Contact</a>
-          <a href="/html_files/faq.html">FAQ</a>
-          <a href="/html_files/contributors.html">Contributors</a>
-        </div>
-        <div class="foot-social">
-          <h3>Social Links</h3>
-          <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-        </div>
+      </div>
+    </div>
+
+    <script src="../javascript/instruction.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css_files/sudoku_game_6x6.css">
   <title>6x6 Sudoku Solver</title>
   <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css_files/model.css">
 
 </head>
 
@@ -22,6 +23,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
       </ul>
     </div>
   </nav>
@@ -84,6 +86,24 @@
       <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
           style="font-size: 1.25em; margin: 2px"></i></a>
     </div>
+
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play 6x6 Sudoku:</h2>
+        <p>
+          1. Each row, column, and 2x3 subgrid must contain all the numbers from 1 to 6.<br>
+          2. Click on a cell to select it, then enter a number from 1 to 6.<br>
+          3. Use the "Solve Puzzle" button to automatically fill in the correct numbers.<br>
+          4. Use the "Reset" button to clear all entered numbers and start over.<br>
+          5. You have 3 lives. Entering an incorrect number will reduce your lives by 1.<br>
+          6. Complete the puzzle before the timer runs out to win!
+        </p>
+
+      </div>
+    </div>
+
+    <script src="../javascript/instruction.js"></script>
 </body>
 
 </html>

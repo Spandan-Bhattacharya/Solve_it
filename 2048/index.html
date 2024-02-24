@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>2048</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" charset="utf-8"></script>
-    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
 
-  </head>
-  <body background="../assets/bg.webp">
-    <nav class="navbar">
-      <div class="image">
-        <img src="../assets/bodylogo.png" alt="loading">
-      </div>
-      <div class="left-nav">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="newContact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contributors.html">Contributors</a></li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" charset="utf-8"></script>
+  <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css_files/model.css">
 
-    <div class="container">
-      <div class="info">
-        <h1>2048</h1>
-        <div class="score-container">
-          <div class="score-title">score</div>
-          <span id="score">0</span>
-        </div>
-      </div>
-      <span id="result">Join the numbers and get to the <b>2048</b> tile!</span>
-      <div class="grid"></div>
+</head>
 
-      <div class="buttons">
-        <button id="resetButton" class="btn-s" onclick="location.reload()">Reset</button>
-        <a href="../index.html"><button id="solve-btn" class="btn-s">Back to Home</button></a>
-      </div>
+<body background="../assets/bg.webp">
+  <nav class="navbar">
+    <div class="image">
+      <img src="../assets/bodylogo.png" alt="loading">
+    </div>
+    <div class="left-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="newContact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <div class="container">
+    <div class="info">
+      <h1>2048</h1>
+      <div class="score-container">
+        <div class="score-title">score</div>
+        <span id="score">0</span>
+      </div>
+    </div>
+    <span id="result">Join the numbers and get to the <b>2048</b> tile!</span>
+    <div class="grid"></div>
+
+    <div class="buttons">
+      <button id="resetButton" class="btn-s" onclick="location.reload()">Reset</button>
+      <a href="../index.html"><button id="solve-btn" class="btn-s">Back to Home</button></a>
     </div>
 
-    <div class="footer-container">
-      <div class="foot-head">
-        <h2>Solve it!</h2>
-        <p>
-          Solve it! is a website that contains solvers for common games like
-          Sudoku, Nonogram, Crosswords and more!
-        </p>
-      </div>
-      <div class="foot-navlinks">
-        <h3>Quick Links</h3>
-        <a href="#">Home</a>
-        <a href="/html_files/about.html">About</a>
-        <a href="/html_files/newContact.html">Contact</a>
-        <a href="/html_files/faq.html">FAQ</a>
-        <a href="/html_files/contributors.html">Contributors</a>
-      </div>
-      <div class="foot-social">
-        <h3>Social Links</h3>
-        <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
-        <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-            style="font-size: 1.25em; margin: 2px"></i></a>
-        <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-            style="font-size: 1.25em; margin: 2px"></i></a>
-      </div>
-   
+  </div>
 
-  </body>
+  <div class="footer-container">
+    <div class="foot-head">
+      <h2>Solve it!</h2>
+      <p>
+        Solve it! is a website that contains solvers for common games like
+        Sudoku, Nonogram, Crosswords and more!
+      </p>
+    </div>
+    <div class="foot-navlinks">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="/html_files/about.html">About</a>
+      <a href="/html_files/newContact.html">Contact</a>
+      <a href="/html_files/faq.html">FAQ</a>
+      <a href="/html_files/contributors.html">Contributors</a>
+    </div>
+    <div class="foot-social">
+      <h3>Social Links</h3>
+      <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+    </div>
+
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play 2048:</h2>
+        <p>
+          1. 2048 is played on a 4x4 grid, with numbered tiles that slide smoothly when a player moves them using the
+          arrow keys.<br>
+          2. Every turn, a new tile will randomly appear in an empty spot on the board with a value of either 2 or
+          4.<br>
+          3. Tiles slide as far as possible in the chosen direction until they are stopped by either another tile or the
+          edge of the grid.<br>
+          4. If two tiles of the same number collide while moving, they will merge into a tile with the total value of
+          the two tiles that collided.<br>
+          5. The game is won when a tile with a value of 2048 appears on the board.<br>
+          6. The game is over when the board is full and no more moves can be made, or if a player reaches a tile with a
+          value of 2048.<br>
+        </p>
+
+      </div>
+    </div>
+
+    <script src="../javascript/instruction.js"></script>
+</body>
+
 </html>

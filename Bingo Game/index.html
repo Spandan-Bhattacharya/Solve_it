@@ -1,51 +1,108 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport"
-		content="width=device-width, 
-	initial-scale=1.0"> 
-	<title>Bingo Game</title> 
-	<link rel="stylesheet" href="style.css"> 
-</head> 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1.0">
+	<title>Bingo Game</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../css_files/model.css">
+</head>
 
-<body background="../assets/bg.webp"> 
+<body background="../assets/bg.webp">
+	<nav class="navbar">
+		<div class="image">
+			<img src="../assets/bodylogo.png" alt="loading">
+		</div>
+		<div class="left-nav">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="newContact.html">Contact</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="contributors.html">Contributors</a></li>
+				<li><a href="#" onclick="openInstructions()">Instructions</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="bingo-container">
 		<a href="../index.html"><Button id="back">Back</Button> </a>
-		<h1>Bingo Game</h1> 
-		<div class="player-cards"> 
-			<h1 id="p1-h1">Player 1's Card</h1> 
-			<div class="player-card" id="player1Card"> 
-			</div> 
-			<div class="player-card" id="player2Card"> 
-			</div> 
-			<h1 id="p2-h1">Player 2's Card</h1> 
-		</div> 
-		<div class="controls"> 
-			<button id="startButton"> 
-				Start 
-			</button> 
-			<button id="resetButton" disabled> 
-				Reset 
-			</button> 
-		</div> 
-		<div class="input-container"> 
-			<label for="numberInput"> 
-				Enter a number (1-25): 
-			</label> 
-			<input type="number"
-				id="numberInput"
-				min="1" max="25" disabled> 
-			<button id="markButton" disabled> 
-				Mark 
-			</button> 
-		</div> 
-		<div id="turnDisplay"></div> 
+		<h1>Bingo Game</h1>
+		<div class="player-cards">
+			<h1 id="p1-h1">Player 1's Card</h1>
+			<div class="player-card" id="player1Card">
+			</div>
+			<div class="player-card" id="player2Card">
+			</div>
+			<h1 id="p2-h1">Player 2's Card</h1>
+		</div>
+		<div class="controls">
+			<button id="startButton">
+				Start
+			</button>
+			<button id="resetButton" disabled>
+				Reset
+			</button>
+		</div>
+		<div class="input-container">
+			<label for="numberInput">
+				Enter a number (1-25):
+			</label>
+			<input type="number" id="numberInput" min="1" max="25" disabled>
+			<button id="markButton" disabled>
+				Mark
+			</button>
+		</div>
+		<div id="turnDisplay"></div>
 		<!-- Display win message here -->
-		<div id="winDisplay"></div> 
-	</div> 
-	<script src="app.js"></script> 
-</body> 
+		<div id="winDisplay"></div>
+	</div>
+
+	<div class="footer-container">
+		<div class="foot-head">
+			<h2>Solve it!</h2>
+			<p>
+				Solve it! is a website that contains solvers for common games like
+				Sudoku, Nonogram, Crosswords and more!
+			</p>
+		</div>
+		<div class="foot-navlinks">
+			<h3>Quick Links</h3>
+			<a href="#">Home</a>
+			<a href="/html_files/about.html">About</a>
+			<a href="/html_files/newContact.html">Contact</a>
+			<a href="/html_files/faq.html">FAQ</a>
+			<a href="/html_files/contributors.html">Contributors</a>
+		</div>
+		<div class="foot-social">
+			<h3>Social Links</h3>
+			<a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter"
+					style="font-size: 1.25em; margin: 2px"></i></a>
+			<a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+					style="font-size: 1.25em; margin: 2px"></i></a>
+			<a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+					style="font-size: 1.25em; margin: 2px"></i></a>
+		</div>
+
+		<div id="instructionsModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeInstructions()">&times;</span>
+				<h2>How to Play Bingo:</h2>
+				<p>
+					1. Each player gets a bingo card with a 5x5 grid containing numbers.<br>
+					2. The game host randomly selects numbers and calls them out.<br>
+					3. Players mark off the called numbers on their cards.<br>
+					4. The first player to complete a row, column, or diagonal on their card shouts "Bingo!" and wins
+					the game.<br>
+					5. In some variations, additional patterns or rules may be used to win.<br>
+				</p>
+
+			</div>
+		</div>
+
+		<script src="../javascript/instruction.js"></script>
+		<script src="app.js"></script>
+</body>
 
 </html>

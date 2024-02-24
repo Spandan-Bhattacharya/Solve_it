@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,27 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./images/uno!.png" type="image/png" />
     <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../css_files/model.css">
 
     <title>UNO Card Game</title>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="image">
-          <img src="../assets/bodylogo.png" alt="loading">
+            <img src="../assets/bodylogo.png" alt="loading">
         </div>
         <div class="left-nav">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="newContact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contributors.html">Contributors</a></li>
-          </ul>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="newContact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contributors.html">Contributors</a></li>
+                <li><a href="#" onclick="openInstructions()">Instructions</a></li>
+            </ul>
         </div>
-      </nav>
+    </nav>
     <div class='cpu-box'>
         <div class='cpu-hand'>
             <img src="images/back.png" alt="">
@@ -88,27 +91,51 @@
     <script src="js/app.js"></script>
     <div class="footer-container">
         <div class="foot-head">
-          <h2>Solve it!</h2>
-          <p>
-            Solve it! is a website that contains solvers for common games like
-            Sudoku, Nonogram, Crosswords and more!
-          </p>
+            <h2>Solve it!</h2>
+            <p>
+                Solve it! is a website that contains solvers for common games like
+                Sudoku, Nonogram, Crosswords and more!
+            </p>
         </div>
         <div class="foot-navlinks">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="/html_files/about.html">About</a>
-          <a href="/html_files/newContact.html">Contact</a>
-          <a href="/html_files/faq.html">FAQ</a>
-          <a href="/html_files/contributors.html">Contributors</a>
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="/html_files/about.html">About</a>
+            <a href="/html_files/newContact.html">Contact</a>
+            <a href="/html_files/faq.html">FAQ</a>
+            <a href="/html_files/contributors.html">Contributors</a>
         </div>
         <div class="foot-social">
-          <h3>Social Links</h3>
-          <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-              style="font-size: 1.25em; margin: 2px"></i></a>
+            <h3>Social Links</h3>
+            <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter"
+                    style="font-size: 1.25em; margin: 2px"></i></a>
+            <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+                    style="font-size: 1.25em; margin: 2px"></i></a>
+            <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+                    style="font-size: 1.25em; margin: 2px"></i></a>
         </div>
+
+        <div id="instructionsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeInstructions()">&times;</span>
+                <h2>How to Play Uno:</h2>
+                <p>
+                    1. Uno is a card game played with a special deck of cards.<br>
+                    2. Each player is dealt a hand of cards, and the remaining cards form a draw pile.<br>
+                    3. The top card of the draw pile is placed face up to start the discard pile.<br>
+                    4. Players take turns matching the top card of the discard pile by color, number, or action.<br>
+                    5. If a player cannot match the top card, they must draw a card from the draw pile. If the drawn
+                    card can be played, they may play it immediately.<br>
+                    6. Special action cards have different effects, such as skipping a player's turn, reversing the
+                    direction of play, or forcing the next player to draw cards.<br>
+                    7. The first player to empty their hand wins the round, and points are scored based on the value of
+                    the cards remaining in other players' hands.<br>
+                </p>
+
+            </div>
+        </div>
+
+        <script src="../javascript/instruction.js"></script>
 </body>
-</html> 
+
+</html>

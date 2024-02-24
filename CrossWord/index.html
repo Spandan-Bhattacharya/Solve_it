@@ -7,7 +7,7 @@
   <title>CrossWord</title>
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="../css_files/model.css">
 </head>
 
 <body>
@@ -22,6 +22,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
       </ul>
     </div>
   </nav>
@@ -184,6 +185,25 @@
       <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
           style="font-size: 1.25em; margin: 2px"></i></a>
     </div>
+
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play Crossword:</h2>
+        <p>
+          1. Crossword is a word puzzle game where you fill in the white squares with letters to form words, which then
+          intersect with each other.<br>
+          2. Each word is clued, either directly or indirectly, and the player must figure out the word based on the
+          clue.<br>
+          3. Words are placed in the grid from left to right or top to bottom, and each square can be part of two words,
+          across and down.<br>
+          4. The game is won when all the white squares are filled in correctly, and all the clues are satisfied.<br>
+        </p>
+
+      </div>
+    </div>
+
+    <script src="../javascript/instruction.js"></script>
 </body>
 
 </html>

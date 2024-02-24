@@ -8,7 +8,7 @@ class Piece {
     return piece.row === this.row && piece.column === this.column;
   }
 }
-const modal = document.getElementById("easyModal");
+const model = document.getElementById("easyModal");
 let game = document.getElementById("game");
 let currentPlayer = 1;
 let posNewPosition = [];
@@ -295,11 +295,11 @@ function displayCounter(black, white) {
 function modalOpen(black) {
   document.getElementById("winner").innerHTML = black === 0 ? "White" : "Black";
   document.getElementById("loser").innerHTML = black !== 0 ? "White" : "Black";
-  modal.classList.add("effect");
+  model.classList.add("effect");
 }
 
 function modalClose() {
-  modal.classList.remove("effect");
+  model.classList.remove("effect");
 }
 
 function reverse(player) {

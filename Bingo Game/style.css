@@ -112,6 +112,84 @@ label {
 
 #back{
 	position: absolute;
-	top: 5px;
+	top: 80px;
 	right: 5px;
+}
+
+.navbar{
+    /* margin-top: 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 67px;
+    width: 100%;
+    background:linear-gradient(#1e2b59 , #0f1d34 );
+    border-bottom:1px solid #ffb780;
+}
+.image img{
+    height: 55px;
+    width: 55px;
+}
+.left-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-nav ul li{
+    list-style: none;
+}
+.left-nav ul li a{
+    text-decoration: none;
+    color: #ffb780;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.left-nav ul li a:hover{
+    text-decoration: underline;
+}
+.footer-container{
+    border-top: 1px solid #ffb780;
+    width: 100%;
+    background:linear-gradient(#1e2b59 , #0f1d34 );
+    padding: 20px;
+    /* background: url(Image.png); */
+     background-position: center;
+     line-height: 2.5rem;
+}
+.foot-head h2{
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+}
+.foot-head p{
+    color: #ffb780;
+    text-align: center;
+    font-size: 1.20rem;
+}
+.foot-navlinks h3{
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+}
+.foot-navlinks {
+    text-align: center;
+}
+.foot-navlinks a{
+    color: #ffb780;
+    font-size: 18px;
+    padding: 10px;
+}
+.foot-social {
+    text-align: center;
+}
+.foot-social h3{
+    color: aqua;
+    font-weight: 600;
+}
+.foot-social a{
+    font-size: 30px;
+    color: #ffb780;
 }
