@@ -70,11 +70,11 @@ img{
 
 @keyframes animate {
     0%{
-        left: 60vw;
+        left: 1000px;
     }
 
     100%{
-        left: -15vw;
+        left: -60px;
     }
 }
 
@@ -96,7 +96,7 @@ img{
     }
 }
 
-.reset {
+.reset , .score{
     border: 2px solid white;
     color: black;
     font-size: 2rem;
