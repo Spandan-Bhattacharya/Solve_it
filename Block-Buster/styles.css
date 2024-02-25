@@ -46,7 +46,22 @@ body {
 .button:hover {
   background-color: #ff6f61;
 }
+.back-to-home {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color:black;
+  font-size: 18px;
+  text-align: center;
+  background-color: #ff6f61; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+}
 
+.back-to-home:hover {
+  background-color:aqua; 
+  text-decoration: none;
+}
 #canvas1 {
   background-image: #fff;
   display: block;

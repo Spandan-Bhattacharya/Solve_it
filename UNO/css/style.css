@@ -294,6 +294,39 @@ button:hover {
     box-shadow:  none;
 }
 
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.backHome-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.backHome {
+    font-size: 17px;
+    padding: 15px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(81, 162, 216);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.backHome:hover {
+    background-color: rgba(81, 101, 216, 0.8);
+}
+
 @media (max-width: 812px) {
     body {
         margin-top: -50px;
