@@ -87,6 +87,23 @@ body{
 .card.flip .front-view{
   transform: rotateY(180deg);
 }
+.back-to-home {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4c8baf;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.back-to-home:hover {
+  background-color: #4556a0;
+}
 
 @media screen and (max-width: 700px) {
   .cards{

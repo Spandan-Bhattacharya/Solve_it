@@ -99,3 +99,19 @@ h1{
     font-size: 30px;
     color: #ffb780;
   }
+  .back-to-home {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4c8baf;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.back-to-home:hover {
+    background-color: #4556a0;
+}

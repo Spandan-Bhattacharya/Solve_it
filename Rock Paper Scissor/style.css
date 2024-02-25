@@ -107,6 +107,31 @@
     position: relative;
 }
 
+.backHome{
+    margin-bottom: 3px;
+}
+backHome a:hover,
+.backHome:hover {
+    text-decoration: none;
+    background-color: #92d3ff;
+    color: rgb(35, 107, 159);
+}
+
+.backHome,
+.backHome a {
+    padding: 12px;
+    background-color: #1665cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
 @keyframes animate1 {
     0%{
         transform: rotate(80deg);
