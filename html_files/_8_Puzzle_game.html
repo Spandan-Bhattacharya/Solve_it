@@ -2,59 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8-Puzzle Game</title>
-    <link rel="stylesheet" href="../css_files/_8_Puzzle_game.css">
-    <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-Puzzle Game</title>
+  <link rel="stylesheet" href="../css_files/_8_Puzzle_game.css">
+  <script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css_files/model.css">
 </head>
 
 <body background="../assets/bg.webp">
-    <nav class="navbar">
-        <div class="image">
-          <img src="../assets/bodylogo.png" alt="loading">
-        </div>
-        <div class="left-nav">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="newContact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contributors.html">Contributors</a></li>
-          </ul>
-        </div>
-      </nav>
-    <h1 class='game_title' id="head">8 Puzzle Game</h1>
-    <div id="game_area">
+  <nav class="navbar">
+    <div class="image">
+      <img src="../assets/bodylogo.png" alt="loading">
     </div>
-    <div id="game_controls"></div>
-    <button class="backHome" style="margin-left: 44vw;"><a href="../index.html">Back To Home</a></button>
-    <script src="../javascript/_8_Puzzle_game.js"></script>
-    <div class="footer-container">
-        <div class="foot-head">
-          <h2>Solve it!</h2>
-          <p>
-            Solve it! is a website that contains solvers for common games like
-            Sudoku, Nonogram, Crosswords and more!
-          </p>
-        </div>
-        <div class="foot-navlinks">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="/html_files/about.html">About</a>
-          <a href="/html_files/newContact.html">Contact</a>
-          <a href="/html_files/faq.html">FAQ</a>
-          <a href="/html_files/contributors.html">Contributors</a>
-        </div>
-        <div class="foot-social">
-          <h3>Social Links</h3>
-          <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-          <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-              style="font-size: 1.25em; margin: 2px"></i></a>
-        </div>
+    <div class="left-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="newContact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class='game_title' id="head">8 Puzzle Game</h1>
+  <div id="game_area">
+  </div>
+  <div id="game_controls"></div>
+  <button class="backHome" style="margin-left: 44vw;"><a href="../index.html">Back To Home</a></button>
+  <script src="../javascript/_8_Puzzle_game.js"></script>
+  <div class="footer-container">
+    <div class="foot-head">
+      <h2>Solve it!</h2>
+      <p>
+        Solve it! is a website that contains solvers for common games like
+        Sudoku, Nonogram, Crosswords and more!
+      </p>
+    </div>
+    <div class="foot-navlinks">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="/html_files/about.html">About</a>
+      <a href="/html_files/newContact.html">Contact</a>
+      <a href="/html_files/faq.html">FAQ</a>
+      <a href="/html_files/contributors.html">Contributors</a>
+    </div>
+    <div class="foot-social">
+      <h3>Social Links</h3>
+      <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+    </div>
+
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play 8 Puzzle:</h2>
+        <p>
+          1. Arrange the tiles in order from 1 to 8, leaving the last square empty.<br>
+          2. Click on a tile adjacent to the empty square to move it into the empty space.<br>
+          3. Continue moving tiles until they are arranged in numerical order from 1 to 8.<br>
+          4. You can only move tiles into the empty square, and only one tile at a time.<br>
+          5. Try to solve the puzzle in the fewest moves possible!<br>
+        </p>
+
+      </div>
+    </div>
+
+    <script src="../javascript/instruction.js"></script>
 </body>
 
 </html>

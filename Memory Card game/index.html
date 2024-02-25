@@ -1,130 +1,189 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">  
-    <title>Memory Card Game</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body background="../assets/bg.webp">
-    <div class="wrapper">
-      <ul class="cards">
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-1.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-6.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-3.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-2.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-1.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-5.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-2.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-6.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-3.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-4.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-5.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-4.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-4.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-4.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-4.png" alt="card-img">
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-          </div>
-          <div class="view back-view">
-            <img src="images/img-4.png" alt="card-img">
-          </div>
-        </li>
+
+<head>
+  <meta charset="utf-8">
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css_files/model.css">
+</head>
+
+<body background="../assets/bg.webp">
+  <nav class="navbar">
+    <div class="image">
+      <img src="../assets/bodylogo.png" alt="loading">
+    </div>
+    <div class="left-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="newContact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="#" onclick="openInstructions()">Instructions</a></li>
       </ul>
     </div>
+  </nav>
 
+  <div class="wrapper">
+    <ul class="cards">
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-1.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-6.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-3.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-2.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-1.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-5.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-2.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-6.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-3.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-5.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+        </div>
+        <div class="view back-view">
+          <img src="images/img-4.png" alt="card-img">
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-container">
+    <div class="foot-head">
+      <h2>Solve it!</h2>
+      <p>
+        Solve it! is a website that contains solvers for common games like
+        Sudoku, Nonogram, Crosswords and more!
+      </p>
+    </div>
+    <div class="foot-navlinks">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="/html_files/about.html">About</a>
+      <a href="/html_files/newContact.html">Contact</a>
+      <a href="/html_files/faq.html">FAQ</a>
+      <a href="/html_files/contributors.html">Contributors</a>
+    </div>
+    <div class="foot-social">
+      <h3>Social Links</h3>
+      <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+      <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+          style="font-size: 1.25em; margin: 2px"></i></a>
+    </div>
+
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>How to Play Memory Card Game:</h2>
+        <p>
+          1. Memory Card Game is a classic matching game where the player's objective is to find all matching pairs of cards.<br>
+          2. The game begins with all cards face down. The player flips two cards over each turn to reveal them.<br>
+          3. If the two cards match, they remain face up. If not, they are flipped face down again, and the player tries again.<br>
+          4. The game ends when all pairs have been matched and the board is cleared.<br>
+        </p>
+        
+      </div>
+    </div>
+
+    <script src="../javascript/instruction.js"></script>
     <script src="script.js"></script>
 
-  </body>
+</body>
+
 </html>

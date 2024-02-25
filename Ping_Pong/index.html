@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Pong Game </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css_files/model.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="image">
+            <img src="../assets/bodylogo.png" alt="loading">
+        </div>
+        <div class="left-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="newContact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contributors.html">Contributors</a></li>
+                <li><a href="#" onclick="openInstructions()">Instructions</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <h1>Ping Pong</h1>
-   <canvas id="pong" width="800" height="600"></canvas>
-   <script src="pong.js"></script>
+    <canvas id="pong" width="800" height="600"></canvas>
+    <div class="footer-container">
+        <div class="foot-head">
+            <h2>Solve it!</h2>
+            <p>
+                Solve it! is a website that contains solvers for common games like
+                Sudoku, Nonogram, Crosswords and more!
+            </p>
+        </div>
+        <div class="foot-navlinks">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="/html_files/about.html">About</a>
+            <a href="/html_files/newContact.html">Contact</a>
+            <a href="/html_files/faq.html">FAQ</a>
+            <a href="/html_files/contributors.html">Contributors</a>
+        </div>
+        <div class="foot-social">
+            <h3>Social Links</h3>
+            <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter"
+                    style="font-size: 1.25em; margin: 2px"></i></a>
+            <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+                    style="font-size: 1.25em; margin: 2px"></i></a>
+            <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+                    style="font-size: 1.25em; margin: 2px"></i></a>
+        </div>
+
+        <div id="instructionsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeInstructions()">&times;</span>
+                <h2>How to Play Ping Pong:</h2>
+                <p>
+                    1. Ping Pong, also known as table tennis, is a game played on a rectangular table with a net across
+                    the middle.<br>
+                    2. Players use paddles to hit a lightweight ball back and forth, with the objective of scoring
+                    points by making the ball land on the opponent's side of the table in a way that the opponent cannot
+                    return it.<br>
+                    3. A point is scored when the opponent fails to return the ball within the rules. The game is
+                    typically played to 11 points, and the player or team that reaches 11 points first wins the
+                    game.<br>
+                </p>
+
+            </div>
+        </div>
+
+        <script src="../javascript/instruction.js"></script>
+        <script src="pong.js"></script>
 </body>
+
 </html>

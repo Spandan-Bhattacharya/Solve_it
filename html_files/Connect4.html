@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,29 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/b9199edbdd.js" crossorigin="anonymous"></script>
-
+	<link rel="stylesheet" href="../css_files/model.css">
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css_files/connect4.css">
 
 </head>
+
 <body background="../assets/bg.webp">
 	<nav class="navbar">
 		<div class="image">
-		  <img src="../assets/bodylogo.png" alt="loading">
+			<img src="../assets/bodylogo.png" alt="loading">
 		</div>
 		<div class="left-nav">
-		  <ul>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="newContact.html">Contact</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="faq.html">FAQ</a></li>
-			<li><a href="contributors.html">Contributors</a></li>
-		  </ul>
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="newContact.html">Contact</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="contributors.html">Contributors</a></li>
+				<li><a href="#" onclick="openInstructions()">Instructions</a></li>
+			</ul>
 		</div>
-	  </nav>
+	</nav>
 
 	<div id="main-container">
 
@@ -320,7 +323,7 @@
 		</div>
 
 		<button type="button" id="reset-btn">Play Again</button>
-        <button class="backHome"><a href="../index.html">Back To Home</a></button>
+		<button class="backHome"><a href="../index.html">Back To Home</a></button>
 
 	</div>
 
@@ -328,27 +331,46 @@
 
 	<div class="footer-container">
 		<div class="foot-head">
-		  <h2>Solve it!</h2>
-		  <p>
-			Solve it! is a website that contains solvers for common games like
-			Sudoku, Nonogram, Crosswords and more!
-		  </p>
+			<h2>Solve it!</h2>
+			<p>
+				Solve it! is a website that contains solvers for common games like
+				Sudoku, Nonogram, Crosswords and more!
+			</p>
 		</div>
 		<div class="foot-navlinks">
-		  <h3>Quick Links</h3>
-		  <a href="#">Home</a>
-		  <a href="/html_files/about.html">About</a>
-		  <a href="/html_files/newContact.html">Contact</a>
-		  <a href="/html_files/faq.html">FAQ</a>
-		  <a href="/html_files/contributors.html">Contributors</a>
+			<h3>Quick Links</h3>
+			<a href="#">Home</a>
+			<a href="/html_files/about.html">About</a>
+			<a href="/html_files/newContact.html">Contact</a>
+			<a href="/html_files/faq.html">FAQ</a>
+			<a href="/html_files/contributors.html">Contributors</a>
 		</div>
 		<div class="foot-social">
-		  <h3>Social Links</h3>
-		  <a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter" style="font-size: 1.25em; margin: 2px"></i></a>
-		  <a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
-			  style="font-size: 1.25em; margin: 2px"></i></a>
-		  <a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
-			  style="font-size: 1.25em; margin: 2px"></i></a>
+			<h3>Social Links</h3>
+			<a href="https://twitter.com/TeamJWOC"><i class="fab fa-x-twitter"
+					style="font-size: 1.25em; margin: 2px"></i></a>
+			<a href="https://github.com/Spandan-Bhattacharya"><i class="fa-brands fa-github"
+					style="font-size: 1.25em; margin: 2px"></i></a>
+			<a href="https://www.linkedin.com/in/spandan-bhattacharya-02509b227"><i class="fa-brands fa-linkedin"
+					style="font-size: 1.25em; margin: 2px"></i></a>
 		</div>
+
+		<div id="instructionsModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeInstructions()">&times;</span>
+				<h2>How to Play Connect 4:</h2>
+				<p>
+					1. Connect 4 is played on a vertical board with 7 columns and 6 rows.<br>
+					2. Players take turns dropping their colored discs from the top into a column.<br>
+					3. The discs fall straight down, occupying the lowest available space in the column.<br>
+					4. The objective is to be the first to connect four of your discs in a row horizontally, vertically,
+					or diagonally.<br>
+					5. If the board fills up without a winner, the game is a draw.<br>
+				</p>
+			</div>
+		</div>
+
+		<script src="../javascript/instruction.js"></script>
 </body>
+
 </html>
