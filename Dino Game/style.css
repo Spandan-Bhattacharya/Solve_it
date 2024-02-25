@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.wrapper{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: url(../assets/bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.game-div{
+    width: 1000px;
+    height: 500px;
+    background-color: #fff;
+    border: 3px solid white;
+    overflow: hidden;
+}
+
+.dino{
+    height: 100px;
+    width: 80px;
+    background-color: #fff;
+    position: relative;
+    top: 398px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.obstacle{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    position: relative;
+    top: 350px;
+    left: 1000px;
+}
+
+.animateBox{
+    animation-name: animate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.animateDino {
+    animation-name: animate2;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes animate {
+    0%{
+        left: 1000px;
+    }
+
+    100%{
+        left: -60px;
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        top: 398px;
+    }
+
+    30%{
+        top: 300px;
+    }
+
+    70%{
+        top: 300px;
+    }
+
+    100%{
+        top: 398px;
+    }
+}
+
+.reset , .score{
+    border: 2px solid white;
+    color: black;
+    font-size: 2rem;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.reset:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
