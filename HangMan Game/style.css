@@ -157,6 +157,27 @@
     color: white;
     cursor: pointer;
 }
+.backHome {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.backHome a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(68, 118, 190);
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.backHome a:hover {
+    background-color: rgb(68, 147, 190);
+    color: #2d2d2d;
+}
+
 
 @media screen and (max-width : 1180px) {
     .game-container {
